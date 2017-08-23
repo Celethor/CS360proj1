@@ -15,11 +15,24 @@ public class School {
 		willingHost=false;
 		classification='N';
 	}
-	public School(String name,String location, int enrollment, boolean willingHost, char classification){
+	public School(String name,String location, int enrollment, boolean willingHost){
 		this.name=name;
 		this.location=location;
 		this.enrollment=enrollment;
 		this.willingHost=willingHost;
-		this.classification=classification;
+		this.classification=classify(this.enrollment);
 	}
+	private char classify(int enrollment){
+		char classification;
+		if(enrollment>1800)
+			classification='A';
+		else if(enrollment>1000)
+			classification='B';
+		else if(enrollment>500)
+			classification='C';
+		else 
+			classification='D';
+		return classification;
+	}
+	
 }
