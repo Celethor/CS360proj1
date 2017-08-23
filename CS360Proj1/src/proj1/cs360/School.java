@@ -1,5 +1,10 @@
 package proj1.cs360;
-
+/*
+ * This class contains all of the fields and methods necessary to
+ * 
+ * 
+ * 
+ */
 public class School {
 
 	private String name;
@@ -9,4 +14,7 @@ public class School {
 	private char classification;
 	
 	
+	private String lookupAddr(){
+	return "";
+	}
 }
