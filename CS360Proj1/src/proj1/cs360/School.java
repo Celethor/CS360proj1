@@ -31,14 +31,12 @@ public class School {
 	}
 	private char classify(int enrollment){
 		char classification;
-		if(enrollment>1800)
+		if(enrollment>1600)
 			classification='A';
-		else if(enrollment>1000)
+		else if(enrollment>800)
 			classification='B';
-		else if(enrollment>500)
-			classification='C';
 		else 
-			classification='D';
+			classification='C';
 		return classification;
 	}
 	
