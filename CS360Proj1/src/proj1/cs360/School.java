@@ -69,11 +69,17 @@ public class School {
 		}
 	}
 	
-	public static String travelDist(School a, School b) {
+	//returns travel distance between schools
+	public static int travelDist(School a, School b) {
 		
-		//ADD call to getDriveDist in EarthSearch with a and b;
+	  String temp = "";
+		try {
+			temp = EarthSearch.getDriveDist(a.getLocation(), b.getLocation());
+		} catch(Exception e) {
+			return -1;
+		}
 		
-		return null;
+		return Integer.parseInt(temp.substring(0, temp.indexOf(" ")));
 	}
 	
 }
