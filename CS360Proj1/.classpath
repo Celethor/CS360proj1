@@ -6,7 +6,7 @@
 	<classpathentry kind="lib" path="lib/error_prone_annotations-2.0.18.jar"/>
 	<classpathentry kind="lib" path="lib/google-maps-services-0.2.2-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/google-maps-services-0.2.2-sources.jar"/>
-	<classpathentry kind="lib" path="lib/google-maps-services-0.2.2.jar"/>
+	<classpathentry kind="lib" path="lib/google-maps-services-0.2.2.jar" sourcepath="lib/google-maps-services-0.2.2-sources.jar"/>
 	<classpathentry kind="lib" path="lib/gson-2.8.1.jar"/>
 	<classpathentry kind="lib" path="lib/guava-23.0-android.jar"/>
 	<classpathentry kind="lib" path="lib/j2objc-annotations-1.1.jar"/>
@@ -17,6 +17,6 @@
 	<classpathentry kind="lib" path="lib/slf4j-api-1.7.25.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-nop-1.7.25-javadoc.jar"/>
 	<classpathentry kind="lib" path="lib/slf4j-nop-1.7.25-sources.jar"/>
-	<classpathentry kind="lib" path="lib/slf4j-nop-1.7.25.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-nop-1.7.25.jar" sourcepath="lib/slf4j-nop-1.7.25-sources.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
