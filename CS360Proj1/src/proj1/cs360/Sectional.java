@@ -17,6 +17,38 @@ public class Sectional {
 			this.count++;
 		}
 	}
+	
+	
+	public String getHost() {
+		return host;
+	}
+
+
+	public void setHost(String host) {
+		this.host = host;
+	}
+
+
+	public School[] getSchools() {
+		return schools;
+	}
+
+
+	public void setSchools(School[] schools) {
+		this.schools = schools;
+	}
+
+
+	public int getCount() {
+		return count;
+	}
+
+
+	public String getType() {
+		return type;
+	}
+
+
 	public boolean addSchool(School toBeAdded){
 		/*if(this.count>=this.size)
 			return false;*/

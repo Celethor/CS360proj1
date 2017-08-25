@@ -14,21 +14,31 @@ public class School {
 	private String name;
 	private String location;
 	private int enrollment;
-	private boolean willingHost;
+	private boolean boys;
+	private boolean girls;
+	private boolean HostSect;
+	private boolean HostReg;
+	private boolean HostSemi;
 	private char classification;
 	
 	public School(){
 		name=new String("");
 		location=new String("");
 		enrollment=0;
-		willingHost=false;
+		HostSect=false;
+		HostReg=false;
+		HostSemi=false;
 		classification='N';
 	}
-	public School(String name, int enrollment, boolean willingHost){
+	public School(String name, int enrollment, boolean boys,boolean girls,boolean HostSect,boolean HostReg,boolean HostSemi){
 		this.name=name;
 		this.location= lookupAddr();		
 		this.enrollment=enrollment;
-		this.willingHost=willingHost;
+		this.boys=boys;
+		this.girls=girls;
+		this.HostSect=HostSect;
+		this.HostReg=HostReg;
+		this.HostSemi=HostSemi;
 		this.classification=classify(this.enrollment);
 	}
 	
@@ -41,8 +51,36 @@ public class School {
 	public int getEnrollment() {
 		return enrollment;
 	}
-	public boolean isWillingHost() {
-		return willingHost;
+	
+	public boolean isBoys() {
+		return boys;
+	}
+	public void setBoys(boolean boys) {
+		this.boys = boys;
+	}
+	public boolean isGirls() {
+		return girls;
+	}
+	public void setGirls(boolean girls) {
+		this.girls = girls;
+	}
+	public boolean isHostSect() {
+		return HostSect;
+	}
+	public void setHostSect(boolean hostSect) {
+		HostSect = hostSect;
+	}
+	public boolean isHostReg() {
+		return HostReg;
+	}
+	public void setHostReg(boolean hostReg) {
+		HostReg = hostReg;
+	}
+	public boolean isHostSemi() {
+		return HostSemi;
+	}
+	public void setHostSemi(boolean hostSemi) {
+		HostSemi = hostSemi;
 	}
 	public char getClassification() {
 		return classification;
