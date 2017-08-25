@@ -2,6 +2,7 @@ package proj1.cs360;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.ParseException;
 import java.util.ArrayList;
 
 import java.util.Scanner;
@@ -10,11 +11,11 @@ public class Tournament {
 	ArrayList<School> schools;
 	Sectional sectionals[];
 	
-	public Tournament(ArrayList<School>schools){
+	public Tournament(ArrayList<School>schools) throws ParseException{
 		this.schools=schools;
 		sortIntoSectionals();
 	}
-	private void sortIntoSectionals(){
+	private void sortIntoSectionals() throws ParseException{
 		sectionals=new Sectional[8];
 		int sectionNumber=0;
 		for(int i=0;i<schools.size();i++){
@@ -27,11 +28,11 @@ public class Tournament {
 			}
 		}
 	}
-	private School[] getClosest(ArrayList<School> schools, School host){
+	private School[] getClosest(ArrayList<School> schools, School host) throws ParseException{
 		School []closest=new School[13];
 		for(int counter=0;counter<13;counter++){
 			
-			double small=School.travelDist(schools.get(0), host);
+			long small=School.travelDist(schools.get(0), host);
 			School smallSchool=schools.get(0);
 			int index=0;
 			for(int i=0;i<schools.size();i++){
@@ -40,6 +41,7 @@ public class Tournament {
 					index=i;
 				}
 			}
+		
 			closest[counter]=smallSchool;
 			schools.remove(index);
 		}

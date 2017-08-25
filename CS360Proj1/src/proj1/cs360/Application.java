@@ -2,11 +2,12 @@ package proj1.cs360;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Application {
-	public static void main(String[]args) throws FileNotFoundException{
+	public static void main(String[]args) throws FileNotFoundException, ParseException{
 				File file=new File("Schools.txt");
 				ArrayList<School>schools=new ArrayList<School>();
 				School x=new School();
@@ -18,7 +19,6 @@ public class Application {
 				boolean HostSect;
 				boolean HostReg;
 				boolean HostSemi;
-				
 				Scanner scan =new Scanner(file).useDelimiter("\\*|\\n");
 				int c=0;
 				while(scan.hasNext()){
@@ -33,8 +33,10 @@ public class Application {
 					HostSemi=assignBoolean(scan.next());
 					c++;
 					x=new School(name,enrollment,boys,girls,HostSect,HostReg,HostSemi);
+					//System.out.println(x.getName()+"\t"+x.getLocation());
 					schools.add(x);
 					//scan.nextLine();
+					
 				}
 				System.out.println(c);
 				Tournament tourney=new Tournament(schools);

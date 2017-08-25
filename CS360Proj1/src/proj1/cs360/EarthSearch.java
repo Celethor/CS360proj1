@@ -49,7 +49,7 @@ public class EarthSearch {
 	}
 	
 	//given two addresses, calculates the driving distance
-	public static String getDriveDist(String addrOne, String addrTwo) throws ApiException, InterruptedException, IOException{
+	public static long getDriveDist(String addrOne, String addrTwo) throws ApiException, InterruptedException, IOException{
 				
 		//set up key
     	GeoApiContext distCalcer = new GeoApiContext.Builder()
@@ -64,7 +64,7 @@ public class EarthSearch {
                 .language("en-US")
                 .await();
         
-				String distApart = result.rows[0].elements[0].distance.toString();
+				long distApart = result.rows[0].elements[0].distance.inMeters;
 		
 		return distApart;
 	}

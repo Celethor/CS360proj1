@@ -1,5 +1,8 @@
 package proj1.cs360;
 
+import java.text.NumberFormat;
+import java.text.ParseException;
+import java.util.Locale;
 
 /*
  * This class contains all of the fields and methods necessary to
@@ -32,7 +35,7 @@ public class School {
 	}
 	public School(String name, int enrollment, boolean boys,boolean girls,boolean HostSect,boolean HostReg,boolean HostSemi){
 		this.name=name;
-		this.location= lookupAddr();		
+		//this.location= lookupAddr();		
 		this.enrollment=enrollment;
 		this.boys=boys;
 		this.girls=girls;
@@ -108,16 +111,21 @@ public class School {
 	}
 	
 	//returns travel distance between schools
-	public static double travelDist(School a, School b) {
+	public static long travelDist(School a, School b) throws ParseException {
 		
-	  String temp = "";
+	  long temp =0;
 		try {
-			temp = EarthSearch.getDriveDist(a.getLocation(), b.getLocation());
+			temp = EarthSearch.getDriveDist(a.name+", IN", b.name+" ,IN");
+			
 		} catch(Exception e) {
 			return -1;
 		}
-		
-		return Double.parseDouble(temp.substring(0, temp.indexOf(" ")));
+		NumberFormat format = NumberFormat.getInstance(Locale.US);
+
+       // Number number = format.parse(temp.substring(0, temp.indexOf(" ")));
+        //System.out.println(number);
+		//return Long.parseLong(temp.substring(0, temp.indexOf(" ")));
+		return temp;
 	}
 	
 }
