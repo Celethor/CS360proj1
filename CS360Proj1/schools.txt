@@ -1,0 +1,98 @@
+Avon high school*2891*T*T*F*F*F
+Bethesda Christian high school*106*T*T*F*F*F
+Brownsburg high school*2629*T*T*F*F*F
+Cascade high school*457*T*T*F*F*F
+Cloverdale high school*382*T*T*F*F*F
+Danville Community high school*791*T*T*F*F*F
+Greencastle high school*556*T*T*F*F*F
+North Putnam high school*456*T*T*F*F*F
+Plainfield high school*1636*T*T*F*F*F
+South Putnam high school*363*T*T*T*F*F
+Tri-West Hendricks high school*624*T*T*F*F*F
+Ben Davis high school*4362*T*T*T*T*F
+Covenant Christian (Indpls) high school*334*T*T*F*F*F
+Decatur Central high school*1767*T*T*F*F*F
+Herron high school*827*T*T*F*F*F
+Indiana Math & Science Academy high school*185*T*T*F*F*F
+Indianapolis Crispus Attucks high school*745*T*T*F*F*F
+Indianapolis Northwest high school*696*T*T*F*F*F
+Indianapolis Shortridge high school*361*T*T*F*F*F
+Indianapolis George Washington high school*457*T*T*F*F*F
+International School of Indiana high school*165*T*T*F*F*F
+Pike high school*3306*T*T*F*F*F
+Providence Cristo Rey high school*255*T*T*F*F*F
+Speedway high school*523*T*T*F*F*F
+Zionsville high school*1928*T*T*F*F*F
+Carmel high school*5000*T*T*F*F*F
+Fishers high school*3250*T*T*F*F*F
+Guerin Catholic high school*758*T*T*F*F*F
+Hamilton Heights high school*728*T*T*F*F*F
+Hamilton Southeastern high school*3118*T*T*F*F*F
+Lebanon high school*976*T*T*F*F*F
+Noblesville high school*2882*T*T*T*T*F
+Sheridan high school*329*T*T*F*F*F
+Tindley high school*273*T*T*F*F*F
+Tipton high school*524*T*T*F*F*F
+University high school*289*T*T*F*F*F
+Westfield high school*2146*T*T*F*F*F
+Brebeuf Jesuit Preparatory high school*794*T*T*T*F*F
+Heritage Christian high school*407*T*T*F*F*F
+Indiana School for the Deaf high school*115*T*T*F*F*F
+Indianapolis Arlington high school*371*T*T*F*F*F
+Indianapolis Arsenal Technical high school*1940*T*T*F*F*F
+Indianapolis Bishop Chatard high school*700*T*T*F*F*F
+Indianapolis Broad Ripple high school*635*T*T*F*F*F
+Indianapolis Cardinal Ritter high school*563*T*T*F*F*F
+Indianapolis Cathedral high school*1184*T*T*F*F*F
+Lawrence Central high school*2340*T*T*F*F*F
+Lawrence North high school*2469*T*T*F*F*F
+North Central (Indpls.) high school*3772*T*T*F*F*F
+Park Tudor high school*403*T*T*F*F*F
+Beech Grove high school*949*T*T*F*F*F
+Eastern Hancock high school*425*T*T*F*F*F
+Franklin Central high school*2659*T*T*F*F*F
+Greenfield-Central high school*1510*T*T*F*F*F
+Indianapolis Emmerich Manual high school*696*T*T*F*F*F
+Indianapolis Lutheran high school*251*T*T*F*F*F
+Indianapolis Scecina Memorial high school*449*T*T*F*F*F
+Morristown high school*194*T*T*F*F*F
+New Palastine high school*1119*T*T*T*F*F
+Roncalli high school*1184*T*T*F*F*F
+Triton Central high school*468*T*T*F*F*F
+Warren Central high school*3736*T*T*F*F*F
+Cambridge City high school*331*T*T*F*F*F
+Centerville high school*463*T*T*F*F*F
+Connersville high school*1111*T*T*T*F*F
+Franklin County high school*836*T*T*F*F*F
+Hagerstown high school*341*T*T*F*F*F
+Knightstown high school*381*T*T*F*F*F
+New Castle high school*1023*T*T*F*F*F
+Northeastern high school*419*T*T*F*F*F
+Richmond high school*1331*T*T*F*F*F
+Rushville Consolidated high school*742*T*T*F*T*F
+Seton Catholic high school*92*T*T*F*F*F
+Union County high school*444*T*T*F*F*F
+Batesville high school*733*T*T*F*F*F
+East Central high school*1302*T*T*F*F*F
+Greensburg high school*750*T*T*F*F*F
+Jac-Cen-Del high school*263*T*T*F*F*F
+Milan high school*411*T*T*F*F*F
+North Decatur high school*329*T*T*F*F*F
+Oldenburg Academy high school*210*T*T*F*F*F
+Rising Sun high school*233*T*T*F*F*F
+South Dearborn high school*868*T*T*T*F*F
+South Decatur high school*313*T*T*F*F*F
+South Ripley high school*354*T*T*F*F*F
+Center Grove high school*2500*T*T*F*F*F
+Christel House Academy high school*232*T*T*F*F*F
+Eminence high school*116*T*T*F*F*F
+Franklin Community high school*1533*T*T*T*F*F
+Greenwood Community high school*1200*T*T*F*F*F
+Greenwood Christian Academy high school*180*T*T*F*F*F
+Monrovia high school*527*T*T*F*F*F
+Mooresville high school*1402*T*T*F*F*F
+Perry Meridian high school*2351*T*T*F*F*F
+Shelbyville high school*1156*T*T*F*T*F
+Southport high school*2185*T*T*F*F*F
+Waldron high school*163*T*T*F*F*F
+Whiteland Community high school*1845*T*T*F*F*F
