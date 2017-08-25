@@ -108,7 +108,7 @@ public class School {
 	}
 	
 	//returns travel distance between schools
-	public static int travelDist(School a, School b) {
+	public static double travelDist(School a, School b) {
 		
 	  String temp = "";
 		try {
@@ -117,7 +117,7 @@ public class School {
 			return -1;
 		}
 		
-		return Integer.parseInt(temp.substring(0, temp.indexOf(" ")));
+		return Double.parseDouble(temp.substring(0, temp.indexOf(" ")));
 	}
 	
 }

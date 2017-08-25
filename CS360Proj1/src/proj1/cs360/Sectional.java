@@ -18,7 +18,13 @@ public class Sectional {
 		}
 	}
 	
-	
+	public String toString(){
+		String x="";
+		x+="Host Name: "+host+"\n";
+		for(int i=0;i<schools.length;i++)
+			x=x+schools.toString()+"\n";
+		return x;
+	}
 	public String getHost() {
 		return host;
 	}
