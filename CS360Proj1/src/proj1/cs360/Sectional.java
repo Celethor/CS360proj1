@@ -1,6 +1,6 @@
 package proj1.cs360;
 
-public class Meet {
+public class Sectional {
 	private String host;
 	private School []schools;
 	//private final int size=13;
@@ -8,7 +8,7 @@ public class Meet {
 	private int count=0;
 	private String type;
 	
-	public Meet(String host, School []schools){
+	public Sectional(String host, School []schools){
 		this.host="";
 		//this.count=0;
 		this.schools=new School[schools.length];
