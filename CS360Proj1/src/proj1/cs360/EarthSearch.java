@@ -32,7 +32,7 @@ public class EarthSearch {
 	private static final String API_KEY = "AIzaSyD2MvqQVbfXo3M0mMu4JPGXbaN3y5z9SIg";
 
 	// Lookups up and returns the address of an establishment given its name and possible some location attributes
-	public static String lookupAddress(String establishment) throws ApiException, InterruptedException, IOException {
+	public static String lookupAddr(String establishment) throws ApiException, InterruptedException, IOException {
 		
 		//set up key
 		GeoApiContext lookupDoodad = new GeoApiContext.Builder()
@@ -49,7 +49,7 @@ public class EarthSearch {
 	}
 	
 	//given two addresses, calculates the driving distance
-	public static String computeDriveDistance(String addrOne, String addrTwo) throws ApiException, InterruptedException, IOException{
+	public static String getDriveDist(String addrOne, String addrTwo) throws ApiException, InterruptedException, IOException{
 				
 		//set up key
     	GeoApiContext distCalcer = new GeoApiContext.Builder()

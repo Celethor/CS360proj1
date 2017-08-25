@@ -63,10 +63,17 @@ public class School {
 	//used in contructor, gets address by looking up name via google maps
 	private String lookupAddr(){
 		try {
-			return EarthSearch.lookupAddress(this.name + ", Indiana");
+			return EarthSearch.lookupAddr(this.name + ", Indiana");
 		} catch (Exception e) {
 			return "Error locating School";
 		}
+	}
+	
+	public static String travelDist(School a, School b) {
+		
+		//ADD call to getDriveDist in EarthSearch with a and b;
+		
+		return null;
 	}
 	
 }
