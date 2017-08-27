@@ -38,7 +38,6 @@ public class EarthSearch {
 	
 	//private static final String API_KEY = "AIzaSyD2MvqQVbfXo3M0mMu4JPGXbaN3y5z9SIg";
 	private static final String API_KEY = "AIzaSyDOQ0NoT9r3RI0zYoO3q-p0h14Z4pggpQ0";
-	private static long[][] matrix;
 
 	// Lookups up and returns the address of an establishment given its name and possible some location attributes
 	public static String lookupAddr(String establishment) throws ApiException, InterruptedException, IOException {
@@ -104,7 +103,6 @@ public class EarthSearch {
 			DistanceMatrixApiRequest req=DistanceMatrixApi.newRequest(context);
 			DistanceMatrix t=req.origins(origins).destinations(destinations).mode(TravelMode.DRIVING).await();
 			//long[][] array=new long[origins.length][destinations.length];
-			matrix=new long[origins.length][destinations.length];
 			File file=new File("Matrix.txt");
 			FileOutputStream out=new FileOutputStream(file);
 			DataOutputStream outFile=new DataOutputStream(out);
