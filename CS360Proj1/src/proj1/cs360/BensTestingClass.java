@@ -14,6 +14,10 @@ public class BensTestingClass {
 	//	System.out.println(EarthSearch.computeDriveDistance("5901 Heywood Cove, Fort Wayne, IN 46815",
 	//			"4600 Fairlawn Pass, Fort Wayne, IN 46815"));
 		
+	//	String establishment = "Snider High School, Indiana";
+	//	System.out.println(EarthSearch.lookupAddr(establishment));
+		
+		
 	}
 
 }
