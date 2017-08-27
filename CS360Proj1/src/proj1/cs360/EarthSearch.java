@@ -112,5 +112,6 @@ public class EarthSearch {
 					outFile.writeLong(t.rows[i].elements[j].distance.inMeters);
 				}
 			}
+			outFile.close();
 	}
 }
