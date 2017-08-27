@@ -41,7 +41,8 @@ public class Tournament {
 					index=i;
 				}
 			}
-		
+			if(schools.get(index).isHostSect()==true&&!(schools.get(index).getName().equals(host.getName())))
+				continue;
 			closest[counter]=smallSchool;
 			schools.remove(index);
 		}
