@@ -50,21 +50,21 @@ public class EarthSearch {
 	}
 	
 	// Lookups up and returns the coordinates of an establishment given its name and possible some location attributes
-	// Lookups up and returns the address of an establishment given its name and possible some location attributes
-		public static LatLng lookupCoord(String establishment) throws ApiException, InterruptedException, IOException {
+	public static LatLng lookupCoord(String establishment) throws ApiException, InterruptedException, IOException {
 			
-			//set up key
-			GeoApiContext lookupDoodad = new GeoApiContext.Builder()
-				    .apiKey(API_KEY)
-				    .build();
-			GeocodingResult[] results =  GeocodingApi.geocode(lookupDoodad,
-			  establishment).await();
+		//set up key
+		GeoApiContext lookupDoodad = new GeoApiContext.Builder()
+			    .apiKey(API_KEY)
+			    .build();
+		GeocodingResult[] results =  GeocodingApi.geocode(lookupDoodad,
+		  establishment).await();
 				
 			//converts results into usable Coordinates
+		
 			LatLng coords = (results[0].geometry.location);
 				
-			return coords;
-		}
+		return coords;
+	}
 		
 	
 	//given two addresses, calculates the driving distance
