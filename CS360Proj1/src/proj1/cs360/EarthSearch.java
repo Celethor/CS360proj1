@@ -1,6 +1,12 @@
 package proj1.cs360;
 
 
+
+
+
+import java.io.DataOutputStream;
+import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import com.google.maps.DirectionsApi.RouteRestriction;
 import com.google.maps.DistanceMatrixApi;
@@ -30,7 +36,9 @@ import com.google.maps.model.TravelMode;
 
 public class EarthSearch {
 	
-	private static final String API_KEY = "AIzaSyD2MvqQVbfXo3M0mMu4JPGXbaN3y5z9SIg";
+	//private static final String API_KEY = "AIzaSyD2MvqQVbfXo3M0mMu4JPGXbaN3y5z9SIg";
+	private static final String API_KEY = "AIzaSyDOQ0NoT9r3RI0zYoO3q-p0h14Z4pggpQ0";
+	private static long[][] matrix;
 
 	// Lookups up and returns the address of an establishment given its name and possible some location attributes
 	public static String lookupAddr(String establishment) throws ApiException, InterruptedException, IOException {
@@ -86,5 +94,25 @@ public class EarthSearch {
 				long distApart = result.rows[0].elements[0].distance.inMeters;
 		
 		return distApart;
+	}
+	
+	public static void distanceMatrix(String[] origins, String[] destinations) throws ApiException, InterruptedException, IOException{
+		GeoApiContext context = new GeoApiContext.Builder()
+			    .apiKey(API_KEY)
+			    .build();
+			
+			DistanceMatrixApiRequest req=DistanceMatrixApi.newRequest(context);
+			DistanceMatrix t=req.origins(origins).destinations(destinations).mode(TravelMode.DRIVING).await();
+			//long[][] array=new long[origins.length][destinations.length];
+			matrix=new long[origins.length][destinations.length];
+			File file=new File("Matrix.txt");
+			FileOutputStream out=new FileOutputStream(file);
+			DataOutputStream outFile=new DataOutputStream(out);
+			for(int i=0;i<origins.length;i++){
+				for(int j=0;j<destinations.length;j++){
+					//System.out.println(t.rows[i].elements[j].distance.inMeters);
+					outFile.writeLong(t.rows[i].elements[j].distance.inMeters);
+				}
+			}
 	}
 }

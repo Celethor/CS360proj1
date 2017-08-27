@@ -1,8 +1,13 @@
 package proj1.cs360;
 
+import java.io.IOException;
+
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.Locale;
+
+import com.google.maps.errors.ApiException;
+import com.google.maps.model.LatLng;
 
 /*
  * This class contains all of the fields and methods necessary to
@@ -23,7 +28,10 @@ public class School {
 	private boolean HostReg;
 	private boolean HostSemi;
 	private char classification;
-	
+	private static int sectNo=0;
+	private int regNo=0;
+	private int semiNo=0;
+	private LatLng coords;
 	public School(){
 		name=new String("");
 		location=new String("");
@@ -33,9 +41,10 @@ public class School {
 		HostSemi=false;
 		classification='N';
 	}
-	public School(String name, int enrollment, boolean boys,boolean girls,boolean HostSect,boolean HostReg,boolean HostSemi){
+	public School(String name, int enrollment, boolean boys,boolean girls,boolean HostSect,boolean HostReg,boolean HostSemi) throws ApiException, InterruptedException, IOException{
 		this.name=name;
-		//this.location= lookupAddr();		
+		//this.location= lookupAddr();	
+		this.coords=EarthSearch.lookupCoord(name);
 		this.enrollment=enrollment;
 		this.boys=boys;
 		this.girls=girls;
@@ -43,6 +52,12 @@ public class School {
 		this.HostReg=HostReg;
 		this.HostSemi=HostSemi;
 		this.classification=classify(this.enrollment);
+		if(this.isHostSect()==true)
+			sectNo++;
+		if(this.isHostReg()==true)
+			regNo++;
+		if(this.isHostSemi()==true)
+			semiNo++;
 	}
 	
 	public String getName() {
@@ -89,6 +104,12 @@ public class School {
 		return classification;
 	}
 	
+	public static int getSectNo() {
+		return sectNo;
+	}
+	public void setSectNo(int sectNo) {
+		this.sectNo = sectNo;
+	}
 	//
 	private char classify(int enrollment){
 		char classification;
@@ -111,7 +132,7 @@ public class School {
 	}
 	
 	//returns travel distance between schools
-	public static long travelDist(School a, School b) throws ParseException {
+	/*public static long travelDist(School a, School b) throws ParseException {
 		
 	  long temp =0;
 		try {
@@ -126,6 +147,28 @@ public class School {
         //System.out.println(number);
 		//return Long.parseLong(temp.substring(0, temp.indexOf(" ")));
 		return temp;
+	}*/
+	public static long travelDist(School a,School b){
+		double orgLat=a.coords.lat;
+		double orgLng=a.coords.lng;
+		double dstLat=b.coords.lat;
+		double dstLng=b.coords.lng;
+		
+		//System.out.println("Lat1: "+orgLng+"\tLat2: "+dstLng);
+		
+		double latDistance=Math.toRadians( dstLat-orgLat );
+		double lngDistance=Math.toRadians(dstLng-orgLng);
+		
+		double x=Math.sin(latDistance/2)*Math.sin(latDistance/2) 
+				+ Math.cos(Math.toRadians(orgLat))*Math.cos(Math.toRadians(dstLat))
+				*Math.sin(lngDistance / 2) * Math.sin(lngDistance / 2);
+		double c=2*Math.atan2(Math.sqrt(x),Math.sqrt(1-x));
+		
+		return (long)(6371000*c);
+	}
+	
+	public String toString(){
+		return "Name: "+this.getName()+"Enrollment: "+this.getEnrollment()+"\n";
 	}
 	
 }
