@@ -43,7 +43,7 @@ public class Tournament {
 			for(int i=0;i<schools.size();i++){
 			if(sectionNumber>=sectNo)
 				break;
-			if(schools.get(i).isHostSect()==true){
+			  if(schools.get(i).isHostSect()==true){
 				School temp=schools.get(i);
 				sectionals[sectionNumber]=new Sectional(temp.getName(),temp,sectDivisor);
 				sectionNumber++;
