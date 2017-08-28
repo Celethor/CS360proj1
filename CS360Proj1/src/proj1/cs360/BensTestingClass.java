@@ -17,6 +17,7 @@ public class BensTestingClass {
 	//	String establishment = "Snider High School, Indiana";
 	//	System.out.println(EarthSearch.lookupAddr(establishment));
 		
+		new GUITest(null, 0);
 		
 	}
 
