@@ -119,6 +119,8 @@ public class EarthSearch {
 		return distApart;
 	}
 	
+	
+	// Why was this added??
 	public static void distanceMatrix(String[] origins, String[] destinations) throws ApiException, InterruptedException, IOException{
 		GeoApiContext context = new GeoApiContext.Builder()
 			    .apiKey(API_KEY)
