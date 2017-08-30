@@ -2,6 +2,14 @@ package proj1.cs360;
 
 import java.io.IOException;
 
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.layout.RowLayout;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
+
 import com.google.maps.errors.ApiException;
 
 public class BensTestingClass {
@@ -16,9 +24,30 @@ public class BensTestingClass {
 		
 	//	String establishment = "Snider High School, Indiana";
 	//	System.out.println(EarthSearch.lookupAddr(establishment));
+	
 		
-		new GUITest(null, 0);
+///////		
+		//CREATES GUI!! I did it!
+
+		Display display = new Display();
 		
+        Shell shell = new Shell(display);
+        
+        new GUITest(shell, SWT.NONE);
+
+        // the layout manager handle the layout
+        // of the widgets in the container
+        shell.setLayout(new FillLayout());
+
+        //add some widgets to the Shell
+        shell.open();
+        while (!shell.isDisposed()) {
+            if (!display.readAndDispatch()) {
+                display.sleep();
+            }
+        }
+        display.dispose();
+///////        
 	}
 
 }

@@ -23,11 +23,11 @@ public class GUITest extends Composite {
 		super(parent, style);
 		
 		List list = new List(this, SWT.BORDER);
-		list.setBounds(10, 10, 158, 460);
+		list.setBounds(676, 99, 158, 700);
 		
 		Browser browser = new Browser(this, SWT.NONE);
-		browser.setUrl("www.google.com");
-		browser.setBounds(200, 35, 268, 168);
+		browser.setUrl("maps.google.com");
+		browser.setBounds(840, 10, 430, 700);
 
 	}
 
