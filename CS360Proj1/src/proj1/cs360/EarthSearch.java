@@ -34,15 +34,45 @@ import com.google.maps.model.TravelMode;
  * 
  * credit to google-maps-services-java project on github for help in this method
  * https://github.com/googlemaps/google-maps-services-java
+ *
+ *                                          _____________               
+                                       __/_|_|_|_|_|_|_\__               
+                                      /                   \    .           
+                 .       ____________/  ____               \   :            
+                 :    __/_|_|_|_|_|_(  |    |               )  |           
+                 |   /               \ | () |()  ()  ()  ()/   *          
+                 *  /  ____           \|____|_____________/            
+    .              (  |    |            \_______________/
+    :               \ | () |()  ()  ()    \___________/
+    |                \|____|____________ /   \______/     .
+    *                  \_______________/       \  /       :
+          3         .    \___________/         (__)       |    .
+            3       :       \______/           /  \       *    :
+             3      |         \  /            /    \           |
+              3     *         (__)           /      \          *
+        ,,     3              /  \          /        \
+      w`\v',___n___          /    \        /          \
+      v\`|Y/      /\        /      \      /            \
+      `-Y/-'_____/  \      /        \    /              \
+       `|-'      |  |     /          \  /                \
+________|_|______|__|____/____________\/__________________\__
+
+ **credit http://ascii.co.uk/art/ufo
  */
 
 
 
 public class EarthSearch {
+
 	//private static final String API_KEY="AIzaSyC-GwtK8z1zbLyyPSkN43d6StDItzu9hrU ";
 	private static final String API_KEY = "AIzaSyD2MvqQVbfXo3M0mMu4JPGXbaN3y5z9SIg";
 	//private static final String API_KEY = "AIzaSyDOQ0NoT9r3RI0zYoO3q-p0h14Z4pggpQ0";
 	private static long[][] matrix;
+
+	
+	//private static final String API_KEY = "AIzaSyD2MvqQVbfXo3M0mMu4JPGXbaN3y5z9SIg";
+	//private static final String API_KEY = "AIzaSyDOQ0NoT9r3RI0zYoO3q-p0h14Z4pggpQ0";
+//>>>>>>> branch 'master' of https://github.com/Celethor/CS360proj1.git
 
 	// Lookups up and returns the address of an establishment given its name and possible some location attributes
 	public static String lookupAddr(String establishment) throws ApiException, InterruptedException, IOException {
@@ -125,6 +155,8 @@ public class EarthSearch {
 		return distApart;
 	}
 	
+	
+	// Why was this added??
 	public static void distanceMatrix(String[] origins, String[] destinations) throws ApiException, InterruptedException, IOException{
 		GeoApiContext context = new GeoApiContext.Builder()
 			    .apiKey(API_KEY)
@@ -133,7 +165,6 @@ public class EarthSearch {
 			DistanceMatrixApiRequest req=DistanceMatrixApi.newRequest(context);
 			DistanceMatrix t=req.origins(origins).destinations(destinations).mode(TravelMode.DRIVING).await();
 			//long[][] array=new long[origins.length][destinations.length];
-			matrix=new long[origins.length][destinations.length];
 			File file=new File("Matrix.txt");
 			FileOutputStream out=new FileOutputStream(file);
 			DataOutputStream outFile=new DataOutputStream(out);
@@ -143,5 +174,6 @@ public class EarthSearch {
 					outFile.writeLong(t.rows[i].elements[j].distance.inMeters);
 				}
 			}
+			outFile.close();
 	}
 }

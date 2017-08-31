@@ -60,6 +60,8 @@ public class School {
 			semiNo++;
 	}
 	
+	
+	//SETTERS AND GETTERS
 	public String getName() {
 		return name;
 	}
@@ -123,6 +125,10 @@ public class School {
 	public static void setSectNo(int sectNo) {
 		sectNo = sectNo;
 	}
+	//END SETTERS AND GETTERS
+	
+	//
+	//SHOUDL PROBABLY BE MOVED TO AN INDEPENEDENT CLASS??
 	//
 	private char classify(int enrollment){
 		char classification;
