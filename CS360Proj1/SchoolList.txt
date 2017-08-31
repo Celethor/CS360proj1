@@ -1,0 +1,392 @@
+Calumet High School*664*T*T*F*F*F
+East Chicago Central High School*1236*T*T*F*F*F
+Gary West Side High School*1046*T*T*F*F*F
+Griffith High School*800*T*T*F*F*F
+Hammond Academy of Science & Technology High School*287*T*T*F*F*F
+Hammond Bishop Noll High School*528*T*T*F*F*F
+Hammond High School*810*T*T*F*F*F
+Hammond Clark High School*760*T*T*F*F*F
+Hammond Gavit High School*904*T*T*T*F*F
+Hammond Morton High School*1348*T*T*F*F*F
+Highland High School*1117*T*T*F*F*F
+Lake Central High School*3219*T*T*F*F*F
+Munster High School*1510*T*T*F*F*F
+Whiting High School*434*T*T*F*F*F
+21st Century Charter -Gary High School*266*T*T*F*F*F
+Andrean High School*492*T*T*F*F*F
+Crown Point High School*2763*T*T*T*T*F
+Lighthouse CPA High School*560*T*T*F*F*F
+Gary Roosevelt High School*458*T*T*F*F*F
+Hanover Central High School*680*T*T*F*F*F
+Hebron High School*370*T*T*F*F*F
+Hobart High School*1265*T*T*F*F*F
+Lowell High School*1197*T*T*F*F*F
+Merrillville High School*2214*T*T*F*F*F
+River Forest High School*439*T*T*F*F*F
+Chesterton High School*2076*T*T*T*F*F
+Boone Grove High School*499*T*T*F*F*F
+Lake Station Edison High School*381*T*T*F*F*F
+LaPorte High School High School*1946*T*T*F*F*F
+Marquette Catholic High School*273*T*T*F*F*F
+Michigan City High School*1753*T*T*F*F*F
+New Prairie High School*993*T*T*F*T*T
+Portage High School*2520*T*T*F*F*F
+South Central (Union Mills) High School*303*T*T*F*F*F
+Valparaiso High School*2082*T*T*F*F*F
+Washington Township High School*266*T*T*F*F*F
+Westville High School*303*T*T*F*F*F
+Wheeler High School*553*T*T*F*F*F
+Kankakee Valley High School*1083*T*T*F*F*F
+Knox High School*584*T*T*F*F*F
+Kouts High School*275*T*T*F*F*F
+LaCrosse High School*118*T*T*F*F*F
+Morgan Township High School*244*T*T*F*F*F
+North Judson-San Pierre High School*368*T*T*F*F*F
+North Newton High School*440*T*T*F*F*F
+Oregon-Davis High School*182*T*T*F*F*F
+Rensselaer Central High School*531*T*T*T*F*F
+South Newton High School*220*T*T*F*F*F
+West Central High School*280*T*T*F*F*F
+Attica High School*223*T*T*F*F*F
+Benton Central High School*585*T*T*T*F*F
+Covington High School*309*T*T*F*F*F
+Crawfordsville High School*702*T*T*F*F*F
+Fountain Central High School*350*T*T*F*F*F
+Frontier High School*202*T*T*F*F*F
+North Montgomery High School*620*T*T*F*F*F
+North Vermillion High School*245*T*T*F*F*F
+North White High School*265*T*T*F*F*F
+Seeger High School*375*T*T*F*F*F
+Southmont High School*550*T*T*F*F*F
+Tri-County High School*234*T*T*F*F*F
+Twin Lakes High School*773*T*T*F*F*F
+Clinton Central High School*274*T*T*F*F*F
+Clinton Prairie High School*330*T*T*F*F*F
+Delphi Community High School*430*T*T*F*F*F
+Faith Christian High School*203*T*T*F*F*F
+Frankfort High School*861*T*T*F*F*F
+Harrison (West Lafayette) High School*1905*T*T*T*T*F
+Lafayette Central Catholic High School*291*T*T*F*F*F
+Lafayette Jefferson High School*2031*T*T*F*F*F
+McCutcheon High School*1769*T*T*F*F*F
+Rossville High School*313*T*T*F*F*F
+West Lafayette High School*734*T*T*F*F*F
+Western Boone High School*529*T*T*F*F*F
+Argos High School*198*T*T*F*F*F
+Caston High School*228*T*T*F*F*F
+Culver Academies High School*812*T*T*T*T*F
+Culver Community High School*249*T*T*F*F*F
+Manchester High School*511*T*T*F*F*F
+North Miami High School*320*T*T*F*F*F
+Plymouth High School*1147*T*T*F*F*F
+Rochester Community High School*524*T*T*F*F*F
+Tippecanoe Valley High School*595*T*T*F*F*F
+Triton High School*468*T*T*F*F*F
+Warsaw Community High School*2176*T*T*F*F*F
+Carroll (Flora) High School*353*T*T*F*F*F
+Cass High School*466*T*T*F*F*F
+Eastern (Greentown) High School*491*T*T*F*F*F
+Kokomo High School*1769*T*T*F*F*F
+Logansport High School*1235*T*T*T*F*F
+Maconaquah High School*666*T*T*F*F*F
+Northwestern High School*562*T*T*F*F*F
+Peru High School*659*T*T*F*F*F
+Pioneer High School*275*T*T*F*F*F
+Taylor High School*413*T*T*F*F*F
+Western High School*855*T*T*F*F*F
+Winamac Community High School*377*T*T*F*F*F
+Bremen Senior High School*497*T*T*F*F*F
+Bethany Christian School*148*T*T*F*F*F
+Angola High School*876*T*T*F*F*F
+Carroll (F.W.) High School*497*T*T*F*F*F
+Glenn High School*580*T*T*F*F*F
+Concord  Community High School*1716*T*T*F*F*F
+Central Noble High School*393*T*T*F*F*F
+Columbia City High School*1056*T*T*F*F*F
+LaVille Jr-Sr High School*363*T*T*F*F*F
+Elkhart Central High School*1673*T*T*T*T*F
+Churubusco Jr-Sr High School*367*T*T*F*F*F
+F.W. Blackhawk Christian Jr-Sr High School*241*T*T*F*F*F
+Mishawaka High School*1470*T*T*F*F*F
+Elkhart Central High School*1673*T*T*F*F*F
+Christian Academy of Indiana*241*T*T*F*F*F
+DeKalb High School*1170*T*T*F*F*F
+F.W. Concordia Lutheran High School*781*T*T*F*F*F
+Mishawaka Marian High School*688*T*T*F*F*F
+Elkhart Memorial High School*1648*T*T*F*F*F
+East Noble High School*1262*T*T*F*F*F
+F.W. Bishop Dwenger High School*1075*T*T*F*F*F
+Penn High School*3345*T*T*F*F*F
+Fairfield Jr-Sr High School*565*T*T*F*F*F
+Eastside Junior-Senior High School*372*T*T*F*F*F
+F.W. Northrop High School*2097*T*T*T*F*F
+S.B. Adams High School*1794*T*T*F*F*F
+Goshen High School*1866*T*T*F*F*F
+Fremont High School*303*T*T*F*F*F
+F.W. North Side High School*1672*T*T*F*F*F
+S.B. Career Academy*263*T*T*F*F*F
+Jimtown High School*605*T*T*F*F*F
+Lakeland High School*577*T*T*F*F*F
+F.W. Snider High School*1850*T*T*F*F*F
+S.B. Clay High School*1143*T*T*F*F*F
+Northridge High School*1392*T*T*F*F*F
+Prairie Heights Sr High School*414*T*T*F*F*F
+Garrett High School*590*T*T*F*F*F
+S.B. Riley High School*1249*T*T*T*F*F
+NorthWood High School*883*T*T*F*F*F
+West Noble High School*723*T*T*T*T*F
+Homestead Senior High School*2348*T*T*F*F*F
+S.B. Saint Joseph's High School*896*T*T*F*F*F
+Wawasee High School*945*T*T*F*F*F
+Westview Jr-Sr High School*416*T*T*F*F*F
+Lakewood Park Christian School*186*T*T*F*F*F
+South Bend Washington High School*906*T*T*F*F*F
+Leo Junior/Senior High School*872*T*T*F*F*F
+Whitko High School*486*T*T*F*F*F
+Adams Central High School*375*T*T*F*F*F
+Blackford High School*558*T*T*F*F*F
+Alexandria-Monroe High School*506*T*T*F*F*F
+Cowan High School*238*T*T*F*F*F
+Bellmont Senior High School*691*T*T*T*F*F
+Eastbrook High School*525*T*T*F*F*F
+Anderson High School*1933*T*T*F*F*F
+Delta High School*871*T*T*T*T*F
+Bluffton High School*443*T*T*F*F*F
+Huntington North High School*1575*T*T*F*F*F
+Anderson Preparatory Academy*247*T*T*F*F*F
+Jay County High School*1060*T*T*F*F*F
+F.W. Canterbury*369*T*T*F*F*F
+Madison-Grant High School*401*T*T*F*F*F
+Blue River Valley Jr-Sr High School*186*T*T*F*F*F
+Monroe Central Jr-Sr High School*370*T*T*F*F*F
+F.W. Bishop Luers High School*617*T*T*F*F*F
+Marion High School*1053*T*T*T*T*F
+Daleville Jr/Sr High School*279*T*T*F*F*F
+Muncie Burris Laboratory School*535*T*T*F*F*F
+F.W. South Side High School*1409*T*T*F*F*F
+Mississinewa High School*845*T*T*F*F*F
+Elwood Community High School*447*T*T*F*F*F
+Muncie Central High School*1551*T*T*F*F*F
+F.W. Wayne High School*1340*T*T*F*F*F
+Northfield Jr-Sr High School*304*T*T*F*F*F
+Frankton Jr-Sr High School*480*T*T*F*F*F
+Randolph Southern Jr-Sr High Sch*172*T*T*F*F*F
+Heritage Jr/Sr High School*596*T*T*F*F*F
+Oak Hill High School*511*T*T*F*F*F
+Lapel Sr High School*470*T*T*F*F*F
+Union (Modoc) Junior & High School*107*T*T*F*F*F
+New Haven High School*996*T*T*F*F*T
+Southern Wells Jr-Sr High Sch*266*T*T*F*F*F
+Liberty Christian School*150*T*T*F*F*F
+Union City Community High Sch*280*T*T*F*F*F
+Norwell High School*769*T*T*F*F*F
+Southwood Jr-Sr High School*295*T*T*F*F*F
+Mt. Vernon (Fortville) High School*1227*T*T*F*F*F
+Wapahani High School*396*T*T*F*F*F
+Smith Academy for Excellence*33*T*T*F*F*F
+Wabash High School*427*T*T*F*F*F
+Pendleton Heights High School*1421*T*T*T*F*F
+Wes-Del Middle/Senior High School*275*T*T*F*F*F
+South Adams High School*369*T*T*F*F*F
+Shenandoah High School*442*T*T*F*F*F
+Winchester Community High School*446*T*T*F*F*F
+Woodlan Jr/Sr High School*534*T*T*F*F*F
+Yorktown High School*801*T*T*F*F*F
+Avon highschool*2891*T*T*F*F*F
+Bethesda Christian highschool*106*T*T*F*F*F
+Brownsburg highschool*2629*T*T*F*F*F
+Cascade highschool*457*T*T*F*F*F
+Cloverdale highschool*382*T*T*F*F*F
+Danville Community highschool*791*T*T*F*F*F
+Greencastle highschool*556*T*T*F*F*F
+North Putnam highschool*456*T*T*F*F*F
+Plainfield highschool*1636*T*T*F*F*F
+South Putnam highschool*363*T*T*T*F*F
+Tri-West Hendricks highschool*624*T*T*F*F*F
+Ben Davis highschool*4362*T*T*T*T*F
+Covenant Christian (Indpls) highschool*334*T*T*F*F*F
+Decatur Central highschool*1767*T*T*F*F*F
+Herron highschool*827*T*T*F*F*F
+Indiana Math & Science Academy highschool*185*T*T*F*F*F
+Indianapolis Crispus Attucks highschool*745*T*T*F*F*F
+Indianapolis Northwest highschool*696*T*T*F*F*F
+Indianapolis Shortridge highschool*361*T*T*F*F*F
+Indianapolis George Washington highschool*457*T*T*F*F*F
+International School of Indiana highschool*165*T*T*F*F*F
+Pike highschool*3306*T*T*F*F*F
+Providence Cristo Rey highschool*255*T*T*F*F*F
+Speedway highschool*523*T*T*F*F*F
+Zionsville highschool*1928*T*T*F*F*F
+Carmel highschool*5000*T*T*F*F*F
+Fishers highschool*3250*T*T*F*F*F
+Guerin Catholic highschool*758*T*T*F*F*F
+Hamilton Heights highschool*728*T*T*F*F*F
+Hamilton Southeastern highschool*3118*T*T*F*F*F
+Lebanon highschool*976*T*T*F*F*F
+Noblesville highschool*2882*T*T*T*T*F
+Sheridan highschool*329*T*T*F*F*F
+Tindley highschool*273*T*T*F*F*F
+Tipton highschool*524*T*T*F*F*F
+University highschool*289*T*T*F*F*F
+Westfield highschool*2146*T*T*F*F*F
+Brebeuf Jesuit Preparatory highschool*794*T*T*T*F*F
+Heritage Christian highschool*407*T*T*F*F*F
+Indiana School for the Deaf highschool*115*T*T*F*F*F
+Indianapolis Arlington highschool*371*T*T*F*F*F
+Indianapolis Arsenal Technical highschool*1940*T*T*F*F*F
+Indianapolis Bishop Chatard highschool*700*T*T*F*F*F
+Indianapolis Broad Ripple highschool*635*T*T*F*F*F
+Indianapolis Cardinal Ritter highschool*563*T*T*F*F*F
+Indianapolis Cathedral highschool*1184*T*T*F*F*F
+Lawrence Central highschool*2340*T*T*F*F*F
+Lawrence North highschool*2469*T*T*F*F*F
+North Central (Indpls.) highschool*3772*T*T*F*F*F
+Park Tudor highschool*403*T*T*F*F*F
+Beech Grove highschool*949*T*T*F*F*F
+Eastern Hancock highschool*425*T*T*F*F*F
+Franklin Central highschool*2659*T*T*F*F*F
+Greenfield-Central highschool*1510*T*T*F*F*F
+Indianapolis Emmerich Manual highschool*696*T*T*F*F*F
+Indianapolis Lutheran highschool*251*T*T*F*F*F
+Indianapolis Scecina Memorial highschool*449*T*T*F*F*F
+Indianapolis Lighthouse Charter School*277*T*T*F*F*F
+Morristown highschool*194*T*T*F*F*F
+New Palestine highschool*1119*T*T*T*F*F
+Roncalli highschool*1184*T*T*F*F*F
+Triton Central highschool*468*T*T*F*F*F
+Warren Central highschool*3736*T*T*F*F*F
+Cambridge City highschool*331*T*T*F*F*F
+Centerville highschool*463*T*T*F*F*F
+Connersville highschool*1111*T*T*T*F*F
+Franklin County highschool*836*T*T*F*F*F
+Hagerstown highschool*341*T*T*F*F*F
+Knightstown highschool*381*T*T*F*F*F
+New Castle highschool*1023*T*T*F*F*F
+Northeastern highschool*419*T*T*F*F*F
+Richmond highschool*1331*T*T*F*F*F
+Rushville Consolidated highschool*742*T*T*F*T*F
+Seton Catholic highschool*92*T*T*F*F*F
+Tri Junior Senior High School*285*F*F*F*F
+Union County highschool*444*T*T*F*F*F
+Batesville highschool*733*T*T*F*F*F
+East Central highschool*1302*T*T*F*F*F
+Greensburg highschool*750*T*T*F*F*F
+Jac-Cen-Del highschool*263*T*T*F*F*F
+Milan highschool*411*T*T*F*F*F
+North Decatur highschool*329*T*T*F*F*F
+Oldenburg Academy highschool*210*T*T*F*F*F
+Rising Sun highschool*233*T*T*F*F*F
+South Dearborn highschool*868*T*T*T*F*F
+South Decatur highschool*313*T*T*F*F*F
+South Ripley highschool*354*T*T*F*F*F
+Center Grove highschool*2500*T*T*F*F*F
+Christel House Academy highschool*232*T*T*F*F*F
+Eminence highschool*116*T*T*F*F*F
+Franklin Community highschool*1533*T*T*T*F*F
+Greenwood Community highschool*1200*T*T*F*F*F
+Greenwood Christian Academy highschool*180*T*T*F*F*F
+Monrovia highschool*527*T*T*F*F*F
+Mooresville highschool*1402*T*T*F*F*F
+Perry Meridian highschool*2351*T*T*F*F*F
+Shelbyville highschool*1156*T*T*F*T*F
+Southport highschool*2185*T*T*F*F*F
+Waldron highschool*163*T*T*F*F*F
+Whiteland Community highschool*1845*T*T*F*F*F
+Brown County High School*657*t*t*t*t*t
+Brownstown Central High School*577*t*t*f*f*f
+Columbus East High School*1534*t*t*f*f*f
+Columbus North High School*2017*t*t*f*f*f
+Crothersville High School*120*t*t*f*f*f
+Edinburgh Community High School*269*t*t*f*f*f
+Hauser High School*268*t*t*f*f*f
+Indian Creek High School*631*t*t*f*f*f
+Martinsville High School*1509*t*t*f*f*f
+Seymour High School*1498*t*t*f*f*f
+Southwestern (Shelbyville) High School*227*t*t*f*f*f
+Trinity Lutheran High School*142*t*t*f*f*f
+White River Valley High School*268*t*t*f*f*f
+Clay City High School*249*t*t*f*f*f
+Linton-Stockton High School*366*t*t*f*f*f
+North Central (Farmerburg) High School*283*t*t*f*f*f
+Northview High School*1024*t*t*f*f*f
+Owen Valley High School*813*t*t*f*f*f
+Riverton Parke High School*304*t*t*f*f*f
+Rockville High School*224*t*t*f*f*f
+Shakamak High School*240*t*t*f*f*f
+South Vermillion High School*546*t*t*f*f*f
+Sullivan High School*591*t*t*f*f*f
+Terre Haute North High School*1854*t*t*t*f*f
+Terre Haute South High School*1778*t*t*t*f*f
+West Vigo High School*577*t*t*f*f*f
+Bedford-North Lawrence High School*1542*t*t*t*t*f
+Bloomfield High School*228*t*t*f*f*f
+Bloomington North High School*1709*t*t*f*f*f
+Bloomington South High School*1742*t*t*f*f*f
+Eastern Greene High School*377*t*t*f*f*f
+Eastern (Pekin) High School*476*t*t*f*f*f
+Edgewood High School*811*t*t*f*f*f
+Medora High School*73*t*t*f*f*f
+Mitchell High School*491*t*t*f*f*f
+Orleans High School*226*t*t*f*f*f
+Paoli High School*468*t*t*f*f*f
+Salem High School*573*t*t*f*f*f
+West Washington High School*257*t*t*f*f*f
+Austin High School*394*t*t*f*f*f
+Charlestown High School*707*t*t*f*f*f
+Henryville High School*349*t*t*f*f*f
+Jennings County High School*1332*t*t*f*f*f
+Madison Consolidated High School*966*t*t*f*f*f
+New Washington High School*225*t*t*f*f*f
+Rock Creek Academy High School*137*t*t*f*f*f
+Scottsburg High School*794*t*t*f*f*f
+Shawe Memorial High School*109*t*t*f*f*f
+Silver Creek High School*909*t*t*f*f*f
+Southwestern (Hanover)*359*t*t*t*f*f
+Switzerland County High School*404*t*t*f*f*f
+Borden High School*230*t*t*f*f*f
+Christian Academy of Indiana High School*240*t*t*f*f*f
+Clarksville High School*464*t*t*f*f*f
+Corydon Central High School*716*t*t*f*f*f
+Crawford County High School*457*t*t*t*t*f
+Floyd Central High School*1746*t*t*f*f*f
+Jeffersonville High School*2066*t*t*f*f*f
+Lanesville High School*253*t*t*f*f*f
+New Albany High School*1843*t*t*f*f*f
+North Harrison High School*689*t*t*f*f*f
+Providence High School*437*t*t*f*f*f
+South Central (Elizabeth) High School*212*t*t*f*f*f
+Cannelton High School*73*t*t*f*f*f
+Forest Park High School*397*t*t*f*f*f
+Heritage Hills High School*619*t*t*f*f*f
+Jasper High School*1093*t*t*t*f*f
+Loogootee High School*278*t*t*f*f*f
+Northeast Dubois High School*268*t*t*f*f*f
+Perry Central High School*379*t*t*f*f*f
+Shoals High School*177*t*t*f*f*f
+South Spencer High School*407*t*t*f*f*f
+Southridge High School*531*t*t*f*f*f
+Springs Valley High School*266*t*t*f*f*f
+Tell City High School*421*t*t*f*f*f
+Barr-Reeve High School*203*t*t*f*f*f
+Gibson Southern High School*654*t*t*f*f*f
+North Daviess High School*306*t*t*f*f*f
+North Knox High School*398*t*t*f*f*f
+Pike Central High School*588*t*t*f*t*f
+Princeton Community High School*618*t*t*f*f*f
+South Knox High School*366*t*t*t*f*f
+Tecumseh High School*309*t*t*f*f*f
+Vincennes Lincoln High School*716*t*t*f*f*f
+Vincennes Rivet High School*98*t*t*f*f*f
+Washington High School*742*t*t*f*f*f
+Washington Catholic High School*71*t*t*f*f*f
+Boonville High School*903*t*t*f*f*f
+Castle High School*1934*t*t*f*f*f
+Evansville Bosse High School*802*t*t*f*f*f
+Evansville Central High School*1185*t*t*f*f*f
+Evansville Harrison High School*1243*t*t*f*f*f
+Evansville Reitz Memorial High School*690*t*t*f*f*f
+Evansville North High School*1614*t*t*t*f*f
+Evansville F. J. Reitz High School*1355*t*t*f*f*f
+Mt. Vernon High School*658*t*t*f*f*f
+North Posey High School*498*t*t*f*f*f
+Signature High School*361*t*t*f*f*f
