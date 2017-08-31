@@ -28,9 +28,9 @@ public class School {
 	private boolean HostReg;
 	private boolean HostSemi;
 	private char classification;
-	private static int sectNo=0;
-	private int regNo=0;
-	private int semiNo=0;
+	 static int sectNo=0;
+	 static int regNo=0;
+	 static int semiNo=0;
 	private LatLng coords;
 	public School(){
 		name=new String("");
@@ -41,10 +41,10 @@ public class School {
 		HostSemi=false;
 		classification='N';
 	}
-	public School(String name, int enrollment, boolean boys,boolean girls,boolean HostSect,boolean HostReg,boolean HostSemi) throws ApiException, InterruptedException, IOException{
+	public School(String name, int enrollment, boolean boys,boolean girls,boolean HostSect,boolean HostReg,boolean HostSemi) throws ApiException, InterruptedException, IOException, ClassNotFoundException{
 		this.name=name;
 		//this.location= lookupAddr();	
-		this.coords=EarthSearch.lookupCoord(name);
+		this.coords=EarthSearch.lookupCoordFromFile(name);
 		this.enrollment=enrollment;
 		this.boys=boys;
 		this.girls=girls;
@@ -104,11 +104,24 @@ public class School {
 		return classification;
 	}
 	
+	public static int getRegNo() {
+		return regNo;
+	}
+	public static void setRegNo(int regNo) {
+		regNo = regNo;
+	}
+	public static int getSemiNo() {
+		return semiNo;
+	}
+	public static void setSemiNo(int semiNo) {
+		semiNo = semiNo;
+	}
+	
 	public static int getSectNo() {
 		return sectNo;
 	}
-	public void setSectNo(int sectNo) {
-		this.sectNo = sectNo;
+	public static void setSectNo(int sectNo) {
+		sectNo = sectNo;
 	}
 	//
 	private char classify(int enrollment){

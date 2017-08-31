@@ -7,30 +7,71 @@ public class Regional {
     * TODO: Sort sectionals.
     * Since a sectional contains School objects, something like sectionals.schools
     * School > Sectional (Array of Schools) > Regional (Array of Sectionals, each of which has an array oc Schools)*/
-    private String host;
+    private School host;
     private ArrayList<Sectional> sectionals;
-
-    public Regional(String host, ArrayList<Sectional> sectionals){
-        this.host="";
+    boolean added;
+    private int size;
+    public Regional(School host, ArrayList<Sectional> sectionals,int size){
+        //this.host="";
         this.sectionals = sectionals;
-        
+        this.size=size;
     }// end constructor
+    public Regional(School host,int size){
+    	this.sectionals=new ArrayList<Sectional>();
+    	this.host=host;
+    	this.size=size;
+    	this.added=false;
+    	//this.sectionals.add(sectional);
+    }
+    public int getSize() {
+		return size;
+	}
+    
+	public boolean isAdded() {
+		return added;
+	}
+	public void setAdded(boolean added) {
+		this.added = added;
+	}
+	public void setSize(int size) {
+		this.size = size;
+	}
+	public Sectional getHostSect(){
+		return sectionals.get(0);
+	}
+	public boolean findSchool(School x){
+		//finds if the school is part of the regional by checking each sectional for the school
+		boolean ret=false;
+		for(int i=0;i<sectionals.size();i++){
+			ret=sectionals.get(i).findSchool(x);
+			if(ret==true)
+				break;
+		}
+		return ret;
+	}
 
-    public String toString(){
-        String str = "" + ("Host Name: " + host + "\n");
-        for(int i = 0; i< sectionals.size(); i++)
-            str = str + sectionals.toString() + "\n";
-        return str;
-    }// end toString
-
-    public String getHost() {
-        return host;
-    }// end getHost
-
-    public void setHost(String host) {
-        this.host = host;
-    }// end setHost
-
+   	public String toString(){
+		String ret="";
+		ret+="\nHost Name: "+this.getHost().getName()+"\n";
+		for(int i=0;i<sectionals.size();i++){
+			ret+="\tSectional "+(i+1)+" : "+sectionals.get(i).getHost();
+		}
+		return ret;
+	}
+    public void addSectional(Sectional x){
+    	this.sectionals.add(x);
+    }
+    public School getHost() {
+		return host;
+	}
+	public void setHost(School host) {
+		this.host = host;
+	}
+	public void addArraySectionals(Sectional[] toAdd){
+    	for(int i=0;i<toAdd.length;i++){
+    		this.sectionals.add(toAdd[i]);
+    	}
+    }
    /*
     public boolean addSectional(Sectional toBeAdded){
         Sectional []temp = new Sectional[this.sectionals.length];

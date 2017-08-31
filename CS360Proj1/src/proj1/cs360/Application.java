@@ -15,8 +15,8 @@ import java.util.Scanner;
 import com.google.maps.errors.ApiException;
 
 public class Application {
-	public static void main(String[]args) throws ParseException, ApiException, InterruptedException, IOException{
-				File file=new File("Schools.txt");
+	public static void main(String[]args) throws ParseException, ApiException, InterruptedException, IOException, ClassNotFoundException{
+				File file=new File("All Schools Lists.txt");
 				ArrayList<School>schools=new ArrayList<School>();
 				School x=new School();
 				String name;
@@ -29,42 +29,50 @@ public class Application {
 				boolean HostSemi;
 				Scanner scan =new Scanner(file).useDelimiter("\\*|\\n");
 				int c=0;
+				int hR=0;
+				int hS=0;
+				int hSec=0;
 				while(scan.hasNext()){
 					name=scan.next();
-					//location=scan.next();
 					enrollment=scan.nextInt();
-					//System.out.println(scan.next());
 					boys=assignBoolean(scan.next());
 					girls=assignBoolean(scan.next());
 					HostSect=assignBoolean(scan.next());
+					if(HostSect==true)
+						hSec++;
 					HostReg=assignBoolean(scan.next());
-					HostSemi=assignBoolean(scan.next());
+					if(HostReg==true)
+						hR++;
+					//do this for semi hosts since scan.next() also reads 
+					//end of line character
+					char q=scan.next().charAt(0);
+					
+					if(q=='T'||q=='t'){
+						hS++;
+						HostSemi=true;
+					}
+					else
+						HostSemi=false;
 					c++;
 					x=new School(name+",IN",enrollment,boys,girls,HostSect,HostReg,HostSemi);
-					//System.out.println(x.getName()+"\t"+x.getLocation());
 					schools.add(x);
-					//scan.nextLine();
-					
 				}
 				int noOfSectionals=School.getSectNo();
-				System.out.println(c);
-				Tournament tourney=new Tournament(schools,noOfSectionals);
-				System.out.println("Now back in main");
-				
+				int noOfRegionals=School.getRegNo();
+				int noOfSemi=School.getSemiNo();
+				int userSect;
+				int userReg;
+				System.out.println(hS);
+				Scanner inputScan=new Scanner(System.in);
+				System.out.print("Enter the no. of Sectionals in the Tournament: ");
+				userSect=inputScan.nextInt();
+				System.out.println("Enter the no. of Regionals in the Tournament: ");
+				userReg=inputScan.nextInt();
+				Tournament tourney=new Tournament(schools,userSect,userReg);
 				System.out.println(tourney.toString());
-			
-				
-				//System.out.println("School 1:  "+schools.get(0)+"\tSchool 2: "+schools.get(1));
-				
-				//System.out.println(School.travelDist(schools.get(0),schools.get(1)));
-				/*String []names=new String[schools.size()];
-				for(int i=0;i<schools.size();i++){
-					names[i]=schools.get(i).getName();
-				}*/
-				
 			}
 			public static boolean assignBoolean(String x){
-				if(x.equals("T"))
+				if(x.equals("T")||x.equals("t"))
 				return true;
 				else 
 					return false;

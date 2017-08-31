@@ -5,9 +5,13 @@ package proj1.cs360;
 
 
 import java.io.DataOutputStream;
+import java.io.EOFException;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.io.ObjectInputStream;
+
 import com.google.maps.DirectionsApi.RouteRestriction;
 import com.google.maps.DistanceMatrixApi;
 import com.google.maps.DistanceMatrixApiRequest;
@@ -35,9 +39,9 @@ import com.google.maps.model.TravelMode;
 
 
 public class EarthSearch {
-	
-	//private static final String API_KEY = "AIzaSyD2MvqQVbfXo3M0mMu4JPGXbaN3y5z9SIg";
-	private static final String API_KEY = "AIzaSyDOQ0NoT9r3RI0zYoO3q-p0h14Z4pggpQ0";
+	//private static final String API_KEY="AIzaSyC-GwtK8z1zbLyyPSkN43d6StDItzu9hrU ";
+	private static final String API_KEY = "AIzaSyD2MvqQVbfXo3M0mMu4JPGXbaN3y5z9SIg";
+	//private static final String API_KEY = "AIzaSyDOQ0NoT9r3RI0zYoO3q-p0h14Z4pggpQ0";
 	private static long[][] matrix;
 
 	// Lookups up and returns the address of an establishment given its name and possible some location attributes
@@ -70,10 +74,35 @@ public class EarthSearch {
 			//converts results into usable Coordinates
 		
 			LatLng coords = (results[0].geometry.location);
-				
+				//System.out.println(results[0].geometry.location);
 		return coords;
 	}
+	public static LatLng lookupCoordFromFile(String name) throws ClassNotFoundException, IOException{
+		ObjectInputStream objIn=new ObjectInputStream(new FileInputStream("Coords.dat"));
+		Coord obj;
+		LatLng xIn=null;
+		int flag=1;
 		
+		try{
+			while(flag==1){
+				Coord tempO=(Coord)objIn.readObject();
+				String s=tempO.nameSchool;
+				if(name.equals(tempO.nameSchool+",IN")){
+					xIn=new LatLng();
+					xIn.lat=tempO.lat;
+					xIn.lng=tempO.lng;
+					break;
+				}
+				
+			}
+		}
+		catch(EOFException e){
+			//System.out.println("Reached EOF. School Coords not found");
+			flag=0;
+		}
+		
+		return xIn;
+	}
 	
 	//given two addresses, calculates the driving distance
 	public static long getDriveDist(String addrOne, String addrTwo) throws ApiException, InterruptedException, IOException{
