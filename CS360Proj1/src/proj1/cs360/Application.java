@@ -62,7 +62,7 @@ public class Application {
 				int noOfSemi=School.getSemiNo();
 				int userSect;
 				int userReg;
-				System.out.println(hS);
+				//System.out.println(hS);
 				Scanner inputScan=new Scanner(System.in);
 				System.out.print("Enter the no. of Sectionals in the Tournament: ");
 				userSect=inputScan.nextInt();
