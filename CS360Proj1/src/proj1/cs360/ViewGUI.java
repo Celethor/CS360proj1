@@ -6,7 +6,12 @@ import javax.swing.*;
  * Created by JFormDesigner on Sat Sep 02 02:34:57 EDT 2017
  */
 
-
+/*
+ * 
+ * MAYBE MAKE THIS BE PASSED A TOURNAMENT CLASS AT INITIALIZATION
+ * 
+ * @ANEESH
+ */
 
 /**
  * @author Benjamin Treesh
