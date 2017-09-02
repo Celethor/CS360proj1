@@ -3,6 +3,10 @@ package proj1.cs360;
 /* This class is responsible for creating the URL that is deployed
  * to the Google Static Map API via HTTPS. */
 
+/*https://maps.googleapis.com/maps/api/staticmap?center={insert address}&zoom=6&size=400x400
+        &markers=color:blue%7Clabel:S%7C{insert address}&markers=size:tiny%7Ccolor:green%7C{insert address}
+        &markers=size:mid%7Ccolor:0xFFFF00%7Clabel:C%7C{insert address}"&key=*/
+
 public class MapBuilder {
 
     public String url = ""; // 8192 character limit
@@ -35,6 +39,14 @@ public class MapBuilder {
         // Get school names, store in array for URL building.
         for(int i = 0; i < schools.length; i++){
             schoolNames[i] = schools[i].getName();
+        }
+    }
+
+    public void ReplaceSpaces(){
+        // Web addresses cannot have spaces. Replace with "+" to keep school names compliant.
+        // Huntington North High School => Huntington+North+High+School
+        for (int index =0; index < schoolNames.length; index++){
+            schoolNames[index] = schoolNames[index].replace(" ", "+");
         }
     }
 
