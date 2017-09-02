@@ -26,25 +26,27 @@ public class BensTestingClass {
 ///////		
 		//CREATES GUI!! I did it!
 
-		Display display = new Display();
+//		Display display = new Display();
 		
-        Shell shell = new Shell(display);
+ //       Shell shell = new Shell(display);
         
-        new GUITest(shell, SWT.NONE);
+ //       new GUITest(shell, SWT.NONE);
 
         // the layout manager handle the layout
         // of the widgets in the container
-        shell.setLayout(new FillLayout());
+//        shell.setLayout(new FillLayout());
 
         //add some widgets to the Shell
-        shell.open();
-        while (!shell.isDisposed()) {
-            if (!display.readAndDispatch()) {
-                display.sleep();
-            }
-        }
-        display.dispose();
+//        shell.open();
+//        while (!shell.isDisposed()) {
+//            if (!display.readAndDispatch()) {
+//                display.sleep();
+ //           }
+//        }
+//        display.dispose();
 ///////        
+		
+		new SetupGUI();
 	}
 
 }
