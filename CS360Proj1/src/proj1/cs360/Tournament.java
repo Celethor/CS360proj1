@@ -347,7 +347,6 @@ public class Tournament {
 				break;
 			if(otherSchools.get(i).isHostReg()==true){
 				School temp=otherSchools.get(i);
-				
 				regionals[regionNumber]=new Regional(temp,regDivisor);
 				regionNumber++;
 			}

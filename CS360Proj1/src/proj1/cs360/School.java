@@ -28,6 +28,7 @@ public class School {
 	private boolean HostReg;
 	private boolean HostSemi;
 	private char classification;
+	 boolean classified=false;//lets system know if already classified
 	 static int sectNo=0;
 	 static int regNo=0;
 	 static int semiNo=0;
