@@ -20,6 +20,68 @@ public class ViewGUI extends JFrame {
 	public ViewGUI() {
 		initComponents();
 	}
+	
+	
+
+	public JLabel getLabel1() {
+		return label1;
+	}
+
+
+
+	public JComboBox getComboBox1() {
+		return comboBox1;
+	}
+
+
+
+	public JScrollPane getScrollPane1() {
+		return scrollPane1;
+	}
+
+
+
+	public JTextArea getTextArea4() {
+		return textArea4;
+	}
+
+
+
+	public JPanel getPanel1() {
+		return panel1;
+	}
+
+
+
+	public JTextArea getTextArea3() {
+		return textArea3;
+	}
+
+
+
+	public JTextArea getTextArea1() {
+		return textArea1;
+	}
+
+
+
+	public JTextArea getTextArea2() {
+		return textArea2;
+	}
+
+
+
+	public JButton getButton1() {
+		return button1;
+	}
+
+
+
+	public JButton getButton2() {
+		return button2;
+	}
+
+
 
 	private void initComponents() {
 		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
