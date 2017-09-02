@@ -27,6 +27,7 @@ public class SetupGUI extends JFrame {
 	private JPanel tilePane, optPane;
 	private JButton[] optBtns = new JButton[3];
 	private JTextField[] numMeets = new JTextField[3];
+	private ViewGUI view;
 
 	public SetupGUI() {
 		setTitle("Tournament Parameters");
@@ -63,7 +64,7 @@ public class SetupGUI extends JFrame {
 
 		// add listeners to buttons
 		optBtns[0].addActionListener(new AcceptButtonListener());
-		// btn[1]
+		optBtns[1].addActionListener(new LoadButtonListener());
 		optBtns[2].addActionListener(new ExitButtonListener());
 
 		for (int i = 0; i < 3; i++) {
@@ -85,6 +86,50 @@ public class SetupGUI extends JFrame {
 		}
 
 	}
+	
+	// Loads binary file containing a previous sessions settings, etc.
+	private class LoadButtonListener implements ActionListener {
+
+		public void actionPerformed(ActionEvent e) {
+			
+			
+			
+			
+			//SAMPLE CODE TO GET US GOING ON THIS PART FROM MY PROJ# of CS161 @Benjamin Treesh
+/*			setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
+			
+			FileNameExtensionFilter ff = new FileNameExtensionFilter("Tile file", "til");
+			chooser.addChoosableFileFilter((javax.swing.filechooser.FileFilter) ff);
+			int retrieval = chooser.showOpenDialog(null);
+			if (retrieval == JFileChooser.APPROVE_OPTION) {
+				try 
+				{
+					FileInputStream fileIn = new FileInputStream(chooser.getSelectedFile());
+					ObjectInputStream in = new ObjectInputStream(fileIn);
+					remove(tilePane);
+					TilePanel tilePaneLoad = (TilePanel) in.readObject();
+					tilePane = new TilePanel((EastGUI) ePanel, tilePaneLoad.getTileArray());
+					add(tilePane, BorderLayout.CENTER);
+					repaint();
+					setSize(WINDOW_WIDTH + 1, WINDOW_HEIGHT + 1);
+					setSize(WINDOW_WIDTH, WINDOW_HEIGHT);					
+					in.close();
+					repaint();
+				}catch(IOException l)
+				{
+					setTitle("Pattern did not load correctly.");
+					return;
+				}catch(ClassNotFoundException l)
+				{
+					setTitle("Incorrect file type.");
+					return;
+				}finally{
+					repaint();
+				}*/
+			}
+		}
+		
+	
 
 	// Opens main program when accept is hit with proper parameters
 	private class AcceptButtonListener implements ActionListener {
@@ -95,29 +140,12 @@ public class SetupGUI extends JFrame {
 			 * 
 			 * PULL INFO From TEXTFIELDS INTO TOURNAMENT CLASS
 			 * 
-			 * THEN HAVE MAIN GUI PULLING ITS INFO FROM TOURNAMENT INSTANCE
+			 * THEN HAVE ViewGUI PULLING ITS INFO FROM TOURNAMENT INSTANCE
 			 * 
 			 */
 			
 			//Creates Main GUI
-			Display display = new Display();
-
-			Shell shell = new Shell(display);
-
-			new GUITest(shell, SWT.NONE);
-
-			// the layout manager handle the layout
-			// of the widgets in the container
-			shell.setLayout(new FillLayout());
-
-			// add some widgets to the Shell
-			shell.open();
-			while (!shell.isDisposed()) {
-				if (!display.readAndDispatch()) {
-					display.sleep();
-				}
-			}
-			display.dispose();
+			view = new ViewGUI();
 
 		}
 	}
