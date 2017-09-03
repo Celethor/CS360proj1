@@ -12,22 +12,19 @@ import org.eclipse.swt.custom.ScrolledComposite;
 import org.eclipse.swt.widgets.List;
 import org.eclipse.swt.browser.Browser;
 
-public class GUITest extends Composite {
-
+public class MapGUI extends Composite {
+	
 	/**
 	 * Create the composite.
 	 * @param parent
 	 * @param style
 	 */
-	public GUITest(Composite parent, int style) {
+	public MapGUI(Composite parent, int style, String url) {
 		super(parent, style);
 		
-		List list = new List(this, SWT.BORDER);
-		list.setBounds(676, 99, 158, 700);
-		
 		Browser browser = new Browser(this, SWT.NONE);
-		browser.setUrl("maps.google.com");
-		browser.setBounds(840, 10, 430, 700);
+		browser.setUrl(url);
+		browser.setBounds(10, 10, 518, 518);
 
 	}
 
