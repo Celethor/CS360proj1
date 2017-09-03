@@ -10,9 +10,11 @@ public class Sectional {
 	private int count=0;
 	private String type;
 	private boolean full;
+	private int actualSize;//returns size of schools arraylist
 	public Sectional(String host, ArrayList<School>schools,int size){
 		this.host="";
 		this.schools=schools;
+		this.actualSize=this.schools.size();
 		this.size=size;
 		this.added=false;
 		this.full=false;
@@ -33,11 +35,20 @@ public class Sectional {
 	public void setSize(int size) {
 		this.size = size;
 	}
+	
+	public int getActualSize() {
+		return this.schools.size();
+	}
+
+	public void setActualSize(int actualSize) {
+		this.actualSize = actualSize;
+	}
 
 	public Sectional(String host,School x, int size){
 		this.schools=new ArrayList<School>();
 		this.host=host;
 		this.schools.add(x);
+		this.actualSize=this.schools.size();
 		this.size=size;
 		this.added=false;
 		this.full=false;
@@ -61,8 +72,16 @@ public class Sectional {
 	}
 	public boolean findSchool(School x){
 		ArrayList<School> temp=this.getSchools();
+		int num=temp.size();
+				
 		for(int i=0;i<temp.size();i++){
-			if(x.getName().equals(temp.get(i).getName()))
+			if(temp.get(i).getName()==null){
+				System.out.println(temp.get(i).toString());
+			}
+			School st=temp.get(i);
+			
+			String cName=x.getName();
+			if(x.getName().equals(st.getName()))
 				return true;
 		}
 		return false;
@@ -75,7 +94,7 @@ public class Sectional {
 		x+="Host Name: "+host+"\n";
 		//System.out.println(schools.size());
 		for(int i=0;i<schools.size();i++)
-			x=x+schools.get(i).toString()+"\n";
+			x=x+"School : "+i+schools.get(i).toString()+"\n";
 		return x;
 	}
 	public String getHost() {
@@ -115,7 +134,16 @@ public class Sectional {
 	public String getType() {
 		return type;
 	}
-
+	
+	public boolean removeSchool(School r){
+		for(int i=0;i<this.schools.size();i++){
+			if(this.schools.get(i).getName().equals(r.getName())){
+				this.schools.remove(i);
+				return true;
+			}
+		}
+		return false;
+	}
 
 	/*public boolean addSchool(School toBeAdded){
 		/*if(this.count>=this.size)

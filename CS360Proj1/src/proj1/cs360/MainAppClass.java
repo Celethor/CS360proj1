@@ -79,7 +79,7 @@ public class MainAppClass {
 			classObj[i]=new Classify(maxEnrollment,schools);
 		}
 		System.out.println("Done creating classes");
-		System.out.println(classObj[0].toString());
+		//System.out.println(classObj[1].toString());
 	}
 	public static boolean assignBoolean(String x){
 		if(x.equals("T")||x.equals("t"))
