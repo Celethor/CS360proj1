@@ -68,7 +68,7 @@ public class SetupGUI extends JFrame {
 
 		tilePane.add(optPane);
 
-		setDefaultCloseOperation(EXIT_ON_CLOSE);
+		
 		setVisible(true);
 	}
 
@@ -139,7 +139,7 @@ public class SetupGUI extends JFrame {
 			 * 
 			 */
 			
-			//Creates Main GUI
+			//
 			view = new ViewGUI();
 
 		}
