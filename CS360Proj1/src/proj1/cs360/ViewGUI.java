@@ -9,7 +9,7 @@ import javax.swing.*;
 
 
 /**
- * @author Benjamin Treesh
+ * @author Benjamin Treesh 
  */
 public class ViewGUI extends JFrame {
 	public ViewGUI() {
