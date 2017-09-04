@@ -60,18 +60,7 @@ public class MainAppClass {
 		int userReg;
 		int userSemi;
 		int maxEnrollment;
-		/*for(int i=0;i<noOfClasses;i++){
-			System.out.println("Enter details for class no. "+(i+1)+" : ");
-			System.out.println("Enter the maximum enrollment for this class: ");
-			maxEnrollment=inputScan.nextInt();
-			System.out.print("Enter the no. of Sectionals in the Tournament: ");
-			userSect=inputScan.nextInt();
-			System.out.println("Enter the no. of Regionals in the Tournament: ");
-			userReg=inputScan.nextInt();
-			System.out.println("Enter the no. of Semi-states in the tourname");
-			userSemi=inputScan.nextInt();
-			classObj[i]=new Classify(userSect,userReg,userSemi,maxEnrollment,schools);
-		}*/
+		
 		for(int i=0;i<noOfClasses;i++){
 			System.out.println("Enter details for class no. "+(i+1)+" : ");
 			System.out.println("Enter the maximum enrollment for this class: ");
@@ -79,7 +68,7 @@ public class MainAppClass {
 			classObj[i]=new Classify(maxEnrollment,schools);
 		}
 		System.out.println("Done creating classes");
-		System.out.println(classObj[0].toString());
+		//System.out.println(classObj[1].toString());
 	}
 	public static boolean assignBoolean(String x){
 		if(x.equals("T")||x.equals("t"))
