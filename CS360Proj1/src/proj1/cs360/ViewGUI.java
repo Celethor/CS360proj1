@@ -170,7 +170,9 @@ public class ViewGUI extends JFrame {
 	public class sectionalComboListener implements ActionListener{
 		public void actionPerformed(ActionEvent e){
 			JComboBox cb=(JComboBox)e.getSource();
-			Sectional toDisplay=(Sectional)cb.getSelectedItem();
+			//Sectional toDisplay=(Sectional)cb.getSelectedItem();
+			int x=(int)cb.getSelectedItem();
+			Sectional toDisplay=classObj.getSectionals().get(x);
 			schoolDisplay.setText(toDisplay.toString());
 		}
 	}
