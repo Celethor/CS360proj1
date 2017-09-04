@@ -51,7 +51,7 @@ public class BensTestingClass {
 //        display.dispose();
 //       
 		
-		new ViewGUI();
+		//new ViewGUI();
 
 //		new MainGUI();
 	}
