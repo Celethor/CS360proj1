@@ -57,8 +57,8 @@ public class MapBuilder {
         this.schools = schools.toArray(new School[schools.size()]);
         schoolNames = new String[schools.size()];
         schoolCoords = new String[schools.size()];
-        AddSchoolNames();
-        ReplaceSpacesInSchoolNames();
+        AddSchoolCoords();
+        //ReplaceSpacesInSchoolNames();
 	}
 
 	public void AddSchoolCoords(){

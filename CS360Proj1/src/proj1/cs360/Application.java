@@ -71,8 +71,8 @@ public class Application {
 				Tournament tourney=new Tournament(schools,userSect,userReg);
 				System.out.println(tourney.toString());
 				
-				/*MapBuilder map = new MapBuilder(tourney.sectionals[0].getHostSchool().getName(), tourney.sectionals[0].getSchools());
-				System.out.print(map.BuildURL());*/
+				MapBuilder map = new MapBuilder(tourney.sectionals[0].getHostSchool().getName(), tourney.sectionals[0].getSchools());
+				System.out.print(map.BuildURL());
 				
 			}
 			public static boolean assignBoolean(String x){
