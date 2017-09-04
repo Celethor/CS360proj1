@@ -32,7 +32,7 @@ public class School {
 	 static int sectNo=0;
 	 static int regNo=0;
 	 static int semiNo=0;
-	private LatLng coords;
+	LatLng coords;
 	public School(){
 		name=new String("");
 		location=new String("");
