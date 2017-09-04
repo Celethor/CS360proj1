@@ -3,6 +3,8 @@ package proj1.cs360;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
+import java.util.ArrayList;
 
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
@@ -18,19 +20,24 @@ public class SetupGUI extends JFrame {
 	 */
 	private static final long serialVersionUID = 1L;
 	private final int WINDOW_WIDTH = 240;
-	private final int WINDOW_HEIGHT = 240;
+	private final int WINDOW_HEIGHT = 400;
 	private JPanel tilePane, optPane;
 	private JButton[] optBtns = new JButton[3];
-	private JTextField[] numMeets = new JTextField[3];
+	private JTextField[] numMeets = new JTextField[4];
 	private ViewGUI view;
-
-	public SetupGUI() {
+	private ArrayList<School> sch;
+	private int n;
+	private Classify classify;
+	public SetupGUI(ArrayList<School> sch, int n,Classify obj) throws ParseException {
+		this.sch=sch;
+		this.n=n;
+		this.classify=obj;
 		setTitle("Tournament Parameters");
 		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 		setSize(WINDOW_WIDTH + 1, WINDOW_HEIGHT + 1);
 
 		// Make new Jpanels with gridlayouts
-		tilePane = new JPanel(new GridLayout(4, 1));
+		tilePane = new JPanel(new GridLayout(5, 1));
 
 		optPane = new JPanel(new GridLayout(1, 3));
 
@@ -41,14 +48,16 @@ public class SetupGUI extends JFrame {
 		numMeets[0] = new JTextField();
 		numMeets[1] = new JTextField();
 		numMeets[2] = new JTextField();
+		numMeets[3] = new JTextField();
 
 		// add borders to input boxes
-		numMeets[0].setBorder(BorderFactory.createTitledBorder("Number of Sectionals"));
-		numMeets[1].setBorder(BorderFactory.createTitledBorder("Number of Regionals"));
-		numMeets[2].setBorder(BorderFactory.createTitledBorder("Number of Semi States"));
+		numMeets[0].setBorder(BorderFactory.createTitledBorder("Max Enrollment for this Class"));
+		numMeets[1].setBorder(BorderFactory.createTitledBorder("Number of Sectionals"));
+		numMeets[2].setBorder(BorderFactory.createTitledBorder("Number of Regionals"));
+		numMeets[3].setBorder(BorderFactory.createTitledBorder("Number of Semi States"));
 
 		// add input boxes to tilePane
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 4; i++) {
 			tilePane.add(numMeets[i]);
 		}
 
@@ -121,6 +130,8 @@ public class SetupGUI extends JFrame {
 				}finally{
 					repaint();
 				}*/
+				
+				
 			}
 		}
 		
@@ -140,8 +151,14 @@ public class SetupGUI extends JFrame {
 			 */
 			
 			//
-			view = new ViewGUI();
-
+			int enroll=Integer.parseInt(numMeets[0].getText());
+			int sect=Integer.parseInt(numMeets[1].getText());
+			int reg=Integer.parseInt(numMeets[2].getText());
+			int semi=Integer.parseInt(numMeets[3].getText());
+			Classify obj=new Classify((char)(n+65),sch,enroll,sect,reg,semi);
+			classify=obj;
+			//view = new ViewGUI();
+			
 		}
 	}
 }

@@ -3,6 +3,7 @@ package proj1.cs360;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 import javax.swing.*;
 /*
@@ -20,7 +21,8 @@ import org.eclipse.swt.widgets.Shell;
  * @author Benjamin Treesh 
  */
 public class ViewGUI extends JFrame {
-	public ViewGUI() {
+	public ViewGUI(Classify classObj) {
+		this.classObj = classObj;
 		initComponents();
 		setVisible(true);
 	}
@@ -57,6 +59,13 @@ public class ViewGUI extends JFrame {
 		contentPane.add(clsComboBox, new GridBagConstraints(0, 1, 5, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 			new Insets(0, 0, 5, 5), 0, 0));
+		
+		//---- clsComboBox components ----
+		//add classArr components
+		for(int i = 0; i<classArr.length; i++){
+			clsComboBox.addItem(classArr[i].getClassName());
+		}
+		
 
 		//---- slctSectLbl ----
 		slctSectLbl.setText("Select a Sectional to View");
@@ -66,7 +75,14 @@ public class ViewGUI extends JFrame {
 		contentPane.add(sectComboBox, new GridBagConstraints(0, 3, 5, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 			new Insets(0, 0, 5, 5), 0, 0));
-
+		
+		//-----sectComboBox components----
+		//add sectional components for particular class
+		ArrayList<Sectional> sectionals=classObj.getSectionals();
+		for(int i=0;i<sectionals.size();i++){
+			sectComboBox.addItem(i);
+		}
+		
 		//======== scrollPane1 ========
 		{
 
@@ -136,7 +152,7 @@ public class ViewGUI extends JFrame {
 	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
 	// Generated using JFormDesigner Evaluation license - Benjamin Treesh
 	private JLabel slctClsLbl;
-	private JComboBox clsComboBox;
+	private JComboBox  clsComboBox;
 	private JLabel slctSectLbl;
 	private JComboBox sectComboBox;
 	private JScrollPane scrollPane1;
@@ -147,8 +163,17 @@ public class ViewGUI extends JFrame {
 	private JTextArea semiText;
 	private JButton mapGenBtn;
 	private JButton sheetGenBtn;
+	private Classify[] classArr;
+	private Classify classObj;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
-
+	//Combobox listener for sectionals
+	public class sectionalComboListener implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			JComboBox cb=(JComboBox)e.getSource();
+			Sectional toDisplay=(Sectional)cb.getSelectedItem();
+			schoolDisplay.setText(toDisplay.toString());
+		}
+	}
 	//Generates map given URL created by MapBuilder Class
 	private class mapGenListener implements ActionListener {
 

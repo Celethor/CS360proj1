@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Classify {
-	private char className;
+	public char className;
 	private int maxEnrollment;
 	private int sectNo;
 	private int regNo;
@@ -21,7 +21,47 @@ public class Classify {
 	int semiDivisor;
 	int modSemi;
 	ArrayList<School> otherSchools;
-	
+	public Classify(){
+		this.schools=null;
+		this.maxEnrollment=0;
+		this.className=' ';
+		this.sectNo=0;
+		this.regNo=0;
+		this.semiNo=0;
+	}
+	public Classify(char className, ArrayList<School> sch, int maxEnrollment, int sectNo, int regNo, int semiNo){
+		this.className=className;
+		
+		this.maxEnrollment=maxEnrollment;
+		this.sectNo=sectNo;
+		this.regNo=regNo;
+		this.semiNo=semiNo;
+		this.schools=new ArrayList<School>();
+		for(int i=0;i<sch.size();i++){
+			if(sch.get(i).classified==false)
+			if(sch.get(i).getEnrollment()<this.maxEnrollment){
+				this.schools.add(sch.get(i));
+				sch.get(i).classified=true;
+			}
+		}
+		this.sectDivisor=(int) Math.floor((double)this.schools.size()/sectNo);
+		this.modSect=schools.size()%sectNo;
+		System.out.println("Sectional Divisor : "+sectDivisor+"\nSectional Mod : "+modSect);
+		sectionals=new ArrayList<Sectional>();
+		
+		sortSectionals();
+		this.regDivisor=(int) Math.floor((double)this.sectNo/regNo);
+		this.modReg=sectNo%regNo;
+		System.out.println("Regional Divisor : "+regDivisor+"\nRegional Mod : "+modReg);
+		regionals=new ArrayList<Regional>();
+		
+		sortRegionals();
+		this.semiDivisor=(int)Math.floor((double)this.regNo/semiNo);
+		this.modSemi=regNo%semiNo;
+		semistates=new ArrayList<Semistate>();
+		System.out.println("Semi Divisor: "+semiDivisor+"\nSemi mod: "+modSemi);
+		sortSemi();
+	}
 	/**
 	 * Better constructor for classes. Used at present
 	 * @param maxEnrollment: maximum enrollment for this class
@@ -31,9 +71,13 @@ public class Classify {
 	 * into another class. 
 	 * @throws ParseException 
 	 */
-	public Classify(int maxEnrollment, ArrayList<School> sch) throws ParseException{
-		this.maxEnrollment=maxEnrollment;
+	public Classify( ArrayList<School> sch) throws ParseException{
+		
 		Scanner scan=new Scanner(System.in);
+		System.out.println("You are creating a new class. Please enter the name as single character : ");
+		this.className=scan.nextLine().charAt(0);
+		System.out.println("Enter the maximum enrollement : ");
+		this.maxEnrollment=scan.nextInt();
 		this.schools=new ArrayList<School>();
 		for(int i=0;i<sch.size();i++){
 			if(sch.get(i).classified==false)
@@ -44,8 +88,8 @@ public class Classify {
 		}
 		this.otherSchools=new ArrayList<School>();
 		this.otherSchools.addAll(this.schools);
-		System.out.println("You are creating a new class. Please enter the name as single character : ");
-		this.className=scan.nextLine().charAt(0);
+		
+		
 		int presentSect=0;
 		for(int i=0;i<this.schools.size();i++){
 			if(this.schools.get(i).isHostSect()==true){
@@ -55,6 +99,7 @@ public class Classify {
 		System.out.println("Present Sectionals in class "+this.className+" : "+presentSect);
 		System.out.println("Enter the no. of sectionals you want: ");
 		int userSect=scan.nextInt();
+		scan.nextLine();
 		if(userSect==presentSect)
 			this.sectNo=presentSect;
 		else{
@@ -66,7 +111,7 @@ public class Classify {
 					if(schools.get(i).isHostSect()==true){
 						System.out.println("Name: "+schools.get(i).getName());
 					}
-				for(int j=0;j<School.getSectNo()-userSect;j++){
+				for(int j=0;j<presentSect-userSect;j++){
 					System.out.println("Enter School "+(j+1)+" to remove: ");
 					String name=scan.nextLine();
 					System.out.println(name);
@@ -83,7 +128,7 @@ public class Classify {
 				this.sectNo=userSect;
 			}
 			//if the user wants more hosts but there are not many in the file already, add more
-			else if(userSect>School.getSectNo()){
+			else if(userSect>presentSect){
 				System.out.println("There are less hosts than specified for Sectionals. Please go through"
 						+ "the list of schools and type in which ones to add");
 				for(int i=0;i<schools.size();i++){
@@ -91,7 +136,7 @@ public class Classify {
 						System.out.println("Name: "+schools.get(i).getName());
 					}
 				}
-				for(int j=0;j<userSect-School.getSectNo();j++){
+				for(int j=0;j<userSect-presentSect;j++){
 					System.out.println("Enter School "+(j+1)+" to add as Host: ");
 					String name=scan.nextLine();
 					for(int k=0;k<schools.size();k++){
@@ -128,7 +173,7 @@ public class Classify {
 						System.out.println("Name: "+schools.get(i).getName());
 					}
 				}
-				for(int j=0;j<School.getRegNo()-userReg;j++){
+				for(int j=0;j<presentReg-userReg;j++){
 					System.out.println("Enter School "+(j+1)+" to remove as host: ");
 					String name=scan.nextLine();
 					int num=schools.size();
@@ -144,7 +189,7 @@ public class Classify {
 				this.regNo=userReg;
 			}
 			//if user wants more hosts than already in file, add more hosts by giving user the option
-			else if(userReg>School.getRegNo()){
+			else if(userReg>presentReg){
 				System.out.println("there are less hosts. Please add more");
 				System.out.println("Present no. of Regional hosts: "+School.getRegNo());
 				for(int i=0;i<schools.size();i++){
@@ -152,7 +197,7 @@ public class Classify {
 						System.out.println("Name: "+schools.get(i).getName());
 					}
 				}
-				for(int j=0;j<userReg-School.getRegNo();j++){
+				for(int j=0;j<userReg-presentReg;j++){
 					System.out.println("Enter School "+(j+1)+" to add");
 					String name=scan.nextLine();
 					int num=schools.size();
@@ -239,13 +284,13 @@ public class Classify {
 		this.modSect=schools.size()%sectNo;
 		System.out.println("Sectional Divisor : "+sectDivisor+"\nSectional Mod : "+modSect);
 		sectionals=new ArrayList<Sectional>();
-		//sortIntoSectionals();
+		
 		sortSectionals();
 		this.regDivisor=(int) Math.floor((double)this.sectNo/regNo);
 		this.modReg=sectNo%regNo;
 		System.out.println("Regional Divisor : "+regDivisor+"\nRegional Mod : "+modReg);
 		regionals=new ArrayList<Regional>();
-		//sortIntoRegionals();
+		
 		sortRegionals();
 		this.semiDivisor=(int)Math.floor((double)this.regNo/semiNo);
 		this.modSemi=regNo%semiNo;
@@ -322,12 +367,14 @@ public class Classify {
 			s.addRegional(regionals.get(i));
 			regionals.get(i).setAdded(true);
 		}
-		System.out.println("Initial regionals added to semis");
-		for(int i=0;i<semistates.size();i++){
-			System.out.println(semistates.get(i).toString());
-		}
+		
 		int minSize=semiDivisor;
+		
 		int maxSize=semiDivisor;
+		if(modSect==0)
+			maxSize=semiDivisor;
+		else
+			maxSize=semiDivisor+1;
 		for(int i=0;i<semistates.size();i++){
 			while(semistates.get(i).getActualSize()<minSize){
 				Regional cRegional=null;
@@ -360,11 +407,12 @@ public class Classify {
 			}
 		}
 		
-		System.out.println("New");
+		System.out.println("Done with second level");
 		for(int i=0;i<semistates.size();i++){
 			System.out.println(semistates.get(i).toString());
 		}
 		for(int i=0;i<semistates.size();i++){
+			if(semistates.get(i).getActualSize()>maxSize)
 			while(semistates.get(i).getActualSize()>maxSize){
 				Regional cRegional=null;
 				Semistate cHost=null;
@@ -447,10 +495,7 @@ public class Classify {
 		}
 		
 		
-		System.out.println("Sectionals added initial to regionals");
-		for(int i=0;i<regionals.size();i++){
-			System.out.println(regionals.get(i).toString());
-		}
+		
 		
 		int minSize=regDivisor;
 		int maxSize=regDivisor+1;
@@ -481,56 +526,11 @@ public class Classify {
 				}
 			}
 		}
-		System.out.println("New ");
+		
+		System.out.println("Regionals");
 		for(int i=0;i<regionals.size();i++){
 			System.out.println(regionals.get(i).toString());
 		}
-		/*for(int i=0;i<regionals.size();i++){
-			ArrayList<Sectional>tempHosts=new ArrayList<Sectional>();
-			tempHosts.addAll(hostSects);
-			while(regionals.get(i).getActualSize()<minSize){
-				Sectional cSectional=null;
-				Sectional cHost=null;
-				School hostSchool=regionals.get(i).getHost();
-				Sectional hostS=findSchoolInSectional(hostSchool);
-				Sectional []ord=orderedSectionals(hostS,tempHosts);
-				for(Sectional host:ord){
-					//System.out.println("Host: "+host.getHost());
-					Regional reg=findRegional(host);
-					//System.out.println("Reg: "+reg.getHost().getName());
-					int n=reg.getActualSize();
-					if(reg.getActualSize()<minSize){
-						continue;
-					}
-					Sectional []ordSects=orderedSectionals(hostS,reg.getSectionals());
-					Sectional closest;
-					if(ordSects[0].getHostSchool().getName().equals(hostS.getHostSchool().getName())){
-						closest=ordSects[1];
-					}
-					else if(ordSects[0].getHost().equals(reg.getHost().getName())){
-						closest=ordSects[1];
-					}
-					else{
-						closest=ordSects[0];
-					}
-					if(cHost==null||School.travelDist(hostS.getHostSchool(), closest.getHostSchool())<School.travelDist(hostS.getHostSchool(), cHost.getHostSchool())){
-						cHost=host;
-						cSectional=closest;
-					}
-				}
-				Regional t=findRegional(cSectional);
-				boolean b=t.removeSectional(cSectional);
-				regionals.get(i).addSectional(cSectional);
-				if(b==false){
-					System.out.println("Could not remove sectional from original host. Null pointer will appear");
-					throw new NullPointerException();
-				}
-			}
-		}*/
-		
-		/*for(int i=0;i<regionals.size();i++){
-			System.out.println(regionals.get(i).toString());
-		}*/
 	}
 	
 	public Sectional[] orderedSectionals(School x,ArrayList<Sectional>hosts){
@@ -718,7 +718,7 @@ public class Classify {
 	
 	public void sortSectionals(){
 		int sectionNumber=0;
-		int indexOfHosts[]=new int[sectNo];
+		
 		System.out.println("School size: "+schools.size());
 		//find the hosts and give each a sectional
 		for(int i=0;i<schools.size();i++){
@@ -726,7 +726,7 @@ public class Classify {
 				break;
 			if(schools.get(i).isHostSect()==true){
 				sectionals.add(new Sectional(schools.get(i).getName(),schools.get(i),sectDivisor));
-				indexOfHosts[sectionNumber]=i;
+				
 				sectionNumber++;
 				//schools.remove(i);//do not remove schools as it is giving error
 			}
@@ -992,4 +992,36 @@ public class Classify {
 		return ret;
 		//return sectionals.get(4).toString();
 	}
+	public char getClassName() {
+		return className;
+	}
+	public void setClassName(char className) {
+		this.className = className;
+	}
+	public int getSemiNo() {
+		return semiNo;
+	}
+	public void setSemiNo(int semiNo) {
+		this.semiNo = semiNo;
+	}
+	public ArrayList<Sectional> getSectionals() {
+		return sectionals;
+	}
+	public void setSectionals(ArrayList<Sectional> sectionals) {
+		this.sectionals = sectionals;
+	}
+	public ArrayList<Regional> getRegionals() {
+		return regionals;
+	}
+	public void setRegionals(ArrayList<Regional> regionals) {
+		this.regionals = regionals;
+	}
+	public ArrayList<Semistate> getSemistates() {
+		return semistates;
+	}
+	public void setSemistates(ArrayList<Semistate> semistates) {
+		this.semistates = semistates;
+	}
+	
+	
 }

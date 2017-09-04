@@ -63,9 +63,9 @@ public class MainAppClass {
 		
 		for(int i=0;i<noOfClasses;i++){
 			System.out.println("Enter details for class no. "+(i+1)+" : ");
-			System.out.println("Enter the maximum enrollment for this class: ");
-			maxEnrollment=inputScan.nextInt();
-			classObj[i]=new Classify(maxEnrollment,schools);
+			//System.out.println("Enter the maximum enrollment for this class: ");
+			//maxEnrollment=inputScan.nextInt();
+			classObj[i]=new Classify(schools);
 		}
 		System.out.println("Done creating classes");
 		//System.out.println(classObj[1].toString());
