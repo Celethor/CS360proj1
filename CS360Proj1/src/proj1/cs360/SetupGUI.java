@@ -124,7 +124,7 @@ public class SetupGUI extends JFrame {
 			}
 		}
 		
-	
+		
 
 	// Opens main program when accept is hit with proper parameters
 	private class AcceptButtonListener implements ActionListener {
