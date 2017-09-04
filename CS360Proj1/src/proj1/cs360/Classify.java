@@ -33,9 +33,9 @@ public class Classify {
 		this.className=className;
 		
 		this.maxEnrollment=maxEnrollment;
-		this.sectNo=sectNo;
-		this.regNo=regNo;
-		this.semiNo=semiNo;
+		int userSect=sectNo;
+		int userReg=regNo;
+		int userSemi=semiNo;
 		this.schools=new ArrayList<School>();
 		for(int i=0;i<sch.size();i++){
 			if(sch.get(i).classified==false)
@@ -44,6 +44,189 @@ public class Classify {
 				sch.get(i).classified=true;
 			}
 		}
+		Scanner scan=new Scanner(System.in);
+		int presentSect=0;
+		for(int i=0;i<this.schools.size();i++){
+			if(this.schools.get(i).isHostSect()==true){
+				presentSect++;
+			}
+		}
+		
+		if(userSect==presentSect)
+			this.sectNo=presentSect;
+		else{
+			if(userSect<presentSect){
+				System.out.println("There are more hosts than specified for Sectionals. Please go through"
+						+ "the list of hosts and type in which ones to remove");
+				System.out.println("Present no. of hosts for sectionals: "+School.sectNo);
+				for(int i=0;i<schools.size();i++)
+					if(schools.get(i).isHostSect()==true){
+						System.out.println("Name: "+schools.get(i).getName());
+					}
+				for(int j=0;j<presentSect-userSect;j++){
+					System.out.println("Enter School "+(j+1)+" to remove: ");
+					String name=scan.nextLine();
+					System.out.println(name);
+					int num=schools.size();
+					for(int k=0;k<num;k++){
+						String x=schools.get(k).getName();
+						if(x.equals(name)){
+							schools.get(k).setHostSect(false);
+							System.out.println("Done matching School");
+							break;
+						}
+					}
+				}
+				this.sectNo=userSect;
+			}
+			//if the user wants more hosts but there are not many in the file already, add more
+			else if(userSect>presentSect){
+				System.out.println("There are less hosts than specified for Sectionals. Please go through"
+						+ "the list of schools and type in which ones to add");
+				for(int i=0;i<schools.size();i++){
+					if(schools.get(i).isHostSect()==false){
+						System.out.println("Name: "+schools.get(i).getName());
+					}
+				}
+				for(int j=0;j<userSect-presentSect;j++){
+					System.out.println("Enter School "+(j+1)+" to add as Host: ");
+					String name=scan.nextLine();
+					for(int k=0;k<schools.size();k++){
+						String x=schools.get(k).getName();
+						if(x.equals(name)){
+							schools.get(k).setHostSect(true);
+							System.out.println("Done");
+							break;
+						}
+					}
+				}
+				this.sectNo=userSect;
+			}
+		}
+		int presentReg=0;
+		for(int i=0;i<this.schools.size();i++){
+			if(this.schools.get(i).isHostReg()==true){
+				presentReg++;
+			}
+		}
+		
+		if(userReg==presentReg)
+			this.regNo=presentReg;
+		else{
+			//For Regionals
+			//if the user wants less regionals than already present, give user option to remove
+			if(userReg<presentReg){
+				System.out.println("There are more hosts for regionals. Please select to remove");
+				System.out.println("Present no. of Regional hosts: "+School.getRegNo());
+				for(int i=0;i<schools.size();i++){
+					if(schools.get(i).isHostReg()==true){
+						System.out.println("Name: "+schools.get(i).getName());
+					}
+				}
+				for(int j=0;j<presentReg-userReg;j++){
+					System.out.println("Enter School "+(j+1)+" to remove as host: ");
+					String name=scan.nextLine();
+					int num=schools.size();
+					for(int k=0;k<num;k++){
+						String x=schools.get(k).getName();
+						if(x.equals(name)){
+							schools.get(k).setHostReg(false);
+							System.out.println("Done Matching School");
+							break;
+						}
+					}
+				}
+				this.regNo=userReg;
+			}
+			//if user wants more hosts than already in file, add more hosts by giving user the option
+			else if(userReg>presentReg){
+				System.out.println("there are less hosts. Please add more");
+				System.out.println("Present no. of Regional hosts: "+School.getRegNo());
+				for(int i=0;i<schools.size();i++){
+					if(schools.get(i).isHostReg()==false){
+						System.out.println("Name: "+schools.get(i).getName());
+					}
+				}
+				for(int j=0;j<userReg-presentReg;j++){
+					System.out.println("Enter School "+(j+1)+" to add");
+					String name=scan.nextLine();
+					int num=schools.size();
+					for(int k=0;k<schools.size();k++){
+						String x=schools.get(k).getName();
+						if(x.equals(name)){
+							schools.get(k).setHostReg(true);
+							System.out.println("Done matching");
+							break;
+						}
+					}
+				}
+				this.regNo=userReg;
+			}
+		}
+		int presentSemi=0;
+		for(int i=0;i<schools.size();i++){
+			if(schools.get(i).isHostSemi()==true)
+				presentSemi++;
+		}
+		
+		
+		if(userSemi==presentSemi)
+			this.semiNo=userSemi;
+		else{
+			//For Regionals
+			//if the user wants less regionals than already present, give user option to remove
+			if(userSemi<presentSemi){
+				System.out.println("There are more hosts for Semi-States. Please select to remove");
+				System.out.println("Present no. of Semistate hosts: "+presentSemi);
+				for(int i=0;i<schools.size();i++){
+					if(schools.get(i).isHostSemi()==true){
+						System.out.println("Name: "+schools.get(i).getName());
+					}
+				}
+				for(int j=0;j<presentSemi-userSemi;j++){
+					System.out.println("Enter School "+(j+1)+" to remove as host: ");
+					String name=scan.nextLine();
+					int num=schools.size();
+					for(int k=0;k<num;k++){
+						String x=schools.get(k).getName();
+						if(x.equals(name)){
+							schools.get(k).setHostSemi(false);
+							System.out.println("Done Matching School");
+							break;
+						}
+					}
+				}
+				this.semiNo=userSemi;
+			}
+			//if user wants more hosts than already in file, add more hosts by giving user the option
+			else if(userSemi>presentSemi){
+				System.out.println("there are less hosts. Please add more");
+				System.out.println("Present no. of Semistate hosts: "+presentSemi);
+				for(int i=0;i<schools.size();i++){
+					if(schools.get(i).isHostSemi()==false){
+						System.out.println("Name: "+schools.get(i).getName());
+					}
+				}
+				
+				for(int j=0;j<userSemi-presentSemi;j++){
+					System.out.println("Enter School "+(j+1)+" to add : ");
+					
+					String name=scan.nextLine();
+					System.out.println("Name: "+name);
+					int num=schools.size();
+					for(int k=0;k<schools.size();k++){
+						String x=schools.get(k).getName();
+						if(x.equals(name)){
+							schools.get(k).setHostSemi(true);
+							System.out.println("Done matching");
+							break;
+						}
+					}
+				}
+				this.semiNo=userSemi;
+			}
+		}
+		
 		this.sectDivisor=(int) Math.floor((double)this.schools.size()/sectNo);
 		this.modSect=schools.size()%sectNo;
 		System.out.println("Sectional Divisor : "+sectDivisor+"\nSectional Mod : "+modSect);
@@ -359,7 +542,7 @@ public class Classify {
 				semiNumber++;
 			}
 		}
-		System.out.println("Semi size: "+semistates.size());
+		System.out.println("Semi size: "+semiNo);
 		for(int i=0;i<regionals.size();i++){
 			School hostforSemi=findClosestSemiHost(regionals.get(i));
 			Semistate s=findSemistateWithSchool(hostforSemi);
@@ -370,7 +553,7 @@ public class Classify {
 		
 		int minSize=semiDivisor;
 		
-		int maxSize=semiDivisor;
+		int maxSize;
 		if(modSect==0)
 			maxSize=semiDivisor;
 		else
@@ -407,10 +590,7 @@ public class Classify {
 			}
 		}
 		
-		System.out.println("Done with second level");
-		for(int i=0;i<semistates.size();i++){
-			System.out.println(semistates.get(i).toString());
-		}
+		
 		for(int i=0;i<semistates.size();i++){
 			if(semistates.get(i).getActualSize()>maxSize)
 			while(semistates.get(i).getActualSize()>maxSize){
