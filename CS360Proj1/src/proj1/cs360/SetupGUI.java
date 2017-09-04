@@ -97,8 +97,6 @@ public class SetupGUI extends JFrame {
 		public void actionPerformed(ActionEvent e) {
 			
 			
-			
-			
 			//SAMPLE CODE TO GET US GOING ON THIS PART FROM MY PROJ# of CS161 @Benjamin Treesh
 /*			setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 			
@@ -131,6 +129,8 @@ public class SetupGUI extends JFrame {
 					repaint();
 				}*/
 				
+			ViewGUI view = new ViewGUI(classify);
+			
 				
 			}
 		}

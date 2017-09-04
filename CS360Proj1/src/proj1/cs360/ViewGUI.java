@@ -21,6 +21,10 @@ import org.eclipse.swt.widgets.Shell;
  * @author Benjamin Treesh 
  */
 public class ViewGUI extends JFrame {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -3475968061247067648L;
 	public ViewGUI(Classify classObj) {
 		this.classObj = classObj;
 		initComponents();
@@ -62,9 +66,10 @@ public class ViewGUI extends JFrame {
 		
 		//---- clsComboBox components ----
 		//add classArr components
-		for(int i = 0; i<classArr.length; i++){
-			clsComboBox.addItem(classArr[i].getClassName());
-		}
+	//	for(int i = 0; i<classArr.length; i++){
+	//		clsComboBox.addItem(classArr[i].getClassName());
+	//	}
+		
 		
 
 		//---- slctSectLbl ----
@@ -82,6 +87,8 @@ public class ViewGUI extends JFrame {
 		for(int i=0;i<sectionals.size();i++){
 			sectComboBox.addItem(i);
 		}
+		
+		sectComboBox.addActionListener(new SectionalComboListener());
 		
 		//======== scrollPane1 ========
 		{
@@ -165,15 +172,25 @@ public class ViewGUI extends JFrame {
 	private JButton sheetGenBtn;
 	private Classify[] classArr;
 	private Classify classObj;
+	private Sectional currentSect;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
+
+	
 	//Combobox listener for sectionals
-	public class sectionalComboListener implements ActionListener{
+	public class SectionalComboListener implements ActionListener{
 		public void actionPerformed(ActionEvent e){
-			JComboBox cb=(JComboBox)e.getSource();
+			//JComboBox cb=(JComboBox)e.getSource();
 			//Sectional toDisplay=(Sectional)cb.getSelectedItem();
-			int x=(int)cb.getSelectedItem();
-			Sectional toDisplay=classObj.getSectionals().get(x);
-			schoolDisplay.setText(toDisplay.toString());
+			int x=(int)sectComboBox.getSelectedItem();
+			currentSect=classObj.getSectionals().get(x);
+			schoolDisplay.setText(currentSect.toString());
+			
+			
+			//update text field to show all current sectionals
+			
+			//update
+			
+			
 		}
 	}
 	//Generates map given URL created by MapBuilder Class
@@ -183,8 +200,14 @@ public class ViewGUI extends JFrame {
 		public void actionPerformed(ActionEvent arg0) {
 			
 			//Test URL string for window
-			String url = "https://maps.googleapis.com/maps/api/staticmap?&size=500x500&markers=size:small%7ccolor:green%7cHammond+Gavit+High+School,IN&markers=size:small%7ccolor:blue%7clabel:S%7c41.5762616,-87.4875017%7c41.5545436,-87.5048099%7c41.5481653,-87.45544319999999%7c41.5864118,-87.4398167%7c41.60522599999999,-87.509568%7c41.6283089,-87.491937%7c41.6179983,-87.5235321%7c41.5327164,-87.436207%7c41.59385,-87.4078595%7c41.6403209,-87.4853127%7c41.5476375,-87.4092115%7c41.5977957,-87.39227699999999%7c41.6782559,-87.50683839999999%7c&maptype=roadmap";
+			//String url = "https://maps.googleapis.com/maps/api/staticmap?&size=500x500&markers=size:small%7ccolor:green%7cHammond+Gavit+High+School,IN&markers=size:small%7ccolor:blue%7clabel:S%7c41.5762616,-87.4875017%7c41.5545436,-87.5048099%7c41.5481653,-87.45544319999999%7c41.5864118,-87.4398167%7c41.60522599999999,-87.509568%7c41.6283089,-87.491937%7c41.6179983,-87.5235321%7c41.5327164,-87.436207%7c41.59385,-87.4078595%7c41.6403209,-87.4853127%7c41.5476375,-87.4092115%7c41.5977957,-87.39227699999999%7c41.6782559,-87.50683839999999%7c&maptype=roadmap";
 			
+			//build new MapBuilder Obj
+			MapBuilder map = new MapBuilder(currentSect.getHostSchool(),currentSect.getSchools());
+			
+			map.BuildURL();
+			
+			String url = map.getFinalURL();
 
 			Display display = new Display();
 			
@@ -208,4 +231,10 @@ public class ViewGUI extends JFrame {
 		}
 		
 	}
-}
+	
+	//Listener to check currently selected Sectional
+
+		
+	}
+	
+
