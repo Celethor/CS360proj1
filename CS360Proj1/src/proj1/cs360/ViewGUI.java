@@ -1,10 +1,18 @@
 package proj1.cs360;
 
 import java.awt.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
 import javax.swing.*;
 /*
  * Created by JFormDesigner on Sat Sep 02 02:34:57 EDT 2017
  */
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.FillLayout;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
 
 
 
@@ -14,6 +22,7 @@ import javax.swing.*;
 public class ViewGUI extends JFrame {
 	public ViewGUI() {
 		initComponents();
+		setVisible(true);
 	}
 
 	private void initComponents() {
@@ -107,6 +116,8 @@ public class ViewGUI extends JFrame {
 			panel1.add(mapGenBtn, new GridBagConstraints(0, 3, 6, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 				new Insets(0, 0, 5, 0), 0, 0));
+				//Add Eventhandler to button
+				mapGenBtn.addActionListener(new mapGenListener());
 
 			//---- sheetGenBtn ----
 			sheetGenBtn.setText("Generate Spreadsheet of Tournament Setup");
@@ -137,4 +148,37 @@ public class ViewGUI extends JFrame {
 	private JButton mapGenBtn;
 	private JButton sheetGenBtn;
 	// JFormDesigner - End of variables declaration  //GEN-END:variables
+
+	//Generates map given URL created by MapBuilder Class
+	private class mapGenListener implements ActionListener {
+
+		
+		public void actionPerformed(ActionEvent arg0) {
+			
+			//Test URL string for window
+			String url = "https://maps.googleapis.com/maps/api/staticmap?center=Indianapolis,IN&zoom=7&size=500x500&markers=color:green%7CHuntington+North+High+School";
+			
+
+			Display display = new Display();
+			
+	        Shell shell = new Shell(display);
+	        shell.setSize(552, 575);
+	        
+	        new MapGUI(shell, SWT.NONE, url);
+
+//	         the layout manager handle the layout
+//	         of the widgets in the container
+	        shell.setLayout(new FillLayout());
+
+	        //add some widgets to the Shell
+	        shell.open();
+	        while (!shell.isDisposed()) {
+	            if (!display.readAndDispatch()) {
+	                display.sleep();
+	            }
+	        }
+	        display.dispose();			
+		}
+		
+	}
 }
