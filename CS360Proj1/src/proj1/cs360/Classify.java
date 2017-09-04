@@ -18,6 +18,8 @@ public class Classify {
 	int modSect;
 	int regDivisor;
 	int modReg;
+	int semiDivisor;
+	int modSemi;
 	ArrayList<School> otherSchools;
 	
 	/**
@@ -166,6 +168,73 @@ public class Classify {
 				this.regNo=userReg;
 			}
 		}
+		int presentSemi=0;
+		for(int i=0;i<schools.size();i++){
+			if(schools.get(i).isHostSemi()==true)
+				presentSemi++;
+		}
+		System.out.println("Present no. of semi-states : "+presentSemi);
+		System.out.println("Enter the no. of semi-states you want : ");
+		int userSemi=scan.nextInt();
+		scan.nextLine();
+		System.out.println("Okay");
+		if(userSemi==presentSemi)
+			semiNo=userSemi;
+		else{
+			//For Regionals
+			//if the user wants less regionals than already present, give user option to remove
+			if(userSemi<presentSemi){
+				System.out.println("There are more hosts for Semi-States. Please select to remove");
+				System.out.println("Present no. of Semistate hosts: "+presentSemi);
+				for(int i=0;i<schools.size();i++){
+					if(schools.get(i).isHostSemi()==true){
+						System.out.println("Name: "+schools.get(i).getName());
+					}
+				}
+				for(int j=0;j<presentSemi-userSemi;j++){
+					System.out.println("Enter School "+(j+1)+" to remove as host: ");
+					String name=scan.nextLine();
+					int num=schools.size();
+					for(int k=0;k<num;k++){
+						String x=schools.get(k).getName();
+						if(x.equals(name)){
+							schools.get(k).setHostSemi(false);
+							System.out.println("Done Matching School");
+							break;
+						}
+					}
+				}
+				this.semiNo=userSemi;
+			}
+			//if user wants more hosts than already in file, add more hosts by giving user the option
+			else if(userSemi>presentSemi){
+				System.out.println("there are less hosts. Please add more");
+				System.out.println("Present no. of Semistate hosts: "+presentSemi);
+				for(int i=0;i<schools.size();i++){
+					if(schools.get(i).isHostSemi()==false){
+						System.out.println("Name: "+schools.get(i).getName());
+					}
+				}
+				
+				for(int j=0;j<userSemi-presentSemi;j++){
+					System.out.println("Enter School "+(j+1)+" to add : ");
+					
+					String name=scan.nextLine();
+					System.out.println("Name: "+name);
+					int num=schools.size();
+					for(int k=0;k<schools.size();k++){
+						String x=schools.get(k).getName();
+						if(x.equals(name)){
+							schools.get(k).setHostSemi(true);
+							System.out.println("Done matching");
+							break;
+						}
+					}
+				}
+				this.semiNo=userSemi;
+			}
+		}
+		
 		this.sectDivisor=(int) Math.floor((double)this.schools.size()/sectNo);
 		this.modSect=schools.size()%sectNo;
 		System.out.println("Sectional Divisor : "+sectDivisor+"\nSectional Mod : "+modSect);
@@ -173,14 +242,372 @@ public class Classify {
 		//sortIntoSectionals();
 		sortSectionals();
 		this.regDivisor=(int) Math.floor((double)this.sectNo/regNo);
-		this.modReg=sectNo/regNo;
+		this.modReg=sectNo%regNo;
 		System.out.println("Regional Divisor : "+regDivisor+"\nRegional Mod : "+modReg);
 		regionals=new ArrayList<Regional>();
 		//sortIntoRegionals();
-		//ArrayList<School>x=sectionals.get(2).getSchools();
-		/*for(int i=0;i<x.size();i++){
-			System.out.println(x.get(i).toString());
+		sortRegionals();
+		this.semiDivisor=(int)Math.floor((double)this.regNo/semiNo);
+		this.modSemi=regNo%semiNo;
+		semistates=new ArrayList<Semistate>();
+		System.out.println("Semi Divisor: "+semiDivisor+"\nSemi mod: "+modSemi);
+		sortSemi();
+	}
+	public School findClosestRegHost(Sectional toAdd){
+		School closest=null;
+		long small=School.travelDist(toAdd.getHostSchool(), regionals.get(0).getHost());
+		School smallSchool=regionals.get(0).getHost();
+		for(int i=0;i<regionals.size();i++){
+			if(School.travelDist(toAdd.getHostSchool(), regionals.get(i).getHost())<small){
+				small=School.travelDist(toAdd.getHostSchool(), regionals.get(i).getHost());
+				smallSchool=regionals.get(i).getHost();
+			}
+		}
+		closest=smallSchool;
+		return closest;
+	}
+	public Regional []orderedRegionals(Regional x, ArrayList<Regional> reg){
+		Regional []arr=new Regional[reg.size()];
+		for(int i=0;i<reg.size();i++){
+			arr[i]=reg.get(i);
+		}
+		int index;
+		for(int i=0;i<arr.length-1;i++){
+			index=i;
+			for(int j=i+1;j<arr.length;j++){
+				if(School.travelDist(x.getHost(), arr[j].getHost())<School.travelDist(x.getHost(), arr[j].getHost())){
+					index=j;
+				}
+			}
+			Regional smaller=arr[index];
+			arr[index]=arr[i];
+			arr[i]=smaller;
+		}
+		return arr;
+	}
+	public Semistate[] orderedSemis(Semistate x,ArrayList<Semistate>semis){
+		Semistate[] ret=new Semistate[semis.size()];
+		for(int i=0;i<semis.size();i++){
+			ret[i]=semis.get(i);
+		}
+		int index;
+		for(int i=0;i<ret.length-1;i++){
+			index=i;
+			for(int j=i+1;j<ret.length;j++){
+				if(School.travelDist(x.getHostSchool(), ret[j].getHostSchool())<School.travelDist(x.getHostSchool(), ret[index].getHostSchool())){
+					index=j;
+				}
+			}
+			Semistate smaller=ret[index];
+			ret[index]=ret[i];
+			ret[i]=smaller;
+		}
+		return ret;
+	}
+	public void sortSemi(){
+		int semiNumber=0;
+		for(int i=0;i<schools.size();i++){
+			if(semiNumber>semiNo)
+				break;
+			if(schools.get(i).isHostSemi()){
+				semistates.add(new Semistate(schools.get(i),semiDivisor));
+				semiNumber++;
+			}
+		}
+		System.out.println("Semi size: "+semistates.size());
+		for(int i=0;i<regionals.size();i++){
+			School hostforSemi=findClosestSemiHost(regionals.get(i));
+			Semistate s=findSemistateWithSchool(hostforSemi);
+			
+			s.addRegional(regionals.get(i));
+			regionals.get(i).setAdded(true);
+		}
+		System.out.println("Initial regionals added to semis");
+		for(int i=0;i<semistates.size();i++){
+			System.out.println(semistates.get(i).toString());
+		}
+		int minSize=semiDivisor;
+		int maxSize=semiDivisor;
+		for(int i=0;i<semistates.size();i++){
+			while(semistates.get(i).getActualSize()<minSize){
+				Regional cRegional=null;
+				Semistate cHost=null;
+				Semistate []ordered=orderedSemis(semistates.get(i),semistates);
+				for(Semistate semi:ordered){
+					if(semi.getActualSize()<minSize){
+						continue;
+					}
+					Regional []reg=orderedRegionals(semistates.get(i).getHostSchool(),semi.getRegionals());
+					Regional closest;
+					if(reg[0].getHost().getName().equals(semi.getHost())){
+						closest=reg[1];
+					}
+					else{
+						closest=reg[0];
+					}
+					if(cHost==null||School.travelDist(semistates.get(i).getHostSchool(), closest.getHost())<
+							School.travelDist(semistates.get(i).getHostSchool(), cHost.getHostSchool())){
+						cHost=semi;
+						cRegional=closest;
+					}
+				}
+				boolean b=cHost.removeRegional(cRegional);
+				semistates.get(i).addRegional(cRegional);
+				if(b==false){
+					System.out.println("Failed to remove regional for semis. Null pointer exception will appear");
+					throw new NullPointerException();
+				}
+			}
+		}
+		
+		System.out.println("New");
+		for(int i=0;i<semistates.size();i++){
+			System.out.println(semistates.get(i).toString());
+		}
+		for(int i=0;i<semistates.size();i++){
+			while(semistates.get(i).getActualSize()>maxSize){
+				Regional cRegional=null;
+				Semistate cHost=null;
+				Semistate []ordered=orderedSemis(semistates.get(i),semistates);
+				Regional []ordReg=orderedRegionals(semistates.get(i).getHostSchool(),semistates.get(i).getRegionals());
+				cRegional=ordReg[ordReg.length-1];
+				for(Semistate semi:ordered){
+					if(semi.getActualSize()>=maxSize){
+						 continue;
+					}
+					semistates.get(i).removeRegional(cRegional);
+					semi.addRegional(cRegional);
+					break;
+				}
+				
+			}
+		}
+		System.out.println("*************************Awesome**********************");
+		for(int i=0;i<semistates.size();i++){
+			System.out.println(semistates.get(i).toString());
+		}
+	}
+	public Regional[] orderedRegionals(School x, ArrayList<Regional> reg){
+		Regional[] ret=new Regional[reg.size()];
+		for(int i=0;i<reg.size();i++){
+			ret[i]=reg.get(i);
+		}
+		int index;
+		for(int i=0;i<ret.length-1;i++){
+			index=i;
+			for(int j=i+1;j<ret.length;j++){
+				if(School.travelDist(x, ret[j].getHost())<School.travelDist(x, ret[index].getHost())){
+					index=j;
+				}
+			}
+			Regional smaller=ret[index];
+			ret[index]=ret[i];
+			ret[i]=smaller;
+		}
+		return ret;
+	}
+	public Semistate findSemistateWithSchool(School x){
+		for(int i=0;i<semistates.size();i++){
+			if(semistates.get(i).getHost().equals(x.getName())){
+				return semistates.get(i);
+			}
+		}
+		return null;
+	}
+	public School findClosestSemiHost(Regional toAdd){
+		School closest;
+		long small=School.travelDist(toAdd.getHost(), semistates.get(0).getHostSchool());
+		School smallSchool=semistates.get(0).getHostSchool();
+		for(int i=0;i<semistates.size();i++){
+			if(School.travelDist(toAdd.getHost(), semistates.get(i).getHostSchool())<small){
+				small=School.travelDist(toAdd.getHost(), semistates.get(i).getHostSchool());
+				smallSchool=semistates.get(i).getHostSchool();
+			}
+		}
+		closest=smallSchool;
+		return closest;
+	}
+	public void sortRegionals(){
+		int regionNumber=0;
+		for(int i=0;i<schools.size();i++){
+			if(regionNumber>regNo)
+				break;
+			if(schools.get(i).isHostReg()){
+				regionals.add(new Regional(schools.get(i),regDivisor));
+				regionNumber++;
+			}
+		}
+		ArrayList<Sectional>hostSects=new ArrayList<Sectional>();
+		
+		for(int i=0;i<sectionals.size();i++){
+			School hostforReg=findClosestRegHost(sectionals.get(i));
+			Regional r=findRegionalWithSchool(hostforReg);
+			r.addSectional(sectionals.get(i));
+			sectionals.get(i).setAdded(true);
+		}
+		
+		
+		System.out.println("Sectionals added initial to regionals");
+		for(int i=0;i<regionals.size();i++){
+			System.out.println(regionals.get(i).toString());
+		}
+		
+		int minSize=regDivisor;
+		int maxSize=regDivisor+1;
+		//now make all of them equal participation
+		for(int i=0;i<regionals.size();i++){
+			while(regionals.get(i).getActualSize()<minSize){
+				Sectional cSectional=null;
+				Regional cHost=null;
+				Regional []ordered=orderedRegionals(regionals.get(i),regionals);
+				for(Regional reg:ordered){
+					if(reg.getActualSize()<minSize){
+						continue;
+					}
+					Sectional sect[]=orderedSectionals(regionals.get(i).getHost(),reg.getSectionals());
+					Sectional closest;
+					closest=sect[0];
+					if(cHost==null||School.travelDist(regionals.get(i).getHost(), closest.getHostSchool())<
+							School.travelDist(regionals.get(i).getHost(), cHost.getHost())){
+						cHost=reg;
+						cSectional=closest;
+					}
+				}
+				boolean b=cHost.removeSectional(cSectional);
+				regionals.get(i).addSectional(cSectional);
+				if(b==false){
+					System.out.println("Could not remove sectional from original host. Null pointer will appear");
+					throw new NullPointerException();
+				}
+			}
+		}
+		System.out.println("New ");
+		for(int i=0;i<regionals.size();i++){
+			System.out.println(regionals.get(i).toString());
+		}
+		/*for(int i=0;i<regionals.size();i++){
+			ArrayList<Sectional>tempHosts=new ArrayList<Sectional>();
+			tempHosts.addAll(hostSects);
+			while(regionals.get(i).getActualSize()<minSize){
+				Sectional cSectional=null;
+				Sectional cHost=null;
+				School hostSchool=regionals.get(i).getHost();
+				Sectional hostS=findSchoolInSectional(hostSchool);
+				Sectional []ord=orderedSectionals(hostS,tempHosts);
+				for(Sectional host:ord){
+					//System.out.println("Host: "+host.getHost());
+					Regional reg=findRegional(host);
+					//System.out.println("Reg: "+reg.getHost().getName());
+					int n=reg.getActualSize();
+					if(reg.getActualSize()<minSize){
+						continue;
+					}
+					Sectional []ordSects=orderedSectionals(hostS,reg.getSectionals());
+					Sectional closest;
+					if(ordSects[0].getHostSchool().getName().equals(hostS.getHostSchool().getName())){
+						closest=ordSects[1];
+					}
+					else if(ordSects[0].getHost().equals(reg.getHost().getName())){
+						closest=ordSects[1];
+					}
+					else{
+						closest=ordSects[0];
+					}
+					if(cHost==null||School.travelDist(hostS.getHostSchool(), closest.getHostSchool())<School.travelDist(hostS.getHostSchool(), cHost.getHostSchool())){
+						cHost=host;
+						cSectional=closest;
+					}
+				}
+				Regional t=findRegional(cSectional);
+				boolean b=t.removeSectional(cSectional);
+				regionals.get(i).addSectional(cSectional);
+				if(b==false){
+					System.out.println("Could not remove sectional from original host. Null pointer will appear");
+					throw new NullPointerException();
+				}
+			}
 		}*/
+		
+		/*for(int i=0;i<regionals.size();i++){
+			System.out.println(regionals.get(i).toString());
+		}*/
+	}
+	
+	public Sectional[] orderedSectionals(School x,ArrayList<Sectional>hosts){
+		Sectional[] ret=new Sectional[hosts.size()];
+		//System.out.println("Initial hosts size: "+hosts.size());
+		for(int i=0;i<hosts.size();i++){
+			ret[i]=hosts.get(i);
+			
+		}
+		
+		int index=0;
+		for(int i=0;i<ret.length-1;i++){
+			index=i;
+			for(int j=i+1;j<ret.length;j++){
+				if(School.travelDist(x, ret[j].getHostSchool())<School.travelDist(x, ret[index].getHostSchool())){
+					index=j;
+				}
+			}
+			Sectional smaller=ret[index];
+			ret[index]=ret[i];
+			ret[i]=smaller;
+		}
+		return ret;
+	}
+	public Sectional[] orderedSectionals(Sectional x,ArrayList<Sectional>hosts){
+		Sectional[] ret=new Sectional[hosts.size()];
+		//System.out.println("Initial hosts size: "+hosts.size());
+		for(int i=0;i<hosts.size();i++){
+			ret[i]=hosts.get(i);
+			
+		}
+		
+		int index=0;
+		for(int i=0;i<ret.length-1;i++){
+			index=i;
+			for(int j=i+1;j<ret.length;j++){
+				if(School.travelDist(x.getHostSchool(), ret[j].getHostSchool())<School.travelDist(x.getHostSchool(), ret[index].getHostSchool())){
+					index=j;
+				}
+			}
+			Sectional smaller=ret[index];
+			ret[index]=ret[i];
+			ret[i]=smaller;
+		}
+		/*for(int i=0;i<ret.length;i++){
+			System.out.println(ret[i].getHost());
+		}*/
+		return ret;
+	}
+	public Regional findRegional(Sectional x){
+		for(int i=0;i<regionals.size();i++){
+			if(regionals.get(i).getHostSect().getHost().equals(x.getHost()))
+				return regionals.get(i);
+		}
+		return null;
+	}
+	public Regional findRegionalWithSchool(School x){
+		for(int i=0;i<regionals.size();i++){
+			if(regionals.get(i).getHost().getName().equals(x.getName()))
+				return regionals.get(i);
+		}
+		return null;
+	}
+	public Sectional getClosestSectional(Sectional toAdd, ArrayList<Sectional>hosts){
+		Sectional ret;
+		long small=School.travelDist(toAdd.getHostSchool(), hosts.get(0).getHostSchool());
+		int index=0;
+		Sectional smallSect=null;
+		for(int i=0;i<hosts.size();i++){
+			if(School.travelDist(toAdd.getHostSchool(), hosts.get(i).getHostSchool())<small){
+				smallSect=hosts.get(i);
+				small=School.travelDist(toAdd.getHostSchool(), hosts.get(i).getHostSchool());
+				index=i;
+			}
+		}
+		ret=smallSect;
+		return ret;
 	}
 	/**
 	 * Method to sort the schools into respective 
@@ -244,7 +671,7 @@ public class Classify {
 				}
 			}
 			//for adding host sectional
-			
+			/*
 			for(int i=0;i<sectionals.size();i++){
 				System.out.println("No. : "+i+"\n"+sectionals.get(i).toString());
 			}
@@ -276,8 +703,17 @@ public class Classify {
 					regionals.get(j).addArraySectionals(getClosestSect(sectionals,temp,tempS));
 				}
 			}
-		}
+		}*/
+			
+			int counter=0;
+			for(int i=0;i<regNo;i++){
+					School temp=regionals.get(i).getHost();
+					
+					regionals.get(i).addArraySectionals(getClosestSect(sectionals,findSectional(temp),regDivisor));
+				
+			}
 		System.out.println("Done sorting regionals");
+		}
 	}
 	
 	public void sortSectionals(){
@@ -389,7 +825,7 @@ public class Classify {
 				}
 			}
 		}
-		System.out.println(this.toString());
+		
 	}
 	public ArrayList<School> getArrayList(School[] x){
 		ArrayList<School>ret=new ArrayList<School>();
@@ -461,6 +897,18 @@ public class Classify {
 		}
 		return null;
 	}
+	public Sectional findSchoolInSectional(School x){
+		ArrayList<School>temp;
+		for(int i=0;i<sectNo;i++){
+			temp=sectionals.get(i).getSchools();
+			for(int j=0;j<temp.size();j++){
+				if(temp.get(j).getName().equals(x.getName())){
+					return sectionals.get(i);
+				}
+			}
+		}
+		return null;
+	}
 	/**
 	 * Methods returns the closest schools to a given hosts
 	 * Used for sorting into sectionals
@@ -507,7 +955,8 @@ public class Classify {
 	 * @return: closest x sectionals to a given host regional
 	 */
 	public Sectional[] getClosestSect(ArrayList<Sectional> sect, Sectional host, int x){
-		Sectional[] closest=new Sectional[x];
+		ArrayList<Sectional> closest=new ArrayList<Sectional>();
+		Sectional []arr;
 		for(int counter=0;counter<x;counter++){
 			if(sect.size()==0)
 				break;
@@ -521,16 +970,24 @@ public class Classify {
 						index=i;
 					}
 				}
-				closest[counter]=smallSect;
+				closest.add(smallSect);
 				sect.get(index).setAdded(true);
 			}
 		}
-		return closest;
+		arr=new Sectional[closest.size()];
+		for(int i=0;i<arr.length;i++){
+			arr[i]=closest.get(i);
+		}
+		return arr;
 	}
 	public String toString(){
 		String ret="Sectionals";
 		for(int i=0;i<sectionals.size();i++){
 			ret+=sectionals.get(i).toString()+"\n";
+		}
+		ret=ret+"Regionals"+"\n";
+		for(int i=0;i<regionals.size();i++){
+			ret+=regionals.get(i).toString()+"\n";
 		}
 		return ret;
 		//return sectionals.get(4).toString();

@@ -7,6 +7,7 @@ public class Semistate {
     private ArrayList<Regional>regionals;
     private School hostSchool;
     private int size;
+    private int actualSize;
     public Semistate(String host, ArrayList<Regional>regionals,int size){
         this.host="";
         this.regionals = regionals;
@@ -18,10 +19,22 @@ public class Semistate {
     	this.host=host.getName();
     	regionals=new ArrayList<Regional>();
     	this.size=size;
-    	
+    	this.actualSize=regionals.size();
     }
     
-    public School getHostSchool() {
+    public ArrayList<Regional> getRegionals() {
+		return regionals;
+	}
+	public void setRegionals(ArrayList<Regional> regionals) {
+		this.regionals = regionals;
+	}
+	public int getActualSize() {
+		return this.regionals.size();
+	}
+	public void setActualSize(int actualSize) {
+		this.actualSize = actualSize;
+	}
+	public School getHostSchool() {
 		return hostSchool;
 	}
 	public void setHostSchool(School hostSchool) {
@@ -49,7 +62,15 @@ public class Semistate {
     public void setHost(String host) {
         this.host = host;
     }// end setHost
-    
+    public boolean removeRegional(Regional x){
+    	for(int i=0;i<regionals.size();i++){
+    		if(regionals.get(i).getHost().getName().equals(x.getHost().getName())){
+    			regionals.remove(i);
+    			return true;
+    		}
+    	}
+    	return false;
+    }
     public void addRegional(Regional toBeAdded){
     	this.regionals.add(toBeAdded);
     }

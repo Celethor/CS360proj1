@@ -11,6 +11,8 @@ public class Regional {
     private ArrayList<Sectional> sectionals;
     boolean added;
     private int size;
+    private int actualSize;
+    
     public Regional(School host, ArrayList<Sectional> sectionals,int size){
         //this.host="";
         this.sectionals = sectionals;
@@ -21,12 +23,34 @@ public class Regional {
     	this.host=host;
     	this.size=size;
     	this.added=false;
+    	this.actualSize=this.sectionals.size();
     	//this.sectionals.add(sectional);
     }
+    
     public int getSize() {
 		return size;
 	}
-    
+    public boolean removeSectional(Sectional x){
+    	for(int i=0;i<sectionals.size();i++){
+    		if(x.getHost().equals(sectionals.get(i).getHost())){
+    			sectionals.remove(i);
+    			return true;
+    		}
+    	}
+    	return false;
+    }
+	public ArrayList<Sectional> getSectionals() {
+		return sectionals;
+	}
+	public void setSectionals(ArrayList<Sectional> sectionals) {
+		this.sectionals = sectionals;
+	}
+	public int getActualSize() {
+		return this.sectionals.size();
+	}
+	public void setActualSize(int actualSize) {
+		this.actualSize = actualSize;
+	}
 	public boolean isAdded() {
 		return added;
 	}
