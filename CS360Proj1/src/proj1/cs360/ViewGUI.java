@@ -95,6 +95,9 @@ public class ViewGUI extends JFrame {
 		
 		sectComboBox.addActionListener(new SectionalComboListener());
 		
+
+		
+		
 		//======== scrollPane1 ========
 		{
 
@@ -153,6 +156,14 @@ public class ViewGUI extends JFrame {
 			panel1.add(sheetGenBtn, new GridBagConstraints(0, 4, 6, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 				new Insets(0, 0, 0, 0), 0, 0));
+			
+			//---- Updatw Components for default selection ---
+			sectComboBox.setSelectedIndex(0);
+			Regional reg=Classify.findRegionalForSectional(classObj,currentSect);
+			regText.setText("Regional Host : "+reg.getHost().getName());
+			Semistate semi=Classify.findSemiStateForRegional(classObj, reg);
+			semiText.setText("Semi State Host : "+semi.getHost());
+			
 		}
 		contentPane.add(panel1, new GridBagConstraints(0, 11, 5, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.BOTH,
