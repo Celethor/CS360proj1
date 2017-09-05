@@ -245,6 +245,15 @@ public class ViewGUI extends JFrame {
 			//Test URL string for window
 			//String url = "https://maps.googleapis.com/maps/api/staticmap?&size=500x500&markers=size:small%7ccolor:green%7cHammond+Gavit+High+School,IN&markers=size:small%7ccolor:blue%7clabel:S%7c41.5762616,-87.4875017%7c41.5545436,-87.5048099%7c41.5481653,-87.45544319999999%7c41.5864118,-87.4398167%7c41.60522599999999,-87.509568%7c41.6283089,-87.491937%7c41.6179983,-87.5235321%7c41.5327164,-87.436207%7c41.59385,-87.4078595%7c41.6403209,-87.4853127%7c41.5476375,-87.4092115%7c41.5977957,-87.39227699999999%7c41.6782559,-87.50683839999999%7c&maptype=roadmap";
 			
+			//Readme instructions for user(LEGEND)
+			
+			String message="Welcome to the map view!\n The host School"
+					+ " is marked with a green label"
+					+ " and \n the other schools in the sectional are marked "
+					+ " with blue labels on the map.  ";
+			JOptionPane.showMessageDialog(null, message);
+			
+			
 			//build new MapBuilder Obj
 			MapBuilder map = new MapBuilder(currentSect.getHostSchool(),currentSect.getSchools());
 			

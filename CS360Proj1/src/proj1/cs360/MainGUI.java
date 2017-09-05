@@ -26,8 +26,13 @@ public class MainGUI extends JFrame {
 	private Classify[] classObj;
 
 	public MainGUI() {
-
-		setTitle("Welcome, my Lord");
+		//Readme for user
+		String message="Welcome to the Tournament Initializer!\n For trying out the "
+				+ "Fifth Semi-State Option: \n Please select the Number of Classes to be "
+				+ "equal to 1, \n and the no. of semi-states(asked later) to be 5";
+				
+		JOptionPane.showMessageDialog(null, message);
+		setTitle("IHSAA Cross-Country Tournament Realignment Explorer");
 		setSize(WINDOW_WIDTH, WINDOW_HEIGHT);
 		setSize(WINDOW_WIDTH + 1, WINDOW_HEIGHT + 1);
 
@@ -76,7 +81,7 @@ public class MainGUI extends JFrame {
 			 * THEN HAVE ViewGUI PULLING ITS INFO FROM TOURNAMENT INSTANCE
 			 * 
 			 */
-
+			
 			// read schools
 			File file = new File("SchoolsList.txt");
 			ArrayList<School> schools = new ArrayList<School>();
@@ -166,7 +171,7 @@ public class MainGUI extends JFrame {
 		private class ViewButtonListener implements ActionListener {
 
 			public void actionPerformed(ActionEvent e) {
-				System.out.println("Semi no. "+classObj[0].getSemiNo());
+				
 				//check if any classify objects have not been initialized 
 				for(int i= 0; i < classObj.length; i++) {
 					if(classObj[i].getSemiNo() == 0){
