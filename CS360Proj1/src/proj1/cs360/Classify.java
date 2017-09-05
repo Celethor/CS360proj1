@@ -1183,16 +1183,20 @@ public class Classify {
 		return arr;
 	}
 	public String toString(){
-		String ret="Sectionals";
+		String ret="**********************Sectionals******************************\n";
 		for(int i=0;i<sectionals.size();i++){
 			ret+=sectionals.get(i).toString()+"\n";
 		}
-		ret=ret+"Regionals"+"\n";
+		ret=ret+"**********************Regionals******************************"+"\n";
 		for(int i=0;i<regionals.size();i++){
 			ret+=regionals.get(i).toString()+"\n";
 		}
+		ret=ret+"**********************Semi-States******************************"+"\n";
+		for(int i=0;i<semistates.size();i++){
+			ret=ret+semistates.get(i).toString()+"\n";
+		}
 		return ret;
-		//return sectionals.get(4).toString();
+		
 	}
 	public char getClassName() {
 		return className;

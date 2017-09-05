@@ -3,6 +3,10 @@ package proj1.cs360;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
 import javax.swing.*;
@@ -144,6 +148,7 @@ public class ViewGUI extends JFrame {
 
 			//---- sheetGenBtn ----
 			sheetGenBtn.setText("Generate Spreadsheet of Tournament Setup");
+			sheetGenBtn.addActionListener(new sheetGenListener());
 			panel1.add(sheetGenBtn, new GridBagConstraints(0, 4, 6, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.BOTH,
 				new Insets(0, 0, 0, 0), 0, 0));
@@ -209,6 +214,27 @@ public class ViewGUI extends JFrame {
 			semiText.setText("Semi State Host : "+semi.getHost());
 		}
 	}
+	//Button listener for sheetGenBtn
+	
+	private class sheetGenListener implements ActionListener{
+		public void actionPerformed(ActionEvent e){
+			String fileName="File for Class "+ classObj.getClassName();
+			File file=new File(fileName);
+			try {
+				PrintWriter out=new PrintWriter(file);
+				String output=classObj.toString();
+				out.write(output);
+				out.close();
+			} catch (FileNotFoundException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			String message="The output was written to the following file"+"\n"+fileName;
+			JOptionPane.showMessageDialog(null, message);
+			
+		}
+	}
+	
 	//Generates map given URL created by MapBuilder Class
 	private class mapGenListener implements ActionListener {
 
