@@ -94,7 +94,7 @@ public class Sectional {
 		x+="Host Name: "+host+"\n";
 		//System.out.println(schools.size());
 		for(int i=0;i<schools.size();i++)
-			x=x+"School : "+i+schools.get(i).toString()+"\n";
+			x=x+schools.get(i).toString()+"\n";
 		return x;
 	}
 	public String getHost() {

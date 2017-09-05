@@ -189,7 +189,8 @@ public class School {
 	}
 	
 	public String toString(){
-		return "Name: "+this.getName()+"Enrollment: "+this.getEnrollment()+"\n";
+		//return "Name: "+this.getName()+"Enrollment: "+this.getEnrollment()+"\n";
+		return this.getName()+"\n";
 	}
 	
 }

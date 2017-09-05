@@ -481,6 +481,11 @@ public class Classify {
 		System.out.println("Semi Divisor: "+semiDivisor+"\nSemi mod: "+modSemi);
 		sortSemi();
 	}
+	/**
+	 * Methods finds the closest regional host to the particular sectional
+	 * @param toAdd: sectional to find the closest regional for
+	 * @return: the closest sectional
+	 */
 	public School findClosestRegHost(Sectional toAdd){
 		School closest=null;
 		long small=School.travelDist(toAdd.getHostSchool(), regionals.get(0).getHost());
@@ -494,6 +499,12 @@ public class Classify {
 		closest=smallSchool;
 		return closest;
 	}
+	/**
+	 * Method orders the regionals by closest distance to the regional given in parameter	 * 
+	 * @param x: Regional to which closest other regionals are to be found
+	 * @param reg: the list of regionals for ordering by distance
+	 * @return: the array of regionals ordered by distance
+	 */
 	public Regional []orderedRegionals(Regional x, ArrayList<Regional> reg){
 		Regional []arr=new Regional[reg.size()];
 		for(int i=0;i<reg.size();i++){
@@ -513,6 +524,12 @@ public class Classify {
 		}
 		return arr;
 	}
+	/**
+	 * Method returns the semistates ordered by distance to particular semistate
+	 * @param x: the semistate to which we need the others to be sorted
+	 * @param semis: the list of semistates for ordering by distance
+	 * @return: the array of semistates ordered by distance
+	 */
 	public Semistate[] orderedSemis(Semistate x,ArrayList<Semistate>semis){
 		Semistate[] ret=new Semistate[semis.size()];
 		for(int i=0;i<semis.size();i++){
@@ -532,8 +549,16 @@ public class Classify {
 		}
 		return ret;
 	}
+	/**
+	 * Method used for sorting the regionals into semi-states. 
+	 * Procedure: 
+	 * First find the hosts and give each host a semi-state 
+	 * Add each of the regionals to its closest host semi-state
+	 * Re-position the regionals in semi-states if they are not equal/almost equal
+	 */
 	public void sortSemi(){
 		int semiNumber=0;
+		//find hosts for semistates and give each host a particular semistate
 		for(int i=0;i<schools.size();i++){
 			if(semiNumber>semiNo)
 				break;
@@ -542,7 +567,7 @@ public class Classify {
 				semiNumber++;
 			}
 		}
-		System.out.println("Semi size: "+semiNo);
+		//find closest semi-state for each regional and add
 		for(int i=0;i<regionals.size();i++){
 			School hostforSemi=findClosestSemiHost(regionals.get(i));
 			Semistate s=findSemistateWithSchool(hostforSemi);
@@ -550,15 +575,15 @@ public class Classify {
 			s.addRegional(regionals.get(i));
 			regionals.get(i).setAdded(true);
 		}
-		
+		//reposition according to the size of the semi-states
 		int minSize=semiDivisor;
-		
 		int maxSize;
 		if(modSect==0)
 			maxSize=semiDivisor;
 		else
 			maxSize=semiDivisor+1;
 		for(int i=0;i<semistates.size();i++){
+			//if size is less than the minimum required size
 			while(semistates.get(i).getActualSize()<minSize){
 				Regional cRegional=null;
 				Semistate cHost=null;
@@ -590,7 +615,7 @@ public class Classify {
 			}
 		}
 		
-		
+		//if size is greater than the maximum size as decided by the program
 		for(int i=0;i<semistates.size();i++){
 			if(semistates.get(i).getActualSize()>maxSize)
 			while(semistates.get(i).getActualSize()>maxSize){
@@ -610,16 +635,22 @@ public class Classify {
 				
 			}
 		}
-		System.out.println("*************************Awesome**********************");
-		for(int i=0;i<semistates.size();i++){
-			System.out.println(semistates.get(i).toString());
-		}
+		
 	}
+	/**
+	 * Method orders the list of regionals based on closest distance 
+	 * to a particular regional 
+	 * @param x: The regional that serves as base 
+	 * @param reg: the list of regionals for sorting by closest distance to the base
+	 * @return: the array of regionals sorted by closest distance
+	 */
 	public Regional[] orderedRegionals(School x, ArrayList<Regional> reg){
+		//copy the entire list to array
 		Regional[] ret=new Regional[reg.size()];
 		for(int i=0;i<reg.size();i++){
 			ret[i]=reg.get(i);
 		}
+		//implement selection sort algorithm
 		int index;
 		for(int i=0;i<ret.length-1;i++){
 			index=i;
@@ -634,6 +665,12 @@ public class Classify {
 		}
 		return ret;
 	}
+	/**
+	 * Method finds the semi-state based on host school 
+	 * passed as parameter
+	 * @param x: the host school 
+	 * @return: the semi-state after matching host school. Returns null if not found
+	 */
 	public Semistate findSemistateWithSchool(School x){
 		for(int i=0;i<semistates.size();i++){
 			if(semistates.get(i).getHost().equals(x.getName())){
@@ -642,6 +679,11 @@ public class Classify {
 		}
 		return null;
 	}
+	/**
+	 * Method finds the closest semi-state host to a given regional
+	 * @param toAdd: the base regional to find closest host
+	 * @return: the closest semi-state host school to the given regional
+	 */
 	public School findClosestSemiHost(Regional toAdd){
 		School closest;
 		long small=School.travelDist(toAdd.getHost(), semistates.get(0).getHostSchool());
@@ -655,7 +697,16 @@ public class Classify {
 		closest=smallSchool;
 		return closest;
 	}
+	/**
+	 * Method sorts the sectionals into regionals. 
+	 * Procedure: 
+	 * First look for hosts and give each a regional.
+	 * Go through all the sectionals and find closest regional host
+	 * add regional to the closest host
+	 * Reposition sectionals based on size(if greater or less in size)
+	 */
 	public void sortRegionals(){
+		//find hosts and give each a regional
 		int regionNumber=0;
 		for(int i=0;i<schools.size();i++){
 			if(regionNumber>regNo)
@@ -666,20 +717,18 @@ public class Classify {
 			}
 		}
 		ArrayList<Sectional>hostSects=new ArrayList<Sectional>();
-		
+		//find closest regional for each sectional
+		//add sectional to closest regional
 		for(int i=0;i<sectionals.size();i++){
 			School hostforReg=findClosestRegHost(sectionals.get(i));
 			Regional r=findRegionalWithSchool(hostforReg);
 			r.addSectional(sectionals.get(i));
 			sectionals.get(i).setAdded(true);
 		}
-		
-		
-		
-		
+		//reposition the sectionals between regionals based on size
 		int minSize=regDivisor;
 		int maxSize=regDivisor+1;
-		//now make all of them equal participation
+		//now make all of them almost equal participation
 		for(int i=0;i<regionals.size();i++){
 			while(regionals.get(i).getActualSize()<minSize){
 				Sectional cSectional=null;
@@ -707,20 +756,22 @@ public class Classify {
 			}
 		}
 		
-		System.out.println("Regionals");
-		for(int i=0;i<regionals.size();i++){
-			System.out.println(regionals.get(i).toString());
-		}
+		
 	}
-	
+	/**
+	 * Method orders the sectionals based on closest distance to given school
+	 * @param x: school that serves as base
+	 * @param hosts: the list of sectionals to be sorted by closest distance to base
+	 * @return: the array of schools sorted by closest distance to base
+	 */
 	public Sectional[] orderedSectionals(School x,ArrayList<Sectional>hosts){
 		Sectional[] ret=new Sectional[hosts.size()];
-		//System.out.println("Initial hosts size: "+hosts.size());
+		//add list to array for sorting
 		for(int i=0;i<hosts.size();i++){
 			ret[i]=hosts.get(i);
 			
 		}
-		
+		//implement selection sort algorithm
 		int index=0;
 		for(int i=0;i<ret.length-1;i++){
 			index=i;
@@ -735,14 +786,19 @@ public class Classify {
 		}
 		return ret;
 	}
+	/**
+	 * Method gives the ordered sectionals based on closest distance to base sectional
+	 * @param x: sectional to serve as base
+	 * @param hosts: list of sectionals to be sorted by closest distance
+	 * @return: the array of sectionals sorted by closest distance
+	 */
 	public Sectional[] orderedSectionals(Sectional x,ArrayList<Sectional>hosts){
 		Sectional[] ret=new Sectional[hosts.size()];
-		//System.out.println("Initial hosts size: "+hosts.size());
 		for(int i=0;i<hosts.size();i++){
 			ret[i]=hosts.get(i);
 			
 		}
-		
+		//implement selection sort algorithm
 		int index=0;
 		for(int i=0;i<ret.length-1;i++){
 			index=i;
@@ -755,11 +811,14 @@ public class Classify {
 			ret[index]=ret[i];
 			ret[i]=smaller;
 		}
-		/*for(int i=0;i<ret.length;i++){
-			System.out.println(ret[i].getHost());
-		}*/
+		
 		return ret;
 	}
+	/**
+	 * Method finds the regional for particular sectional
+	 * @param x: The sectional for which regional needs to be found
+	 * @return: the regional which contains the particular sectional. Returns null if not found
+	 */
 	public Regional findRegional(Sectional x){
 		for(int i=0;i<regionals.size();i++){
 			if(regionals.get(i).getHostSect().getHost().equals(x.getHost()))
@@ -767,6 +826,11 @@ public class Classify {
 		}
 		return null;
 	}
+	/**
+	 * Method finds the regional using school and compares for host
+	 * @param x: School that might be host for a regional
+	 * @return: Regional whose host school is passed as parameter. If not found, returns null
+	 */
 	public Regional findRegionalWithSchool(School x){
 		for(int i=0;i<regionals.size();i++){
 			if(regionals.get(i).getHost().getName().equals(x.getName()))
@@ -774,6 +838,12 @@ public class Classify {
 		}
 		return null;
 	}
+	/**
+	 * Method finds the regional for the particular sectional
+	 * @param obj: The class object whose data to be used. 
+	 * @param x: The sectional whose regional needs to be found
+	 * @return: The regional that contains particular sectional. If not found, returns null
+	 */
 	public static Regional findRegionalForSectional(Classify obj,Sectional x){
 		for(int i=0;i<obj.regionals.size();i++){
 			ArrayList<Sectional> temp=obj.regionals.get(i).getSectionals();
@@ -785,6 +855,12 @@ public class Classify {
 		}
 		return null;
 	}
+	/**
+	 * Method finds the semi state for particular regional
+	 * @param obj: the class object whose data is to be used
+	 * @param x: the regional whose semi-state needs to be found. 
+	 * @return: the semi-state for particular regional. If not found, returns null
+	 */
 	public static Semistate findSemiStateForRegional(Classify obj,Regional x){
 		for(int i=0;i<obj.semistates.size();i++){
 			ArrayList<Regional>temp=obj.semistates.get(i).getRegionals();
@@ -796,6 +872,12 @@ public class Classify {
 		}
 		return null;
 	}
+	/**
+	 * Method returns the closest sectional to given sectional
+	 * @param toAdd: Sectional to serve as base
+	 * @param hosts: The list of sectionals to find closest sectional
+	 * @return: The closest sectional to the given sectional
+	 */
 	public Sectional getClosestSectional(Sectional toAdd, ArrayList<Sectional>hosts){
 		Sectional ret;
 		long small=School.travelDist(toAdd.getHostSchool(), hosts.get(0).getHostSchool());
@@ -812,6 +894,7 @@ public class Classify {
 		return ret;
 	}
 	/**
+	 * This method is NOT USED in the program now
 	 * Method to sort the schools into respective 
 	 * sectionals. This ensures that the 
 	 * no. of sectionals in a particular class 
@@ -853,10 +936,9 @@ public class Classify {
 		System.out.println("Done sorting schools into classes");
 	}
 	/**
+	 * METHOD NOT USED in program now
 	 * Method to sort sectionals into the regionals
-	 * Will also work(expected to) even if the 
-	 * no. of regionals as required by the user
-	 * is set = 0; 
+	 * 
 	 */
 	private void sortIntoRegionals(){
 		//first case : regNo not equal to zero 
@@ -917,7 +999,13 @@ public class Classify {
 		System.out.println("Done sorting regionals");
 		}
 	}
-	
+	/**
+	 * Method to sort the schools into sectionals
+	 * Procedure: 
+	 * Find hosts and give each a sectional
+	 * Find closest sectional to each school
+	 * Add them. Reposition if required based on size
+	 */
 	public void sortSectionals(){
 		int sectionNumber=0;
 		
@@ -1002,6 +1090,7 @@ public class Classify {
 			}
 			
 		}
+		//if size>maxSize
 		for(int i=0;i<sectionals.size();i++){
 			ArrayList<School>tempHosts=new ArrayList<School>();
 			tempHosts.addAll(hosts);
@@ -1029,6 +1118,11 @@ public class Classify {
 		}
 		
 	}
+	/**
+	 * Method returns the arraylist of schools for the array passed as parameter
+	 * @param x: the array to convert to arrayList
+	 * @return: the arraylist of the initial array passed
+	 */
 	public ArrayList<School> getArrayList(School[] x){
 		ArrayList<School>ret=new ArrayList<School>();
 		for(int i=0;i<x.length;i++){
@@ -1036,6 +1130,12 @@ public class Classify {
 		}
 		return ret;
 	}
+	/**
+	 * Method orders the schools based on closest distance to the given school
+	 * @param present: the school to serve as base
+	 * @param tempHosts: the list of schools to be sorted
+	 * @return: the sorted array of schools based on closest distance to base.
+	 */
 	public School[] ordered(School present, ArrayList<School>tempHosts){
 		School[] ret=new School[tempHosts.size()];
 		for(int i=0;i<tempHosts.size();i++){
@@ -1057,6 +1157,12 @@ public class Classify {
 		}
 		return ret;
 	}
+	/**
+	 * Method to find the hosts other than present host for sectionals
+	 * @param hosts: the list of all hosts
+	 * @param x: the sectional at present
+	 * @return: list of all hosts other than the present
+	 */
 	public ArrayList<School> findOtherHosts(ArrayList<School>hosts,Sectional x){
 		for(int i=0;i<hosts.size();i++){
 			if(x.getHost().equals(hosts.get(i).getName())){
@@ -1066,6 +1172,12 @@ public class Classify {
 		}
 		return hosts;
 	}
+	/**
+	 * Method adds a school to a particular sectional
+	 * @param x: Sectional for adding school
+	 * @param toAdd: School to be added
+	 * @return: true/false based on added/not added
+	 */
 	public boolean addInSectional(Sectional x, School toAdd){
 		for(int i=0;i<sectionals.size();i++){
 			if(sectionals.get(i).getHost().equals(x.getHost())){
@@ -1075,6 +1187,12 @@ public class Classify {
 		}
 		return false;
 	}
+	/**
+	 * Method gives the closest school to a list of hosts
+	 * @param toAdd: the school to find host
+	 * @param hosts: the list of hosts
+	 * @return: the host which is closest to the given school
+	 */
 	public School getClosestSchool(School toAdd, ArrayList<School> hosts){
 		School closestHost;
 		School temp=hosts.get(0);
@@ -1090,6 +1208,11 @@ public class Classify {
 		closestHost=smallSchool;
 		return closestHost;
 	}
+	/**
+	 * Method finds the sectional based on host school
+	 * @param host: The host school for finding sectional
+	 * @return: the sectional found. Returns null if sectional not found
+	 */
 	public Sectional findSectional(School host){
 		Sectional ret;
 		for(int j=0;j<sectNo;j++){
@@ -1099,6 +1222,11 @@ public class Classify {
 		}
 		return null;
 	}
+	/**
+	 * Method checks if the given school is present in a sectional
+	 * @param x: the school to find
+	 * @return: the sectional that has the given school. If not found, returns null
+	 */
 	public Sectional findSchoolInSectional(School x){
 		ArrayList<School>temp;
 		for(int i=0;i<sectNo;i++){
@@ -1182,6 +1310,10 @@ public class Classify {
 		}
 		return arr;
 	}
+	/**
+	 * The toString method of the entire class. 
+	 * Returns the string containing the sectionals, regionals and semi-states after sorting
+	 */
 	public String toString(){
 		String ret="**********************Sectionals******************************\n";
 		for(int i=0;i<sectionals.size();i++){
