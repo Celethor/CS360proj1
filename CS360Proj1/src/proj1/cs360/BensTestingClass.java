@@ -53,7 +53,7 @@ public class BensTestingClass {
 		
 		//new ViewGUI();
 
-		new MainGUI();
+		new InitGUI();
 	}
 
 }
