@@ -33,7 +33,7 @@ public class MapBuilder {
     private String markers = "markers="; // Determines the style of marker to be used
     // Markers are based on groups, so a new marker tag will be necessary
     // EXAMPLE markers={markerStyles}%7c{markerLocation1}%7c{markerLocation2}%7c{etc}
-    // %7c is code for | character; | is an illegal character in URLs
+    // %7c is code for | character; | is an illegal character in URLs according to Google API
     String markerLabel = "label:S";
     private String []markerColor = {"color:green", "color:blue"};
     private String markerSize = "size:mid";
@@ -49,14 +49,18 @@ public class MapBuilder {
 	}
 
 	public void AddSchoolCoords(){
-        // Get school names, store in array for URL building.
+        /* Get the latitude and longitude coordinates from each School object
+         * and store individually in to an array as a String
+         * for easy referencing. */
         for(int i = 0; i < schools.length; i++){
             schoolCoords[i] = Double.toString(schools[i].coords.lat) + "," + Double.toString(schools[i].coords.lng);
         }
     }
 
 	public void AddSchoolNames(){
-        // Get school names, store in array for URL building.
+        /* Get the school name from each School object
+         * and store individually in to an array as a String
+         * for easy referencing. */
         for(int i = 0; i < schools.length; i++){
             schoolNames[i] = schools[i].getName();
         }
