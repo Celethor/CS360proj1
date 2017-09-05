@@ -63,7 +63,8 @@ public class SetupGUI extends JFrame {
 
 		// create buttons add to optnPane then tilePane
 		optBtns[0] = new JButton("Accept");
-		optBtns[1] = new JButton("Load File");
+		optBtns[1] = new JButton("View");
+		optBtns[1].setEnabled(false);
 		optBtns[2] = new JButton("Cancel");
 
 		// add listeners to buttons
@@ -158,6 +159,7 @@ public class SetupGUI extends JFrame {
 			Classify obj=new Classify((char)(n+65),sch,enroll,sect,reg,semi);
 			classify=obj;
 			//view = new ViewGUI();
+			optBtns[1].setEnabled(true);
 			
 		}
 	}
