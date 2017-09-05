@@ -37,6 +37,7 @@ public class InitGUI extends JFrame {
 		add(welcome);
 		add(other);
 		
+		setLocationRelativeTo(null);
 		setVisible(true);
 	}
 

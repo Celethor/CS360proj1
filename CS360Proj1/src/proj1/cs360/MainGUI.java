@@ -21,7 +21,7 @@ public class MainGUI extends JFrame {
 	private final int WINDOW_HEIGHT = 240;
 	private JTextField classText;
 	private JLabel classLbl;
-	private JPanel optPane = new JPanel(new GridLayout(1,3));
+	private JPanel optPane = new JPanel(new GridLayout(1,2));
 	private JButton[] optBtns = new JButton[3];
 	private Classify[] classObj;
 
@@ -44,19 +44,20 @@ public class MainGUI extends JFrame {
 		// create buttons add to optnPane
 		optBtns[0] = new JButton("Accept");
 		optBtns[1] = new JButton("Cancel");
-		optBtns[2] = new JButton("View");
+		//optBtns[2] = new JButton("View");
 
 		// Add Listeners
 		optBtns[0].addActionListener(new AcceptButtonListener());
 		optBtns[1].addActionListener(new ExitButtonListener());
-		optBtns[2].addActionListener(new ViewButtonListener());
+		//optBtns[2].addActionListener(new ViewButtonListener());
 
-		for (int i = 0; i < 3; i++) {
+		for (int i = 0; i < 2; i++) {
 			optPane.add(optBtns[i]);
 		}
 
 		add(optPane);
 
+		setLocationRelativeTo(null);
 		setVisible(true);
 		setDefaultCloseOperation(EXIT_ON_CLOSE);
 
@@ -155,7 +156,8 @@ public class MainGUI extends JFrame {
 				}
 			}
 			
-			
+		
+			optBtns[0].setEnabled(false);
 		}
 
 	}

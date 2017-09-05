@@ -41,6 +41,7 @@ public class SchoolDisplayGUI extends JFrame {
 		add(schoolList);
 		add(accept);
 		
+		setLocationRelativeTo(null);
 		setVisible(true);
 	}
 	private class ButtonListener implements ActionListener {

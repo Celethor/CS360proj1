@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
 
@@ -78,7 +79,7 @@ public class SetupGUI extends JFrame {
 
 		tilePane.add(optPane);
 
-		
+		setLocationRelativeTo(null);
 		setVisible(true);
 	}
 
@@ -130,8 +131,8 @@ public class SetupGUI extends JFrame {
 					repaint();
 				}*/
 				
-			ViewGUI view = new ViewGUI(classify);
-			
+			new ViewGUI(classify);
+			setVisible(false);
 				
 			}
 		}
@@ -151,16 +152,33 @@ public class SetupGUI extends JFrame {
 			 * 
 			 */
 			
-			//
-			int enroll=Integer.parseInt(numMeets[0].getText());
-			int sect=Integer.parseInt(numMeets[1].getText());
-			int reg=Integer.parseInt(numMeets[2].getText());
-			int semi=Integer.parseInt(numMeets[3].getText());
-			Classify obj=new Classify((char)(n+65),sch,enroll,sect,reg,semi);
-			classify=obj;
-			//view = new ViewGUI();
-			optBtns[1].setEnabled(true);
+			//Check if any fields are 0, if so, DONT ALLOW CLASSIFY INSTANTIATION
 			
+			boolean allow = true;
+			
+			for(int i = 0; i<4; i++) {
+				if(Integer.parseInt(numMeets[i].getText()) <= 0)
+					allow = false;
+			}
+			
+			//if all input is correct, allow creation of the Classify object
+			if(allow) {
+			//
+				int enroll=Integer.parseInt(numMeets[0].getText());
+				int sect=Integer.parseInt(numMeets[1].getText());
+				int reg=Integer.parseInt(numMeets[2].getText());
+				int semi=Integer.parseInt(numMeets[3].getText());
+				Classify obj=new Classify((char)(n+65),sch,enroll,sect,reg,semi);
+				classify=obj;
+				//view = new ViewGUI();
+				optBtns[0].setEnabled(false);
+				optBtns[1].setEnabled(true);
+			}
+			else {
+				JOptionPane.showMessageDialog(null, "Field can not be less than or equal to zero",
+						"Invalid Input", JOptionPane.WARNING_MESSAGE);
+				return;
+			}
 		}
 	}
 }
