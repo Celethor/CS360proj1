@@ -39,10 +39,10 @@ public class ViewGUI extends JFrame {
 	private void initComponents() {
 		// JFormDesigner - Component initialization - DO NOT MODIFY  //GEN-BEGIN:initComponents
 		// Generated using JFormDesigner License - Benjamin Treesh
-		slctClsLbl = new JLabel();
-		clsComboBox = new JComboBox();
+//		slctClsLbl = new JLabel();
+//		clsComboBox = new JComboBox();
 		slctSectLbl = new JLabel();
-		sectComboBox = new JComboBox();
+		sectComboBox = new JComboBox<Integer>();
 		scrollPane1 = new JScrollPane();
 		schoolDisplay = new JTextArea();
 		panel1 = new JPanel();
@@ -116,7 +116,7 @@ public class ViewGUI extends JFrame {
 			((GridBagLayout)panel1.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 1.0E-4};
 
 			//---- feedInto ----
-			feedInto.setText("feeds into...");
+			feedInto.setText("Feeds into...");
 			feedInto.setBorder(BorderFactory.createEtchedBorder());
 			feedInto.setEditable(false);
 			panel1.add(feedInto, new GridBagConstraints(0, 0, 6, 1, 0.0, 0.0,
@@ -164,10 +164,10 @@ public class ViewGUI extends JFrame {
 
 	// JFormDesigner - Variables declaration - DO NOT MODIFY  //GEN-BEGIN:variables
 	// Generated using JFormDesigner Evaluation license - Benjamin Treesh
-	private JLabel slctClsLbl;
-	private JComboBox  clsComboBox;
+//	private JLabel slctClsLbl;
+//	private JComboBox  clsComboBox;
 	private JLabel slctSectLbl;
-	private JComboBox sectComboBox;
+	private JComboBox<Integer> sectComboBox;
 	private JScrollPane scrollPane1;
 	private JTextArea schoolDisplay;
 	private JPanel panel1;

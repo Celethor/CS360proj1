@@ -25,7 +25,6 @@ public class SetupGUI extends JFrame {
 	private JPanel tilePane, optPane;
 	private JButton[] optBtns = new JButton[3];
 	private JTextField[] numMeets = new JTextField[4];
-	private ViewGUI view;
 	private ArrayList<School> sch;
 	private int n;
 	private Classify classify;
