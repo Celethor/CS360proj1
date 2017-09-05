@@ -13,6 +13,7 @@ import java.util.Scanner;
 import javax.swing.*;
 
 import com.google.maps.errors.ApiException;
+import com.google.maps.model.LatLng;
 
 public class MainGUI extends JFrame {
 
@@ -76,7 +77,7 @@ public class MainGUI extends JFrame {
 			 */
 
 			// read schools
-			File file = new File("All Schools Lists.txt");
+			File file = new File("SchoolsList.txt");
 			ArrayList<School> schools = new ArrayList<School>();
 			School x = new School();
 			String name;
@@ -87,9 +88,13 @@ public class MainGUI extends JFrame {
 			boolean HostSect;
 			boolean HostReg;
 			boolean HostSemi;
+			LatLng coords;
+			double lat;
+			double lng;
 			Scanner scan = null;
 			try {
 				scan = new Scanner(file).useDelimiter("\\*|\\n");
+				//scan = new Scanner(file).useDelimiter("\\*");
 			} catch (FileNotFoundException e1) {
 				// TODO Auto-generated catch block
 				e1.printStackTrace();
@@ -119,8 +124,13 @@ public class MainGUI extends JFrame {
 				} else
 					HostSemi = false;
 				c++;
+				lat=scan.nextDouble();
+				
+				lng=Double.parseDouble(scan.next());
+				
+				coords=new LatLng(lat,lng);
 				try {
-					x = new School(name + ",IN", enrollment, boys, girls, HostSect, HostReg, HostSemi);
+					x = new School(name + ",IN", enrollment, boys, girls, HostSect, HostReg, HostSemi,coords);
 				} catch (ClassNotFoundException | ApiException | InterruptedException | IOException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();

@@ -15,7 +15,7 @@ import java.util.Scanner;
 import com.google.maps.errors.ApiException;
 
 public class Application {
-	public static void main(String[]args) throws ParseException, ApiException, InterruptedException, IOException, ClassNotFoundException{
+	/*public static void main(String[]args) throws ParseException, ApiException, InterruptedException, IOException, ClassNotFoundException{
 				File file=new File("All Schools Lists.txt");
 				ArrayList<School>schools=new ArrayList<School>();
 				School x=new School();
@@ -81,5 +81,5 @@ public class Application {
 				return true;
 				else 
 					return false;
-			}
+			}*/
 }

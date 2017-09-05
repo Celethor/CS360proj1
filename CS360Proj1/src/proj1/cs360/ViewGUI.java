@@ -183,14 +183,30 @@ public class ViewGUI extends JFrame {
 			//Sectional toDisplay=(Sectional)cb.getSelectedItem();
 			int x=(int)sectComboBox.getSelectedItem();
 			currentSect=classObj.getSectionals().get(x);
-			schoolDisplay.setText(currentSect.toString());
+			
 			
 			
 			//update text field to show all current sectionals
+			schoolDisplay.setText(currentSect.toString());
+			//update labels to show feeding into which regional and semi-state
+			Semistate semi,s;
+			Regional reg=null;
 			
-			//update
-			
-			
+			ArrayList<Sectional>tempS,sects;
+			ArrayList<Regional> temp;
+			temp=classObj.getRegionals();
+			for(int i=0;i<temp.size();i++){
+				tempS=temp.get(i).getSectionals();
+				for(int j=0;j<tempS.size();j++){
+					if(temp.get(j).getHost().equals(currentSect.getHost())){
+						reg=temp.get(i);
+					}
+				}
+			}
+			reg=Classify.findRegionalForSectional(classObj,currentSect);
+			regText.setText("Regional Host : "+reg.getHost().getName());
+			semi=Classify.findSemiStateForRegional(classObj, reg);
+			semiText.setText("Semi State Host : "+semi.getHost());
 		}
 	}
 	//Generates map given URL created by MapBuilder Class

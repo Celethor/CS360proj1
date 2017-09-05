@@ -9,7 +9,7 @@ import java.util.Scanner;
 import com.google.maps.errors.ApiException;
 
 public class MainAppClass {
-	public static void main(String[] args) throws ClassNotFoundException, ApiException, InterruptedException, IOException, ParseException{
+	/*public static void main(String[] args) throws ClassNotFoundException, ApiException, InterruptedException, IOException, ParseException{
 		File file=new File("All Schools Lists.txt");
 		ArrayList<School>schools=new ArrayList<School>();
 		School x=new School();
@@ -75,6 +75,6 @@ public class MainAppClass {
 		return true;
 		else 
 			return false;
-	}
+	}*/
 }
 

@@ -42,10 +42,11 @@ public class School {
 		HostSemi=false;
 		classification='N';
 	}
-	public School(String name, int enrollment, boolean boys,boolean girls,boolean HostSect,boolean HostReg,boolean HostSemi) throws ApiException, InterruptedException, IOException, ClassNotFoundException{
+	public School(String name, int enrollment, boolean boys,boolean girls,boolean HostSect,boolean HostReg,boolean HostSemi, LatLng coords) throws ApiException, InterruptedException, IOException, ClassNotFoundException{
 		this.name=name;
 		//this.location= lookupAddr();	
-		this.coords=EarthSearch.lookupCoordFromFile(name);
+		//this.coords=EarthSearch.lookupCoordFromFile(name);
+		this.coords=coords;
 		this.enrollment=enrollment;
 		this.boys=boys;
 		this.girls=girls;

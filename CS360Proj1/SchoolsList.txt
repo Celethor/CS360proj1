@@ -1,0 +1,392 @@
+Calumet High School*664*T*T*F*F*F*41.5475777*-87.4092986
+East Chicago Central High School*1236*T*T*F*F*F*41.6403209*-87.4853127
+Gary West Side High School*1046*T*T*F*F*F*41.59385*-87.4078595
+Griffith High School*800*T*T*F*F*F*41.5327164*-87.436207
+Hammond Academy of Science & Technology High School*287*T*T*F*F*F*41.6179983*-87.5235321
+Hammond Bishop Noll High School*528*T*T*F*F*F*41.6283089*-87.491937
+Hammond High School*810*T*T*F*F*F*41.60522599999999*-87.509568
+Hammond Clark High School*760*T*T*F*F*F*41.6782559*-87.50683839999999
+Hammond Gavit High School*904*T*T*T*F*F*41.5762616*-87.4875017
+Hammond Morton High School*1348*T*T*F*F*F*41.5864118*-87.4398167
+Highland High School*1117*T*T*F*F*F*41.5466717*-87.45926429999997
+Lake Central High School*3219*T*T*F*F*F*41.467027*-87.472988
+Munster High School*1510*T*T*F*F*F*41.5545436*-87.5048099
+Whiting High School*434*T*T*F*F*F*41.6810164*-87.4937826
+21st Century Charter -Gary High School*266*T*T*F*F*F*41.60522599999999*-87.509568
+Andrean High School*492*T*T*F*F*F*41.5102973*-87.33377259999999
+Crown Point High School*2763*T*T*T*T*F*41.3897616*-87.3612677
+Lighthouse CPA High School*560*T*T*F*F*F*39.743379*-86.08896510000001
+Gary Roosevelt High School*458*T*T*F*F*F*41.5740598*-87.3442627
+Hanover Central High School*680*T*T*F*F*F*41.3785593*-87.45787899999999
+Hebron High School*370*T*T*F*F*F*41.31392650000001*-87.19649509999999
+Hobart High School*1265*T*T*F*F*F*41.5207163*-87.23205109999999
+Lowell High School*1197*T*T*F*F*F*41.2914076*-87.39343500000001
+Merrillville High School*2214*T*T*F*F*F*41.4944455*-87.3298741
+River Forest High School*439*T*T*F*F*F*41.5589266*-87.27979080000001
+Chesterton High School*2076*T*T*T*F*F*41.5890906*-87.0646117
+Boone Grove High School*499*T*T*F*F*F*41.3962693*-87.1658616
+Lake Station Edison High School*381*T*T*F*F*F*41.5771221*-87.245178
+LaPorte High School High School*1946*T*T*F*F*F*41.6011891*-86.7268627
+Marquette Catholic High School*273*T*T*F*F*F*41.7109078*-86.90274090000003
+Michigan City High School*1753*T*T*F*F*F*41.6782169*-86.8628109
+New Prairie High School*993*T*T*F*T*T*41.683073*-86.563983
+Portage High School*2520*T*T*F*F*F*41.55400969999999*-87.16763
+South Central (Union Mills) High School*303*T*T*F*F*F*41.4643351*-86.81633049999999
+Valparaiso High School*2082*T*T*F*F*F*41.4932851*-87.06756229999999
+Washington Township High School*266*T*T*F*F*F*41.4845668*-86.99462249999999
+Westville High School*303*T*T*F*F*F*41.5416489*-86.89444429999999
+Wheeler High School*553*T*T*F*F*F*41.4786881*-87.1791144
+Kankakee Valley High School*1083*T*T*F*F*F*41.1856481*-87.1201533
+Knox High School*584*T*T*F*F*F*41.2854565*-86.62601430000001
+Kouts High School*275*T*T*F*F*F*41.3128995*-87.02199879999999
+LaCrosse High School*118*T*T*F*F*F*41.317746*-86.8896859
+Morgan Township High School*244*T*T*F*F*F*41.392245*-87.024659
+North Judson-San Pierre High School*368*T*T*F*F*F*41.2106705*-86.7883045
+North Newton High School*440*T*T*F*F*F*41.0357011*-87.42552649999999
+Oregon-Davis High School*182*T*T*F*F*F*41.38846600000001*-86.55225100000001
+Rensselaer Central High School*531*T*T*T*F*F*40.9345016*-87.13625569999999
+South Newton High School*220*T*T*F*F*F*40.8070708*-87.384638
+West Central High School*280*T*T*F*F*F*41.028479*-86.890402
+Attica High School*223*T*T*F*F*F*40.277395*-87.25062899999999
+Benton Central High School*585*T*T*T*F*F*40.5640606*-87.2425641
+Covington High School*309*T*T*F*F*F*40.1431119*-87.39594060000002
+Crawfordsville High School*702*T*T*F*F*F*40.0209269*-86.90744409999999
+Fountain Central High School*350*T*T*F*F*F*40.1062136*-87.22666009999999
+Frontier High School*202*T*T*F*F*F*40.6642995*-86.862799
+North Montgomery High School*620*T*T*F*F*F*40.1246682*-86.9068336
+North Vermillion High School*245*T*T*F*F*F*39.9676332*-87.45259170000001
+North White High School*265*T*T*F*F*F*40.8675418*-86.8756643
+Seeger High School*375*T*T*F*F*F*40.2981631*-87.3881674
+Southmont High School*550*T*T*F*F*F*39.9472479*-86.90555189999999
+Tri-County High School*234*T*T*F*F*F*40.736303*-87.08552829999996
+Twin Lakes High School*773*T*T*F*F*F*40.74207579999999*-86.7701417
+Clinton Central High School*274*T*T*F*F*F*40.297755*-86.391188
+Clinton Prairie High School*330*T*T*F*F*F*40.251284*-86.5920069
+Delphi Community High School*430*T*T*F*F*F*40.5752004*-86.6649688
+Faith Christian High School*203*T*T*F*F*F*41.1613114*-85.46093109999998
+Frankfort High School*861*T*T*F*F*F*40.281529*-86.485168
+Harrison (West Lafayette) High School*1905*T*T*T*T*F*40.499183*-86.91452620000001
+Lafayette Central Catholic High School*291*T*T*F*F*F*40.3927809*-86.8870068
+Lafayette Jefferson High School*2031*T*T*F*F*F*40.3985594*-86.87487899999999
+McCutcheon High School*1769*T*T*F*F*F*40.3509069*-86.9031813
+Rossville High School*313*T*T*F*F*F*40.4140594*-86.59762970000001
+West Lafayette High School*734*T*T*F*F*F*40.436141*-86.9118518
+Western Boone High School*529*T*T*F*F*F *40.0563338*-86.6131316
+Argos High School*198*T*T*F*F*F*41.24131*-86.25032240000002
+Caston High School*228*T*T*F*F*F*40.9116962*-86.28217389999999
+Culver Academies High School*812*T*T*T*T*F*41.2250559*-86.4047044
+Culver Community High School*249*T*T*F*F*F*41.2238137*-86.42521579999999
+Manchester High School*511*T*T*F*F*F*41.00935810000001*-85.77266680000002
+North Miami High School*320*T*T*F*F*F*40.895989*-86.06602199999998
+Plymouth High School*1147*T*T*F*F*F*41.3473756*-86.3027616
+Rochester Community High School*524*T*T*F*F*F*41.0577808*-86.2243472
+Tippecanoe Valley High School*595*T*T*F*F*F*41.1095802*-86.0393392
+Triton High School*468*T*T*F*F*F*41.3013485*-86.1090019
+Warsaw Community High School*2176*T*T*F*F*F*41.2237933*-85.8658955
+Carroll (Flora) High School*353*T*T*F*F*F*40.545908*-86.4804912
+Cass High School*466*T*T*F*F*F*40.6627281*-86.25141389999999
+Eastern (Greentown) High School*491*T*T*F*F*F*40.4728487*-85.97085
+Kokomo High School*1769*T*T*F*F*F*40.4560891*-86.1575594
+Logansport High School*1235*T*T*T*F*F*40.7493624*-86.3314841
+Maconaquah High School*666*T*T*F*F*F*40.651725*-86.06580300000002
+Northwestern High School*562*T*T*F*F*F*40.6627281*-86.25141389999999
+Peru High School*659*T*T*F*F*F*40.760488*-86.0728159
+Pioneer High School*275*T*T*F*F*F*40.861756*-86.49494299999998
+Taylor High School*413*T*T*F*F*F*40.43532769999999*-86.0547709
+Western High School*855*T*T*F*F*F*40.437402*-86.24293879999999
+Winamac Community High School*377*T*T*F*F*F*41.0458267*-86.5963694
+Bremen Senior High School*497*T*T*F*F*F*41.4441506*-86.14192059999999
+Bethany Christian School*148*T*T*F*F*F*41.5455148*-85.8271025
+Angola High School*876*T*T*F*F*F*41.6317985*-84.971477
+Carroll (F.W.) High School*497*T*T*F*F*F*41.1903467*-85.1925191
+Glenn High School*580*T*T*F*F*F*41.4574282*-86.4799099
+Concord  Community High School*1716*T*T*F*F*F*41.635752*-85.9286636
+Central Noble High School*393*T*T*F*F*F*41.3976883*-85.42005759999999
+Columbia City High School*1056*T*T*F*F*F*41.16285610000001*-85.4841256
+LaVille Jr-Sr High School*363*T*T*F*F*F*41.4781872*-86.3031157
+Elkhart Central High School*1673*T*T*T*T*F*41.6848123*-85.95888959999999
+Churubusco Jr-Sr High School*367*T*T*F*F*F*41.2309817*-85.3236374
+F.W. Blackhawk Christian Jr-Sr High School*241*T*T*F*F*F*41.1050294*-85.04571969999999
+Mishawaka High School*1470*T*T*F*F*F*41.6630632*-86.1616794
+Elkhart Central High School*1673*T*T*F*F*F*41.6848123*-85.95888959999999
+DeKalb High School*1170*T*T*F*F*F*41.4064699*-85.0410956
+F.W. Concordia Lutheran High School*781*T*T*F*F*F*41.109845*-85.117668
+Mishawaka Marian High School*688*T*T*F*F*F*41.6498136*-86.1973249
+Elkhart Memorial High School*1648*T*T*F*F*F*41.6968351*-86.0138757
+East Noble High School*1262*T*T*F*F*F*41.4347673*-85.25746620000001
+F.W. Bishop Dwenger High School*1075*T*T*F*F*F*41.1318002*-85.1254925
+Penn High School*3345*T*T*F*F*F*41.6789166*-86.1077188
+Fairfield Jr-Sr High School*565*T*T*F*F*F*41.517725*-85.7679462
+Eastside Junior-Senior High School*372*T*T*F*F*F*41.43152*-84.86328999999999
+F.W. Northrop High School*2097*T*T*T*F*F*41.1457383*-85.1394507
+S.B. Adams High School*1794*T*T*F*F*F*41.6670326*-86.2228372
+Goshen High School*1866*T*T*F*F*F*41.5807053*-85.8230976
+Fremont High School*303*T*T*F*F*F*41.72964869999999*-84.94011460000002
+F.W. North Side High School*1672*T*T*F*F*F*41.0977081*-85.1352018
+S.B. Career Academy*263*T*T*F*F*F*41.7277848*-86.331558
+Jimtown High School*605*T*T*F*F*F*41.6372322*-86.02399640000002
+Lakeland High School*577*T*T*F*F*F*41.65393770000001*-85.41031370000002
+F.W. Snider High School*1850*T*T*F*F*F*41.1077269*-85.08243139999999
+S.B. Clay High School*1143*T*T*F*F*F*41.7326017*-86.2383412
+Northridge High School*1392*T*T*F*F*F*41.66964100000001*-85.73517759999999
+Prairie Heights Sr High School*414*T*T*F*F*F*41.639249*-85.2002749
+Garrett High School*590*T*T*F*F*F*41.348105*-85.12719299999999
+S.B. Riley High School*1249*T*T*T*F*F*41.6544793*-86.24431299999999
+NorthWood High School*883*T*T*F*F*F*41.46162739999999*-85.99933679999998
+West Noble High School*723*T*T*T*T*F*41.4258661*-85.58130880000002
+Homestead Senior High School*2348*T*T*F*F*F*41.0433219*-85.28625569999997
+S.B. Saint Joseph's High School*896*T*T*F*F*F*41.6813057*-86.2390061
+Wawasee High School*945*T*T*F*F*F*41.4179325*-85.75673119999999
+Westview Jr-Sr High School*416*T*T*F*F*F*41.6174014*-85.5397318
+Lakewood Park Christian School*186*T*T*F*F*F*41.3320724*-85.0466916
+South Bend Washington High School*906*T*T*F*F*F*41.67496999999999*-86.31422189999999
+Leo Junior/Senior High School*872*T*T*F*F*F*41.2198405*-85.017715
+Whitko High School*486*T*T*F*F*F*41.0829323*-85.63544209999999
+Adams Central High School*375*T*T*F*F*F*40.746696*-84.942426
+Blackford High School*558*T*T*F*F*F*40.4848916*-85.37228189999999
+Alexandria-Monroe High School*506*T*T*F*F*F*40.2520348*-85.6782961
+Cowan High School*238*T*T*F*F*F *40.1078972*-85.3931491
+Bellmont Senior High School*691*T*T*T*F*F*40.8355568*-84.9072224
+Eastbrook High School*525*T*T*F*F*F*40.5454527*-85.50523280000002
+Anderson High School*1933*T*T*F*F*F*40.06583799999999*-85.69068199999998
+Delta High School*871*T*T*T*T*F*40.278276*-85.34807239999999
+Bluffton High School*443*T*T*F*F*F*40.72363250000001*-85.16245549999996
+Huntington North High School*1575*T*T*F*F*F*40.8918853*-85.5105274
+Anderson Preparatory Academy*247*T*T*F*F*F*40.0864699*-85.6804128
+Jay County High School*1060*T*T*F*F*F*40.4297071*-85.0237727
+F.W. Canterbury*369*T*T*F*F*F*41.0540212*-85.2119561
+Madison-Grant High School*401*T*T*F*F*F*40.384119*-85.67368549999999
+Blue River Valley Jr-Sr High School*186*T*T*F*F*F*40.001838*-85.328867
+Monroe Central Jr-Sr High School*370*T*T*F*F*F*40.191922*-85.1676079
+F.W. Bishop Luers High School*617*T*T*F*F*F*41.0333173*-85.13349219999999
+Marion High School*1053*T*T*T*T*F*40.5387549*-85.6686289
+Daleville Jr/Sr High School*279*T*T*F*F*F*40.1184352*-85.5546521
+Muncie Burris Laboratory School*535*T*T*F*F*F*40.1967204*-85.41227459999999
+F.W. South Side High School*1409*T*T*F*F*F*41.05239*-85.1367542
+Mississinewa High School*845*T*T*F*F*F*40.4966375*-85.61341929999999
+Elwood Community High School*447*T*T*F*F*F*40.2898005*-85.835292
+Muncie Central High School*1551*T*T*F*F*F*40.2011017*-85.3877266
+F.W. Wayne High School*1340*T*T*F*F*F*41.0007198*-85.1401401
+Northfield Jr-Sr High School*304*T*T*F*F*F*40.8553665*-85.79578219999999
+Frankton Jr-Sr High School*480*T*T*F*F*F*40.2207185*-85.7727518
+Randolph Southern Jr-Sr High Sch*172*T*T*F*F*F*40.052241*-84.9455942
+Heritage Jr/Sr High School*596*T*T*F*F*F*40.975684*-84.96250700000002
+Oak Hill High School*511*T*T*F*F*F*40.5798803*-85.8212287
+Lapel Sr High School*470*T*T*F*F*F*40.0773686*-85.8404654
+Union (Modoc) Junior & High School*107*T*T*F*F*F*40.0470503*-85.1413044
+New Haven High School*996*T*T*F*F*T*41.0652957*-85.0121387
+Southern Wells Jr-Sr High Sch*266*T*T*F*F*F*40.6076036*-85.27987
+Liberty Christian School*150*T*T*F*F*F*40.0929057*-85.66750819999999
+Union City Community High Sch*280*T*T*F*F*F*40.2041946*-84.81485289999999
+Norwell High School*769*T*T*F*F*F*40.8283587*-85.20205870000001
+Southwood Jr-Sr High School*295*T*T*F*F*F*40.7401174*-85.78124079999999
+Mt. Vernon (Fortville) High School*1227*T*T*F*F*F*39.901374*-85.84411
+Wapahani High School*396*T*T*F*F*F*40.1676513*-85.2639447
+Smith Academy for Excellence*33*T*T*F*F*F *41.0756452*-85.1485764
+Wabash High School*427*T*T*F*F*F*40.806979*-85.8250889
+Pendleton Heights High School*1421*T*T*T*F*F*39.9973648*-85.7353144
+Wes-Del Middle/Senior High School*275*T*T*F*F*F*40.2801027*-85.49961809999999
+South Adams High School*369*T*T*F*F*F*40.6457215*-84.9600497
+Shenandoah High School*442*T*T*F*F*F*40.0057614*-85.5255344
+Winchester Community High School*446*T*T*F*F*F*40.1810243*-84.97506829999999
+Woodlan Jr/Sr High School*534*T*T*F*F*F*41.1235004*-84.91912719999999
+Yorktown High School*801*T*T*F*F*F*40.183124*-85.49375800000001
+Avon High School*2891*T*T*F*F*F*39.7389748*-86.3879795
+Bethesda Christian High School*106*T*T*F*F*F*39.877906*-86.412057
+Brownsburg High School*2629*T*T*F*F*F*39.8299773*-86.38797079999999
+Cascade High School*457*T*T*F*F*F*39.665807*-86.55906099999999
+Cloverdale High School*382*T*T*F*F*F*39.5119005*-86.79126769999999
+Danville Community High School*791*T*T*F*F*F*39.7569997*-86.5401579
+Greencastle High School*556*T*T*F*F*F*39.6431741*-86.8433368
+North Putnam High School*456*T*T*F*F*F*39.7892971*-86.8010151
+Plainfield High School*1636*T*T*F*F*F*39.6818979*-86.37876599999998
+South Putnam High School*363*T*T*T*F*F*39.5828639*-86.8158314
+Tri-West Hendricks High School*624*T*T*F*F*F*39.877131*-86.54208539999999
+Ben Davis High School*4362*T*T*T*T*F*39.784335*-86.291011
+Covenant Christian (Indpls) High School*334*T*T*F*F*F*39.7930563*-86.29305839999999
+Decatur Central High School*1767*T*T*F*F*F*39.6877735*-86.27685989999999
+Herron High School*827*T*T*F*F*F*39.7887861*-86.1552952
+Indiana Math & Science Academy High School*185*T*T*F*F*F*39.8898852*-86.1209423
+Indianapolis Crispus Attucks High School*745*T*T*F*F*F*39.7828316*-86.1691992
+Indianapolis Northwest High School*696*T*T*F*F*F*39.81465110000001*-86.25855399999999
+Indianapolis Shortridge High School*361*T*T*F*F*F*39.8181711*-86.15562729999999
+Indianapolis George Washington High School*457*T*T*F*F*F*39.7655047*-86.1991647
+International School of Indiana High School*165*T*T*F*F*F*39.834057*-86.186585
+Pike High School*3306*T*T*F*F*F*39.8755913*-86.2553787
+Providence Cristo Rey High School*255*T*T*F*F*F*39.7676282*-86.2024856
+Speedway High School*523*T*T*F*F*F*39.80084*-86.252904
+Zionsville High School*1928*T*T*F*F*F*39.9587127*-86.2729923
+Carmel High School*5000*T*T*F*F*F*39.9800196*-86.1194606
+Fishers High School*3250*T*T*F*F*F*39.97743639999999*-85.9671656
+Guerin Catholic High School*758*T*T*F*F*F*40.010302*-86.08685
+Hamilton Heights High School*728*T*T*F*F*F*40.1655542*-86.01554820000001
+Hamilton Southeastern High School*3118*T*T*F*F*F*39.9705991*-85.91720839999999
+Lebanon High School*976*T*T*F*F*F*40.058319*-86.4624662
+Noblesville High School*2882*T*T*T*T*F*40.0564429*-85.99788989999999
+Sheridan High School*329*T*T*F*F*F*40.140363*-86.21535770000003
+Tindley High School*273*T*T*F*F*F*39.8297603*-86.1145682
+Tipton High School*524*T*T*F*F*F*40.2739755*-86.04006860000001
+University High School*289*T*T*F*F*F*39.9542639*-86.21221249999996
+Westfield High School*2146*T*T*F*F*F*40.0521817*-86.1297922
+Brebeuf Jesuit Preparatory High School*794*T*T*T*F*F*39.9106145*-86.2102522
+Heritage Christian High School*407*T*T*F*F*F*41.4234041*-87.50989229999999
+Indiana School for the Deaf High School*115*T*T*F*F*F*39.8337753*-86.1354765
+Indianapolis Arlington High School*371*T*T*F*F*F*39.8442112*-86.0635161
+Indianapolis Arsenal Technical High School*1940*T*T*F*F*F*39.7792736*-86.13478789999999
+Indianapolis Bishop Chatard High School*700*T*T*F*F*F*39.8618738*-86.1273429
+Indianapolis Broad Ripple High School*635*T*T*F*F*F*39.86849369999999*-86.137492
+Indianapolis Cardinal Ritter High School*563*T*T*F*F*F*39.8127943*-86.21590429999999
+Indianapolis Cathedral High School*1184*T*T*F*F*F*39.8520411*-86.0807787
+Lawrence Central High School*2340*T*T*F*F*F*39.85667*-86.0382149
+Lawrence North High School*2469*T*T*F*F*F*39.8961663*-86.0349536
+North Central (Indpls.) High School*3772*T*T*F*F*F*39.91089059999999*-86.1292201
+Park Tudor High School*403*T*T*F*F*F*39.8843004*-86.1480418
+Beech Grove High School*949*T*T*F*F*F*39.7114249*-86.0761321
+Eastern Hancock High School*425*T*T*F*F*F*39.8241433*-85.60990720000001
+Franklin Central High School*2659*T*T*F*F*F*39.67694669999999*-86.0157925
+Greenfield-Central High School*1510*T*T*F*F*F*39.7929609*-85.78150699999999
+Indianapolis Emmerich Manual High School*696*T*T*F*F*F*39.7330998*-86.1535792
+Indianapolis Lutheran High School*251*T*T*F*F*F*39.6874613*-86.0622193
+Indianapolis Scecina Memorial High School*449*T*T*F*F*F*39.78704219999999*-86.08534809999999
+Indianapolis Lighthouse Charter School*277*T*T*F*F*F*39.743379*-86.08896510000001
+Morristown High School*194*T*T*F*F*F*39.6725742*-85.70174329999998
+New Palestine High School*1119*T*T*T*F*F*39.7186612*-85.89054999999999
+Roncalli High School*1184*T*T*F*F*F*39.6901287*-86.1068634
+Triton Central High School*468*T*T*F*F*F*39.611196*-85.8735445
+Warren Central High School*3736*T*T*F*F*F*39.7908649*-85.9995792
+Cambridge City High School*331*T*T*F*F*F*39.816359*-85.167234
+Centerville High School*463*T*T*F*F*F*39.8131337*-84.99916229999997
+Connersville High School*1111*T*T*T*F*F*39.636354*-85.160944
+Franklin County High School*836*T*T*F*F*F*39.42856200000001*-84.998764
+Hagerstown High School*341*T*T*F*F*F*39.920567*-85.161254
+Knightstown High School*381*T*T*F*F*F*39.7940785*-85.5409103
+New Castle High School*1023*T*T*F*F*F*39.9124869*-85.3765877
+Northeastern High School*419*T*T*F*F*F*39.9344466*-84.9121811
+Richmond High School*1331*T*T*F*F*F*39.8224975*-84.9022281
+Rushville Consolidated High School*742*T*T*F*T*F*39.6211095*-85.4490007
+Seton Catholic High School*92*T*T*F*F*F*39.825006*-84.8953684
+Tri Junior Senior High School*285*T*T*F*F*F*39.832935*-85.3510865
+Union County High School*444*T*T*F*F*F*39.635175*-84.92089529999998
+Batesville High School*733*T*T*F*F*F*39.3109449*-85.2340038
+East Central High School*1302*T*T*F*F*F*39.27899050000001*-84.9742498
+Greensburg High School*750*T*T*F*F*F*39.3409772*-85.4684102
+Jac-Cen-Del High School*263*T*T*F*F*F*39.1402889*-85.29480029999999
+Milan High School*411*T*T*F*F*F*39.12933530000001*-85.12801100000001
+North Decatur High School*329*T*T*F*F*F*39.3830281*-85.477649
+Oldenburg Academy High School*210*T*T*F*F*F*39.3425846*-85.2007007
+Rising Sun High School*233*T*T*F*F*F*38.9501149*-84.8595567
+South Dearborn High School*868*T*T*T*F*F*39.06395000000001*-84.9285637
+South Decatur High School*313*T*T*F*F*F*39.2068084*-85.5766525
+South Ripley High School*354*T*T*F*F*F*39.0510622*-85.2502114
+Center Grove High School*2500*T*T*F*F*F*39.5760289*-86.1952026
+Christel House Academy High School*232*T*T*F*F*F*39.7278877*-86.14827269999999
+Eminence High School*116*T*T*F*F*F*38.37277650000001*-85.1826652
+Franklin Community High School*1533*T*T*T*F*F*39.5117904*-86.0867306
+Greenwood Community High School*1200*T*T*F*F*F*39.6029045*-86.1174631
+Greenwood Christian Academy High School*180*T*T*F*F*F*39.584151*-86.122723
+Monrovia High School*527*T*T*F*F*F*39.5755679*-86.47864600000003
+Mooresville High School*1402*T*T*F*F*F*39.6187343*-86.37710800000002
+Perry Meridian High School*2351*T*T*F*F*F*39.6483986*-86.1665921
+Shelbyville High School*1156*T*T*F*T*T*39.5062308*-85.789248
+Southport High School*2185*T*T*F*F*F*39.671079*-86.1414684
+Waldron High School*163*T*T*F*F*F*39.453185*-85.661158
+Whiteland Community High School*1845*T*T*F*F*F*39.5513204*-86.0841139
+Brown County High School*657*T*T*T*T*T*39.2046253*-86.2439528
+Brownstown Central High School*577*T*T*F*F*F*38.8859036*-86.0457121
+Columbus East High School*1534*T*T*F*F*F*39.1950999*-85.8861404
+Columbus North High School*2017*T*T*F*F*F*39.2245573*-85.9112191
+Crothersville High School*120*T*T*F*F*F*38.797841*-85.8365242
+Edinburgh Community High School*269*T*T*F*F*F*39.3516005*-85.9705208
+Hauser High School*268*T*T*F*F*F*39.2926055*-85.7700062
+Indian Creek High School*631*T*T*F*F*F*39.40738020000001*-86.1607531
+Martinsville High School*1509*T*T*F*F*F*39.419674*-86.411796
+Seymour High School*1498*T*T*F*F*F*38.9562509*-85.9062532
+Southwestern (Shelbyville) High School*227*T*T*F*F*F*39.43826139999999*-85.84503959999999
+Trinity Lutheran High School*142*T*T*F*F*F*38.985783*-85.877177
+White River Valley High School*268*T*T*F*F*F*38.985783*-85.877177
+Clay City High School*249*T*T*F*F*F*39.2795639*-87.1100096
+Linton-Stockton High School*366*T*T*F*F*F*39.0415839*-87.1665422
+North Central (Farmerburg) High School*283*T*T*F*F*F*39.2249612*-87.3904635
+Northview High School*1024*T*T*F*F*F*39.5159437*-87.1661818
+Owen Valley High School*813*T*T*F*F*F*39.288654*-86.78154699999999
+Riverton Parke High School*304*T*T*F*F*F*39.697741*-87.3220879
+Rockville High School*224*T*T*F*F*F*39.768405*-87.23316990000001
+Shakamak High School*240*T*T*F*F*F*39.1595628*-87.2123124
+South Vermillion High School*546*T*T*F*F*F*39.6886356*-87.41390249999999
+Sullivan High School*591*T*T*F*F*F*39.1054066*-87.4113001
+Terre Haute North High School*1854*T*T*T*F*F*39.4928774*-87.3634658
+Terre Haute South High School*1778*T*T*F*F*F*39.4254888*-87.4082875
+West Vigo High School*577*T*T*F*F*F*39.4606165*-87.4896802
+Bedford-North Lawrence High School*1542*T*T*T*T*F*38.881746*-86.442403
+Bloomfield High School*228*T*T*F*F*F*39.025011*-86.94670400000001
+Bloomington North High School*1709*T*T*F*F*F*39.1991004*-86.5490246
+Bloomington South High School*1742*T*T*F*F*F*39.143062*-86.529005
+Eastern Greene High School*377*T*T*F*F*F*39.0308869*-86.73748549999999
+Eastern (Pekin) High School*476*T*T*F*F*F*38.5146014*-86.0014731
+Edgewood High School*811*T*T*F*F*F*39.23586*-86.634036
+Medora High School*73*T*T*F*F*F*38.8246124*-86.17227179999999
+Mitchell High School*491*T*T*F*F*F*38.7366465*-86.48038500000001
+Orleans High School*226*T*T*F*F*F*38.66788020000001*-86.4544227
+Paoli High School*468*T*T*F*F*F*38.5503789*-86.47735259999999
+Salem High School*573*T*T*F*F*F*38.6116598*-86.10679160000001
+West Washington High School*257*T*T*F*F*F*38.583932*-86.23446600000001
+Austin High School*394*T*T*F*F*F*38.7398727*-85.80037370000002
+Charlestown High School*707*T*T*F*F*F*38.4556156*-85.66690340000002
+Henryville High School*349*T*T*F*F*F*38.543589*-85.77059340000001
+Jennings County High School*1332*T*T*F*F*F*38.998923*-85.6414446
+Madison Consolidated High School*966*T*T*F*F*F*38.7733285*-85.4025678
+New Washington High School*225*T*T*F*F*F*38.5656272*-85.54140699999999
+Rock Creek Academy High School*137*T*T*F*F*F*38.43994900000001*-85.76217009999999
+Scottsburg High School*794*T*T*F*F*F*38.6806275*-85.7812543
+Shawe Memorial High School*109*T*T*F*F*F*38.7581139*-85.3889876
+Silver Creek High School*909*T*T*F*F*F*38.4077876*-85.7552273
+Southwestern (Hanover)*359*T*T*T*F*F*38.710169*-85.4728999
+Switzerland County High School*404*T*T*F*F*F*38.7413049*-85.07983139999999
+Borden High School*230*T*T*F*F*F*38.4694128*-85.9477132
+Christian Academy of Indiana High School*240*T*T*F*F*F*38.3257356*-85.8289458
+Clarksville High School*464*T*T*F*F*F*38.2990366*-85.76730529999998
+Corydon Central High School*716*T*T*F*F*F*38.2009798*-86.1193947
+Crawford County High School*457*T*T*T*T*F*38.319303*-86.35296799999999
+Floyd Central High School*1746*T*T*F*F*F*38.3327561*-85.930774
+Jeffersonville High School*2066*T*T*F*F*F*38.3166996*-85.7101307
+Lanesville High School*253*T*T*F*F*F*38.2394083*-85.9888677
+New Albany High School*1843*T*T*F*F*F*38.2987932*-85.8110215
+North Harrison High School*689*T*T*F*F*F*38.322028*-86.1441722
+Providence High School*437*T*T*F*F*F*38.30658849999999*-85.78360699999996
+South Central (Elizabeth) High School*212*T*T*F*F*F*38.0820991*-86.0018116
+Cannelton High School*73*T*T*F*F*F*37.9100712*-86.74398579999999
+Forest Park High School*397*T*T*F*F*F*38.22761910000001*-86.857842
+Heritage Hills High School*619*T*T*F*F*F*38.1197533*-86.9881688
+Jasper High School*1093*T*T*T*F*F*38.4027107*-86.95074
+Loogootee High School*278*T*T*F*F*F*38.6779439*-86.9212472
+Northeast Dubois High School*268*T*T*F*F*F*38.4509433*-86.7964178
+Perry Central High School*379*T*T*F*F*F*38.11134699999999*-86.60414999999999
+Shoals High School*177*T*T*F*F*F*38.66743779999999*-86.7776262
+South Spencer High School*407*T*T*F*F*F*37.9035151*-87.1063928
+Southridge High School*531*T*T*F*F*F*38.274853*-86.96517510000001
+Springs Valley High School*266*T*T*F*F*F*38.5504533*-86.61587150000001
+Tell City High School*421*T*T*F*F*F*37.9546249*-86.76340689999999
+Barr-Reeve High School*203*T*T*F*F*F*38.668275*-87.049189
+Gibson Southern High School*654*T*T*F*F*F*38.2382679*-87.6347127
+North Davies High School*306*T*T*F*F*F*38.84743470000001*-87.06191919999999
+North Knox High School*398*T*T*F*F*F*38.8350125*-87.3132612
+Pike Central High School*588*T*T*F*T*F*38.4343374*-87.24238869999999
+Princeton Community High School*618*T*T*F*F*F*38.3690032*-87.5704815
+South Knox High School*366*T*T*T*F*F*38.6353632*-87.4214664
+Tecumseh High School*309*T*T*F*F*F*38.1943771*-87.34055309999997
+Vincennes Lincoln High School*716*T*T*F*F*F*38.6509208*-87.5000211
+Vincennes Rivet High School*98*T*T*F*F*F*38.6780842*-87.5342088
+Washington High School*742*T*T*F*F*F*38.6586775*-87.16899819999998
+Washington Catholic High School*71*T*T*F*F*F*38.6593116*-87.17358970000001
+Boonville High School*903*T*T*F*F*F*38.0528013*-87.2800146
+Castle High School*1934*T*T*F*F*F*37.984834*-87.384368
+Evansville Mater Dei High School*529*T*T*T*F*F*37.988803*-87.615867
+Evansville Bosse High School*802*T*T*F*F*F*37.963822*-87.540014
+Evansville Central High School*1185*T*T*F*F*F*38.029117*-87.578447
+Evansville Harrison High School*1243*T*T*F*F*F*37.97381*-87.48605700000002
+Evansville Reitz Memorial High School*690*T*T*F*F*F*37.971318*-87.53681499999999
+Evansville North High School*1614*T*T*F*F*F*38.115449*-87.551358
+Evansville F. J. Reitz High School*1355*T*T*F*F*F*37.972065*-87.60554900000001
+Mt. Vernon High School*658*T*T*F*F*F*37.93753960000001*-87.88673130000001
+North Posey High School*498*T*T*F*F*F*38.1421044*-87.80190569999999
+Signature High School*361*T*T*F*F*F*37.9729899*-87.5686546

@@ -774,6 +774,28 @@ public class Classify {
 		}
 		return null;
 	}
+	public static Regional findRegionalForSectional(Classify obj,Sectional x){
+		for(int i=0;i<obj.regionals.size();i++){
+			ArrayList<Sectional> temp=obj.regionals.get(i).getSectionals();
+			for(int j=0;j<temp.size();j++){
+				if(temp.get(j).getHost().equals(x.getHost())){
+					return obj.regionals.get(i);
+				}
+			}
+		}
+		return null;
+	}
+	public static Semistate findSemiStateForRegional(Classify obj,Regional x){
+		for(int i=0;i<obj.semistates.size();i++){
+			ArrayList<Regional>temp=obj.semistates.get(i).getRegionals();
+			for(int j=0;j<temp.size();j++){
+				if(temp.get(j).getHost().getName().equals(x.getHost().getName())){
+					return obj.semistates.get(i);
+				}
+			}
+		}
+		return null;
+	}
 	public Sectional getClosestSectional(Sectional toAdd, ArrayList<Sectional>hosts){
 		Sectional ret;
 		long small=School.travelDist(toAdd.getHostSchool(), hosts.get(0).getHostSchool());
