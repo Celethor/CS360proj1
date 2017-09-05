@@ -31,8 +31,13 @@ public class SchoolDisplayGUI extends JFrame {
 		
 		setLayout(new GridLayout(2,1));
 		
+			
 		for(aI=0; aI< schools.size(); aI++) {
-			schoolList.addItem(schools.get(aI));
+			if(schools.get(aI).isHostSect()==true){
+				System.out.println("Name: "+schools.get(aI).getName());
+				schoolList.addItem(schools.get(aI));
+			}
+			
 		}
 		
 		
@@ -47,7 +52,8 @@ public class SchoolDisplayGUI extends JFrame {
 	private class ButtonListener implements ActionListener {
 
 		public void actionPerformed(ActionEvent arg0) {
-			
+			School selected=(School)schoolList.getSelectedItem();
+			System.out.println(selected.toString());
 			//hide window
 			setVisible(false);
 		}

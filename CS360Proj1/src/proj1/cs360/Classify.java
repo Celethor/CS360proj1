@@ -4,6 +4,10 @@ import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import javax.swing.DefaultComboBoxModel;
+import javax.swing.JComboBox;
+import javax.swing.JOptionPane;
+
 public class Classify {
 	public char className;
 	private int maxEnrollment;
@@ -56,46 +60,85 @@ public class Classify {
 			this.sectNo=presentSect;
 		else{
 			if(userSect<presentSect){
-				System.out.println("There are more hosts than specified for Sectionals. Please go through"
+				
+				//System.out.println("There are more hosts than specified for Sectionals. Please go through"
+					//	+ "the list of hosts and type in which ones to remove");
+				//System.out.println("Present no. of hosts for sectionals: "+School.sectNo);
+				JOptionPane.showMessageDialog(null, "There are more hosts than specified for Sectionals.\n Please go through"
 						+ "the list of hosts and type in which ones to remove");
-				System.out.println("Present no. of hosts for sectionals: "+School.sectNo);
+				ArrayList<School>tempSchools=new ArrayList<School>();
 				for(int i=0;i<schools.size();i++)
 					if(schools.get(i).isHostSect()==true){
-						System.out.println("Name: "+schools.get(i).getName());
+						//System.out.println("Name: "+schools.get(i).getName());
+						tempSchools.add(schools.get(i));
 					}
+				//SchoolDisplayGUI disp=new SchoolDisplayGUI(tempSchools);
 				for(int j=0;j<presentSect-userSect;j++){
-					System.out.println("Enter School "+(j+1)+" to remove: ");
+					DefaultComboBoxModel m=new DefaultComboBoxModel();
+					for(int k=0;k<tempSchools.size();k++){
+						m.addElement(tempSchools.get(k));
+					}
+					
+					JComboBox cb=new JComboBox(m);
+					int input=JOptionPane.showConfirmDialog(null,cb,"Enter school to remove",JOptionPane.OK_CANCEL_OPTION);
+					String name="";
+					if(input==JOptionPane.OK_OPTION){
+						School x=(School)cb.getSelectedItem();
+					    name=x.getName();
+						//System.out.println(name);
+					}
+					
+					/*System.out.println("Enter School "+(j+1)+" to remove: ");
 					String name=scan.nextLine();
-					System.out.println(name);
+					System.out.println(name);*/
+					
 					int num=schools.size();
 					for(int k=0;k<num;k++){
 						String x=schools.get(k).getName();
 						if(x.equals(name)){
 							schools.get(k).setHostSect(false);
-							System.out.println("Done matching School");
+							//System.out.println("Done matching School");
 							break;
 						}
 					}
+					
 				}
 				this.sectNo=userSect;
 			}
 			//if the user wants more hosts but there are not many in the file already, add more
 			else if(userSect>presentSect){
-				System.out.println("There are less hosts than specified for Sectionals. Please go through"
+				//System.out.println("There are less hosts than specified for Sectionals. Please go through"
+					//	+ "the list of schools and type in which ones to add");
+				JOptionPane.showMessageDialog(null, "There are less hosts than specified for Sectionals.\n Please go through"
 						+ "the list of schools and type in which ones to add");
+				ArrayList<School>tempSchools=new ArrayList<School>();
 				for(int i=0;i<schools.size();i++){
 					if(schools.get(i).isHostSect()==false){
-						System.out.println("Name: "+schools.get(i).getName());
+						//System.out.println("Name: "+schools.get(i).getName());
+						tempSchools.add(schools.get(i));
 					}
 				}
 				for(int j=0;j<userSect-presentSect;j++){
-					System.out.println("Enter School "+(j+1)+" to add as Host: ");
-					String name=scan.nextLine();
+					DefaultComboBoxModel m=new DefaultComboBoxModel();
+					for(int k=0;k<tempSchools.size();k++){
+						m.addElement(tempSchools.get(k));
+					}
+					
+					JComboBox cb=new JComboBox(m);
+					int input=JOptionPane.showConfirmDialog(null,cb,"Enter school to add",JOptionPane.OK_CANCEL_OPTION);
+					String name="";
+					if(input==JOptionPane.OK_OPTION){
+						School x=(School)cb.getSelectedItem();
+					    name=x.getName();
+						//System.out.println(name);
+					}
+					//System.out.println("Enter School "+(j+1)+" to add as Host: ");
+					//String name=scan.nextLine();
 					for(int k=0;k<schools.size();k++){
 						String x=schools.get(k).getName();
 						if(x.equals(name)){
 							schools.get(k).setHostSect(true);
-							System.out.println("Done");
+							//System.out.println("Done");
 							break;
 						}
 					}
@@ -116,22 +159,38 @@ public class Classify {
 			//For Regionals
 			//if the user wants less regionals than already present, give user option to remove
 			if(userReg<presentReg){
-				System.out.println("There are more hosts for regionals. Please select to remove");
-				System.out.println("Present no. of Regional hosts: "+School.getRegNo());
+				//System.out.println("There are more hosts for regionals. Please select to remove");
+				//System.out.println("Present no. of Regional hosts: "+School.getRegNo());
+				JOptionPane.showMessageDialog(null, "There are more hosts than specified for Regionals.\n Please go through"
+						+ "the list of schools and type in which ones to remove");
+				ArrayList<School>tempSchools=new ArrayList<School>();
 				for(int i=0;i<schools.size();i++){
 					if(schools.get(i).isHostReg()==true){
-						System.out.println("Name: "+schools.get(i).getName());
+						//System.out.println("Name: "+schools.get(i).getName());
+						tempSchools.add(schools.get(i));
 					}
 				}
 				for(int j=0;j<presentReg-userReg;j++){
-					System.out.println("Enter School "+(j+1)+" to remove as host: ");
-					String name=scan.nextLine();
+					//System.out.println("Enter School "+(j+1)+" to remove as host: ");
+					//String name=scan.nextLine();
+					DefaultComboBoxModel m=new DefaultComboBoxModel();
+					for(int k=0;k<tempSchools.size();k++){
+						m.addElement(tempSchools.get(k));
+					}
+					
+					JComboBox cb=new JComboBox(m);
+					int input=JOptionPane.showConfirmDialog(null,cb,"Enter school to remove",JOptionPane.OK_CANCEL_OPTION);
+					String name="";
+					if(input==JOptionPane.OK_OPTION){
+						School x=(School)cb.getSelectedItem();
+					    name=x.getName();
+					}
 					int num=schools.size();
 					for(int k=0;k<num;k++){
 						String x=schools.get(k).getName();
 						if(x.equals(name)){
 							schools.get(k).setHostReg(false);
-							System.out.println("Done Matching School");
+							//System.out.println("Done Matching School");
 							break;
 						}
 					}
@@ -140,22 +199,38 @@ public class Classify {
 			}
 			//if user wants more hosts than already in file, add more hosts by giving user the option
 			else if(userReg>presentReg){
-				System.out.println("there are less hosts. Please add more");
-				System.out.println("Present no. of Regional hosts: "+School.getRegNo());
+				//System.out.println("there are less hosts. Please add more");
+				//System.out.println("Present no. of Regional hosts: "+School.getRegNo());
+				JOptionPane.showMessageDialog(null, "There are less hosts than specified for Regionals.\n Please go through"
+						+ "the list of schools and type in which ones to add");
+				ArrayList<School>tempSchools=new ArrayList<School>();
 				for(int i=0;i<schools.size();i++){
 					if(schools.get(i).isHostReg()==false){
-						System.out.println("Name: "+schools.get(i).getName());
+						//System.out.println("Name: "+schools.get(i).getName());
+						tempSchools.add(schools.get(i));
 					}
 				}
 				for(int j=0;j<userReg-presentReg;j++){
-					System.out.println("Enter School "+(j+1)+" to add");
-					String name=scan.nextLine();
+					//System.out.println("Enter School "+(j+1)+" to add");
+					//String name=scan.nextLine();
+					DefaultComboBoxModel m=new DefaultComboBoxModel();
+					for(int k=0;k<tempSchools.size();k++){
+						m.addElement(tempSchools.get(k));
+					}
+					
+					JComboBox cb=new JComboBox(m);
+					int input=JOptionPane.showConfirmDialog(null,cb,"Enter school to add",JOptionPane.OK_CANCEL_OPTION);
+					String name="";
+					if(input==JOptionPane.OK_OPTION){
+						School x=(School)cb.getSelectedItem();
+					    name=x.getName();
+					}
 					int num=schools.size();
 					for(int k=0;k<schools.size();k++){
 						String x=schools.get(k).getName();
 						if(x.equals(name)){
 							schools.get(k).setHostReg(true);
-							System.out.println("Done matching");
+							//System.out.println("Done matching");
 							break;
 						}
 					}
@@ -176,22 +251,38 @@ public class Classify {
 			//For Regionals
 			//if the user wants less regionals than already present, give user option to remove
 			if(userSemi<presentSemi){
-				System.out.println("There are more hosts for Semi-States. Please select to remove");
-				System.out.println("Present no. of Semistate hosts: "+presentSemi);
+				//System.out.println("There are more hosts for Semi-States. Please select to remove");
+				//System.out.println("Present no. of Semistate hosts: "+presentSemi);
+				JOptionPane.showMessageDialog(null, "There are more hosts than specified for Semi-State.\n Please go through"
+						+ "the list of schools and type in which ones to remove");
+				ArrayList<School>tempSchools=new ArrayList<School>();
 				for(int i=0;i<schools.size();i++){
 					if(schools.get(i).isHostSemi()==true){
-						System.out.println("Name: "+schools.get(i).getName());
+						//System.out.println("Name: "+schools.get(i).getName());
+						tempSchools.add(schools.get(i));
 					}
 				}
 				for(int j=0;j<presentSemi-userSemi;j++){
-					System.out.println("Enter School "+(j+1)+" to remove as host: ");
-					String name=scan.nextLine();
+					DefaultComboBoxModel m=new DefaultComboBoxModel();
+					for(int k=0;k<tempSchools.size();k++){
+						m.addElement(tempSchools.get(k));
+					}
+					
+					JComboBox cb=new JComboBox(m);
+					int input=JOptionPane.showConfirmDialog(null,cb,"Enter school to remove",JOptionPane.OK_CANCEL_OPTION);
+					String name="";
+					if(input==JOptionPane.OK_OPTION){
+						School x=(School)cb.getSelectedItem();
+					    name=x.getName();
+					}
+					//System.out.println("Enter School "+(j+1)+" to remove as host: ");
+					//String name=scan.nextLine();
 					int num=schools.size();
 					for(int k=0;k<num;k++){
 						String x=schools.get(k).getName();
 						if(x.equals(name)){
 							schools.get(k).setHostSemi(false);
-							System.out.println("Done Matching School");
+							//System.out.println("Done Matching School");
 							break;
 						}
 					}
@@ -200,25 +291,41 @@ public class Classify {
 			}
 			//if user wants more hosts than already in file, add more hosts by giving user the option
 			else if(userSemi>presentSemi){
-				System.out.println("there are less hosts. Please add more");
-				System.out.println("Present no. of Semistate hosts: "+presentSemi);
+				//System.out.println("there are less hosts. Please add more");
+				//System.out.println("Present no. of Semistate hosts: "+presentSemi);
+				JOptionPane.showMessageDialog(null, "There are less hosts than specified for Semi-State.\n Please go through"
+						+ "the list of schools and type in which ones to add");
+				ArrayList<School>tempSchools=new ArrayList<School>();
 				for(int i=0;i<schools.size();i++){
 					if(schools.get(i).isHostSemi()==false){
-						System.out.println("Name: "+schools.get(i).getName());
+						//System.out.println("Name: "+schools.get(i).getName());
+						tempSchools.add(schools.get(i));
 					}
 				}
 				
 				for(int j=0;j<userSemi-presentSemi;j++){
-					System.out.println("Enter School "+(j+1)+" to add : ");
+					//System.out.println("Enter School "+(j+1)+" to add : ");
+					//String name=scan.nextLine();
+					DefaultComboBoxModel m=new DefaultComboBoxModel();
+					for(int k=0;k<tempSchools.size();k++){
+						m.addElement(tempSchools.get(k));
 					
-					String name=scan.nextLine();
-					System.out.println("Name: "+name);
+					}
+					
+					JComboBox cb=new JComboBox(m);
+					int input=JOptionPane.showConfirmDialog(null,cb,"Enter school to add",JOptionPane.OK_CANCEL_OPTION);
+					String name="";
+					if(input==JOptionPane.OK_OPTION){
+						School x=(School)cb.getSelectedItem();
+					    name=x.getName();
+					}
+					//System.out.println("Name: "+name);
 					int num=schools.size();
 					for(int k=0;k<schools.size();k++){
 						String x=schools.get(k).getName();
 						if(x.equals(name)){
 							schools.get(k).setHostSemi(true);
-							System.out.println("Done matching");
+							//System.out.println("Done matching");
 							break;
 						}
 					}
@@ -229,20 +336,20 @@ public class Classify {
 		
 		this.sectDivisor=(int) Math.floor((double)this.schools.size()/sectNo);
 		this.modSect=schools.size()%sectNo;
-		System.out.println("Sectional Divisor : "+sectDivisor+"\nSectional Mod : "+modSect);
+		//System.out.println("Sectional Divisor : "+sectDivisor+"\nSectional Mod : "+modSect);
 		sectionals=new ArrayList<Sectional>();
 		
 		sortSectionals();
 		this.regDivisor=(int) Math.floor((double)this.sectNo/regNo);
 		this.modReg=sectNo%regNo;
-		System.out.println("Regional Divisor : "+regDivisor+"\nRegional Mod : "+modReg);
+		//System.out.println("Regional Divisor : "+regDivisor+"\nRegional Mod : "+modReg);
 		regionals=new ArrayList<Regional>();
 		
 		sortRegionals();
 		this.semiDivisor=(int)Math.floor((double)this.regNo/semiNo);
 		this.modSemi=regNo%semiNo;
 		semistates=new ArrayList<Semistate>();
-		System.out.println("Semi Divisor: "+semiDivisor+"\nSemi mod: "+modSemi);
+		//System.out.println("Semi Divisor: "+semiDivisor+"\nSemi mod: "+modSemi);
 		sortSemi();
 	}
 	/**
@@ -1009,7 +1116,7 @@ public class Classify {
 	public void sortSectionals(){
 		int sectionNumber=0;
 		
-		System.out.println("School size: "+schools.size());
+		//System.out.println("School size: "+schools.size());
 		//find the hosts and give each a sectional
 		for(int i=0;i<schools.size();i++){
 			if(sectionNumber>sectNo)
@@ -1042,7 +1149,7 @@ public class Classify {
 				}
 			}
 		}
-		System.out.println("Done getting closest hosts");
+		//System.out.println("Done getting closest hosts");
 		//System.out.println(this.toString());
 		int maxSize=sectDivisor+2;
 		int minSize=sectDivisor;
