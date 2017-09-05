@@ -59,7 +59,7 @@ public class ViewGUI extends JFrame {
 		((GridBagLayout)contentPane.getLayout()).columnWeights = new double[] {0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 1.0E-4};
 		((GridBagLayout)contentPane.getLayout()).rowWeights = new double[] {0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0, 1.0E-4};
 
-		//---- slctClsLbl ----
+/*		//---- slctClsLbl ----
 		slctClsLbl.setText("Choose a Class to View");
 		contentPane.add(slctClsLbl, new GridBagConstraints(0, 0, 5, 1, 0.0, 0.0,
 			GridBagConstraints.CENTER, GridBagConstraints.VERTICAL,
@@ -74,7 +74,7 @@ public class ViewGUI extends JFrame {
 	//		clsComboBox.addItem(classArr[i].getClassName());
 	//	}
 		
-		
+*/		
 
 		//---- slctSectLbl ----
 		slctSectLbl.setText("Select a Sectional to View");
