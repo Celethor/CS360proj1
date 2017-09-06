@@ -980,133 +980,6 @@ public class Classify {
 		return null;
 	}
 	/**
-	 * Method returns the closest sectional to given sectional
-	 * @param toAdd: Sectional to serve as base
-	 * @param hosts: The list of sectionals to find closest sectional
-	 * @return: The closest sectional to the given sectional
-	 */
-	public Sectional getClosestSectional(Sectional toAdd, ArrayList<Sectional>hosts){
-		Sectional ret;
-		long small=School.travelDist(toAdd.getHostSchool(), hosts.get(0).getHostSchool());
-		int index=0;
-		Sectional smallSect=null;
-		for(int i=0;i<hosts.size();i++){
-			if(School.travelDist(toAdd.getHostSchool(), hosts.get(i).getHostSchool())<small){
-				smallSect=hosts.get(i);
-				small=School.travelDist(toAdd.getHostSchool(), hosts.get(i).getHostSchool());
-				index=i;
-			}
-		}
-		ret=smallSect;
-		return ret;
-	}
-	/**
-	 * This method is NOT USED in the program now
-	 * Method to sort the schools into respective 
-	 * sectionals. This ensures that the 
-	 * no. of sectionals in a particular class 
-	 * cannot be equal to zero!
-	 * @throws ParseException
-	 */
-	public void sortIntoSectionals() throws ParseException{
-		int sectionNumber=0;
-		int indexOfHosts[]=new int[sectNo];
-		System.out.println("School size: "+schools.size());
-		//find the hosts and give each a sectional
-		for(int i=0;i<schools.size();i++){
-			if(sectionNumber>sectNo)
-				break;
-			if(schools.get(i).isHostSect()==true){
-				sectionals.add(new Sectional(schools.get(i).getName(),schools.get(i),sectDivisor));
-				indexOfHosts[sectionNumber]=i;
-				sectionNumber++;
-				//schools.remove(i);//do not remove schools as it is giving error
-			}
-			
-		}
-		//find schools nearest to host and add them 
-		//counter and mod are used when the amount of schools is not divisible
-		//by the number of sectionals that is required by the user
-		int counter=0;
-		System.out.println("SecNo: "+sectNo+" sec .size = "+sectionals.size());
-		for(int j=0;j<sectNo;j++){
-			if(counter<modSect){
-				sectionals.get(j).addArraySchools(getClosest(schools,sectionals.get(j).getHostSchool(),sectionals.get(j).getSize()+1));
-				counter++;
-			}
-			else{
-				School temp=sectionals.get(j).getHostSchool();
-				int tempSize=sectionals.get(j).getSize();
-				sectionals.get(j).addArraySchools(getClosest(schools,temp,tempSize));
-			}
-		}
-		System.out.println("Done sorting schools into classes");
-	}
-	/**
-	 * METHOD NOT USED in program now
-	 * Method to sort sectionals into the regionals
-	 * 
-	 */
-	private void sortIntoRegionals(){
-		//first case : regNo not equal to zero 
-		//(i.e. when user has specified for input)
-		if(regNo!=0){
-			int regionNumber=0;
-			for(int i=0;i<otherSchools.size();i++){
-				if(regionNumber>regNo)
-					break;
-				if(otherSchools.get(i).isHostReg()==true){
-					School temp=otherSchools.get(i);
-					regionals.add(new Regional(temp,regDivisor));
-					regionNumber++;
-				}
-			}
-			//for adding host sectional
-			/*
-			for(int i=0;i<sectionals.size();i++){
-				System.out.println("No. : "+i+"\n"+sectionals.get(i).toString());
-			}
-			int counter=0;
-			for(counter=0;counter<regNo;counter++){
-				for(int j=0;j<sectionals.size();j++){
-					//if(counter==regNo)
-						//break;
-					School h=regionals.get(counter).getHost();
-					Sectional t=sectionals.get(j);
-					ArrayList<School> s=t.getSchools();
-					if(t.findSchool(h)){
-						regionals.get(counter).addSectional(sectionals.get(j));
-						sectionals.get(j).setAdded(true);
-						break;
-					}
-				}
-			}
-			//for adding nearby sectional
-			counter=0;
-			for(int j=0;j<regNo;j++){
-				if(counter<modReg){
-					regionals.get(j).addArraySectionals(getClosestSect(sectionals,regionals.get(j).getHostSect(),regionals.get(j).getSize()));
-					counter++;
-				}
-				else{
-					Sectional temp=regionals.get(j).getHostSect();
-					int tempS=regionals.get(j).getSize()-1;
-					regionals.get(j).addArraySectionals(getClosestSect(sectionals,temp,tempS));
-				}
-			}
-		}*/
-			
-			int counter=0;
-			for(int i=0;i<regNo;i++){
-					School temp=regionals.get(i).getHost();
-					
-					regionals.get(i).addArraySectionals(getClosestSect(sectionals,findSectional(temp),regDivisor));
-				
-			}
-		System.out.println("Done sorting regionals");
-		}
-	}
-	/**
 	 * Method to sort the schools into sectionals
 	 * Procedure: 
 	 * Find hosts and give each a sectional
@@ -1198,31 +1071,31 @@ public class Classify {
 			
 		}
 		//if size>maxSize
-		for(int i=0;i<sectionals.size();i++){
+/*		for(Sectional sectional: sectionals){
 			ArrayList<School>tempHosts=new ArrayList<School>();
 			tempHosts.addAll(hosts);
-			if(sectionals.get(i).getActualSize()>maxSize){
-				while(sectionals.get(i).getActualSize()>maxSize){
-					School cHost=null;
-					School cSchool;
-					School []ordSchools=ordered(sectionals.get(i).getHostSchool(),sectionals.get(i).getSchools());
-					cSchool=ordSchools[ordSchools.length-1];//because this is the farthest one
-					School []hostsOrd=ordered(cSchool,tempHosts);
-					for(School host:hostsOrd){
-						Sectional sec=findSectional(host);
-						if(sec.getActualSize()>=maxSize){
-							continue;
-						}
-						Sectional s=findSectional(host);
-						s.addSchools(cSchool);
-						int x=sectionals.get(i).getActualSize();
-						sectionals.get(i).removeSchool(cSchool);
-						sectionals.get(i).setActualSize(x-1);
-						break;
+			
+			while(sectional.getActualSize() > maxSize){
+				School cHost=null;
+				School cSchool;
+				School [] ordSchools = ordered(sectional.getHostSchool(), sectional.getSchools());
+				cSchool = ordSchools[ordSchools.length-1];//because this is the farthest one
+				School [] hostsOrd = ordered(cSchool, tempHosts);
+				
+				for(School host: hostsOrd){
+					Sectional sec = findSectional(host);
+					if(sec.getActualSize()>=maxSize){
+						continue;
 					}
+					Sectional s = findSectional(host);
+					s.addSchools(cSchool);
+					int x = sectional.getActualSize();
+					sectional.removeSchool(cSchool);
+					sectional.setActualSize(x-1);
+					break;
 				}
 			}
-		}
+		}*/
 		
 	}
 	/**
@@ -1300,7 +1173,7 @@ public class Classify {
 	 * @param hosts: the list of hosts
 	 * @return: the host which is closest to the given school
 	 */
-	public School getClosestSchool(School toAdd, ArrayList<School> hosts){
+	private School getClosestSchool(School toAdd, ArrayList<School> hosts){
 		School closestHost;
 		School temp=hosts.get(0);
 		long small=School.travelDist(toAdd, temp);
@@ -1320,7 +1193,7 @@ public class Classify {
 	 * @param host: The host school for finding sectional
 	 * @return: the sectional found. Returns null if sectional not found
 	 */
-	public Sectional findSectional(School host){
+	private Sectional findSectional(School host){
 		Sectional ret;
 		for(int j=0;j<sectNo;j++){
 			if(sectionals.get(j).getHost().equals(host.getName())){
@@ -1328,94 +1201,6 @@ public class Classify {
 			}
 		}
 		return null;
-	}
-	/**
-	 * Method checks if the given school is present in a sectional
-	 * @param x: the school to find
-	 * @return: the sectional that has the given school. If not found, returns null
-	 */
-	public Sectional findSchoolInSectional(School x){
-		ArrayList<School>temp;
-		for(int i=0;i<sectNo;i++){
-			temp=sectionals.get(i).getSchools();
-			for(int j=0;j<temp.size();j++){
-				if(temp.get(j).getName().equals(x.getName())){
-					return sectionals.get(i);
-				}
-			}
-		}
-		return null;
-	}
-	/**
-	 * Methods returns the closest schools to a given hosts
-	 * Used for sorting into sectionals
-	 * @param schools: list of all the schools 
-	 * @param host: host school
-	 * @param x: size of particular sectional
-	 * @return: closest x schools to a particular host
-	 * @throws ParseException
-	 */
-	private School[] getClosest(ArrayList<School> schools, School host,int x) throws ParseException{
-		//School []closest=new School[x];
-		ArrayList<School>closest=new ArrayList<School>();
-		for(int counter=0;counter<x;counter++){
-			if(schools.size()==0)
-				break;
-			School temp=schools.get(0);
-			if(temp.getName().equals(host.getName())==false){
-			long small=School.travelDist(temp, host);
-			School smallSchool=schools.get(0);
-			int index=0;
-			for(int i=0;i<schools.size();i++){
-				if(School.travelDist(host, schools.get(i))<small){
-					smallSchool=schools.get(i);
-					index=i;
-				}
-			}
-			//closest[counter]=smallSchool;
-			closest.add(smallSchool);
-			schools.remove(index);
-		}
-		}
-		School ret[]=new School[closest.size()];
-		for(int i=0;i<ret.length;i++){
-			ret[i]=closest.get(i);
-		}
-		return ret;
-	}
-	/**
-	 * Method returns the closest sectionals to a particular
-	 * regional 
-	 * @param sect: list of sectionals that can be added
-	 * @param host: host sectional
-	 * @param x: size of host sectional
-	 * @return: closest x sectionals to a given host regional
-	 */
-	public Sectional[] getClosestSect(ArrayList<Sectional> sect, Sectional host, int x){
-		ArrayList<Sectional> closest=new ArrayList<Sectional>();
-		Sectional []arr;
-		for(int counter=0;counter<x;counter++){
-			if(sect.size()==0)
-				break;
-			long small=School.travelDist(sect.get(0).getHostSchool(), host.getHostSchool());
-			Sectional smallSect=sect.get(0);
-			int index=0;
-			for(int i=0;i<sect.size();i++){
-				if(sect.get(i).isAdded()==false){
-					if(School.travelDist(host.getHostSchool(), sect.get(i).getHostSchool())<small){
-						smallSect=sect.get(i);
-						index=i;
-					}
-				}
-				closest.add(smallSect);
-				sect.get(index).setAdded(true);
-			}
-		}
-		arr=new Sectional[closest.size()];
-		for(int i=0;i<arr.length;i++){
-			arr[i]=closest.get(i);
-		}
-		return arr;
 	}
 	/**
 	 * The toString method of the entire class. 
