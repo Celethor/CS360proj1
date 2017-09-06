@@ -152,7 +152,7 @@ public class ViewGUI extends JFrame {
 				mapGenBtn.addActionListener(new mapGenListener());
 
 			//---- sheetGenBtn ----
-			sheetGenBtn.setText("Generate Spreadsheet of Tournament Setup");
+			sheetGenBtn.setText("Generate Output File of Tournament Setup");
 			sheetGenBtn.addActionListener(new sheetGenListener());
 			panel1.add(sheetGenBtn, new GridBagConstraints(0, 4, 6, 1, 0.0, 0.0,
 				GridBagConstraints.CENTER, GridBagConstraints.BOTH,

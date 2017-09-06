@@ -1,0 +1,789 @@
+**********************Sectionals******************************
+Host Name: Hammond Gavit High School,IN
+Hammond Gavit High School,IN
+
+Calumet High School,IN
+
+East Chicago Central High School,IN
+
+Gary West Side High School,IN
+
+Griffith High School,IN
+
+Hammond Academy of Science & Technology High School,IN
+
+Hammond Bishop Noll High School,IN
+
+Hammond High School,IN
+
+Hammond Clark High School,IN
+
+Hammond Morton High School,IN
+
+Highland High School,IN
+
+Whiting High School,IN
+
+21st Century Charter -Gary High School,IN
+
+North Knox High School,IN
+
+Vincennes Rivet High School,IN
+
+
+Host Name: Rensselaer Central High School,IN
+Kankakee Valley High School,IN
+
+Kouts High School,IN
+
+Hebron High School,IN
+
+Lowell High School,IN
+
+Winamac Community High School,IN
+
+Boone Grove High School,IN
+
+Morgan Township High School,IN
+
+Hanover Central High School,IN
+
+Wheeler High School,IN
+
+Washington Township High School,IN
+
+Heritage Christian High School,IN
+
+Hobart High School,IN
+
+Andrean High School,IN
+
+North Central (Farmerburg) High School,IN
+
+Shakamak High School,IN
+
+Mitchell High School,IN
+
+
+Host Name: Benton Central High School,IN
+Benton Central High School,IN
+
+North Newton High School,IN
+
+South Newton High School,IN
+
+Covington High School,IN
+
+Fountain Central High School,IN
+
+North Montgomery High School,IN
+
+Rossville High School,IN
+
+Clinton Prairie High School,IN
+
+Crawfordsville High School,IN
+
+North Vermillion High School,IN
+
+Southmont High School,IN
+
+Western Boone High School,IN
+
+Lebanon High School,IN
+
+South Vermillion High School,IN
+
+West Vigo High School,IN
+
+Salem High School,IN
+
+
+Host Name: Culver Academies High School,IN
+Culver Academies High School,IN
+
+LaCrosse High School,IN
+
+Westville High School,IN
+
+Northfield Jr-Sr High School,IN
+
+Wabash High School,IN
+
+Marquette Catholic High School,IN
+
+Rensselaer Central High School,IN
+
+Maconaquah High School,IN
+
+Southwood Jr-Sr High School,IN
+
+Columbia City High School,IN
+
+Faith Christian High School,IN
+
+Lake Station Edison High School,IN
+
+River Forest High School,IN
+
+Bloomfield High School,IN
+
+Sullivan High School,IN
+
+Linton-Stockton High School,IN
+
+
+Host Name: Logansport High School,IN
+Logansport High School,IN
+
+Rensselaer Central High School,IN
+
+North White High School,IN
+
+Tri-County High School,IN
+
+Peru High School,IN
+
+Tipton High School,IN
+
+Elwood Community High School,IN
+
+Guerin Catholic High School,IN
+
+Lapel Sr High School,IN
+
+University High School,IN
+
+Anderson Preparatory Academy,IN
+
+Liberty Christian School,IN
+
+Brebeuf Jesuit Preparatory High School,IN
+
+Borden High School,IN
+
+South Central (Elizabeth) High School,IN
+
+Eastern Greene High School,IN
+
+
+Host Name: S.B. Riley High School,IN
+S.B. Riley High School,IN
+
+New Prairie High School,IN
+
+South Central (Union Mills) High School,IN
+
+Knox High School,IN
+
+North Judson-San Pierre High School,IN
+
+Oregon-Davis High School,IN
+
+West Central High School,IN
+
+Gary Roosevelt High School,IN
+
+Garrett High School,IN
+
+Carroll (F.W.) High School,IN
+
+DeKalb High School,IN
+
+Lakewood Park Christian School,IN
+
+Cowan High School,IN
+
+
+Host Name: West Noble High School,IN
+West Noble High School,IN
+
+Culver Community High School,IN
+
+Plymouth High School,IN
+
+Glenn High School,IN
+
+LaVille Jr-Sr High School,IN
+
+Mishawaka High School,IN
+
+Mishawaka Marian High School,IN
+
+S.B. Career Academy,IN
+
+Jimtown High School,IN
+
+S.B. Clay High School,IN
+
+S.B. Riley High School,IN
+
+S.B. Saint Joseph's High School,IN
+
+South Bend Washington High School,IN
+
+Cannelton High School,IN
+
+Tell City High School,IN
+
+
+Host Name: Bellmont Senior High School,IN
+Bellmont Senior High School,IN
+
+Churubusco Jr-Sr High School,IN
+
+Randolph Southern Jr-Sr High Sch,IN
+
+Union (Modoc) Junior & High School,IN
+
+Northeastern High School,IN
+
+Hagerstown High School,IN
+
+Shenandoah High School,IN
+
+New Castle High School,IN
+
+Seton Catholic High School,IN
+
+Richmond High School,IN
+
+Centerville High School,IN
+
+Cambridge City High School,IN
+
+Pendleton Heights High School,IN
+
+Orleans High School,IN
+
+Crawford County High School,IN
+
+North Davies High School,IN
+
+
+Host Name: Delta High School,IN
+Blue River Valley Jr-Sr High School,IN
+
+Tri Junior Senior High School,IN
+
+Eastern Hancock High School,IN
+
+Knightstown High School,IN
+
+Mt. Vernon (Fortville) High School,IN
+
+Connersville High School,IN
+
+Rushville Consolidated High School,IN
+
+Morristown High School,IN
+
+New Palestine High School,IN
+
+Indianapolis Arlington High School,IN
+
+Indianapolis Cathedral High School,IN
+
+Indiana Math & Science Academy High School,IN
+
+Union County High School,IN
+
+Silver Creek High School,IN
+
+Clarksville High School,IN
+
+Providence High School,IN
+
+
+Host Name: Marion High School,IN
+Marion High School,IN
+
+Argos High School,IN
+
+Culver Academies High School,IN
+
+Rochester Community High School,IN
+
+Triton High School,IN
+
+Bremen Senior High School,IN
+
+Bethany Christian School,IN
+
+Fairfield Jr-Sr High School,IN
+
+Lakeland High School,IN
+
+Northridge High School,IN
+
+NorthWood High School,IN
+
+Wawasee High School,IN
+
+Westview Jr-Sr High School,IN
+
+Delta High School,IN
+
+Christian Academy of Indiana High School,IN
+
+Medora High School,IN
+
+
+Host Name: Pendleton Heights High School,IN
+Pendleton Heights High School,IN
+
+Tippecanoe Valley High School,IN
+
+Angola High School,IN
+
+Central Noble High School,IN
+
+East Noble High School,IN
+
+Fremont High School,IN
+
+Prairie Heights Sr High School,IN
+
+West Noble High School,IN
+
+Indianapolis Bishop Chatard High School,IN
+
+Indianapolis Broad Ripple High School,IN
+
+Tindley High School,IN
+
+Indianapolis Scecina Memorial High School,IN
+
+Indiana School for the Deaf High School,IN
+
+Brown County High School,IN
+
+Rock Creek Academy High School,IN
+
+Brownstown Central High School,IN
+
+
+Host Name: South Putnam High School,IN
+South Putnam High School,IN
+
+Greencastle High School,IN
+
+Cloverdale High School,IN
+
+North Putnam High School,IN
+
+Cascade High School,IN
+
+Monrovia High School,IN
+
+Danville Community High School,IN
+
+Northview High School,IN
+
+Owen Valley High School,IN
+
+Mooresville High School,IN
+
+Tri-West Hendricks High School,IN
+
+Rockville High School,IN
+
+Edgewood High School,IN
+
+Clay City High School,IN
+
+Riverton Parke High School,IN
+
+South Putnam High School,IN
+
+
+Host Name: Brebeuf Jesuit Preparatory High School,IN
+Brebeuf Jesuit Preparatory High School,IN
+
+Benton Central High School,IN
+
+Frontier High School,IN
+
+Seeger High School,IN
+
+Twin Lakes High School,IN
+
+Caston High School,IN
+
+Pioneer High School,IN
+
+Park Tudor High School,IN
+
+International School of Indiana High School,IN
+
+Indianapolis Emmerich Manual High School,IN
+
+Christel House Academy High School,IN
+
+Beech Grove High School,IN
+
+Roncalli High School,IN
+
+Greenwood Community High School,IN
+
+Greenwood Christian Academy High School,IN
+
+Edinburgh Community High School,IN
+
+
+Host Name: New Palestine High School,IN
+New Palestine High School,IN
+
+Attica High School,IN
+
+Delphi Community High School,IN
+
+Lafayette Central Catholic High School,IN
+
+West Lafayette High School,IN
+
+Manchester High School,IN
+
+North Miami High School,IN
+
+Carroll (Flora) High School,IN
+
+Cass High School,IN
+
+Logansport High School,IN
+
+Northwestern High School,IN
+
+Whitko High School,IN
+
+Triton Central High School,IN
+
+Indianapolis Lutheran High School,IN
+
+Waldron High School,IN
+
+Shelbyville High School,IN
+
+
+Host Name: Connersville High School,IN
+Connersville High School,IN
+
+F.W. Blackhawk Christian Jr-Sr High School,IN
+
+F.W. Concordia Lutheran High School,IN
+
+F.W. Bishop Dwenger High School,IN
+
+Eastside Junior-Senior High School,IN
+
+Leo Junior/Senior High School,IN
+
+F.W. Canterbury,IN
+
+F.W. Bishop Luers High School,IN
+
+F.W. South Side High School,IN
+
+F.W. Wayne High School,IN
+
+New Haven High School,IN
+
+Smith Academy for Excellence,IN
+
+Woodlan Jr/Sr High School,IN
+
+North Decatur High School,IN
+
+Seymour High School,IN
+
+Charlestown High School,IN
+
+
+Host Name: South Dearborn High School,IN
+South Dearborn High School,IN
+
+Heritage Jr/Sr High School,IN
+
+Rising Sun High School,IN
+
+Milan High School,IN
+
+East Central High School,IN
+
+South Ripley High School,IN
+
+Jac-Cen-Del High School,IN
+
+Batesville High School,IN
+
+Switzerland County High School,IN
+
+Oldenburg Academy High School,IN
+
+Franklin County High School,IN
+
+Madison Consolidated High School,IN
+
+Greensburg High School,IN
+
+South Dearborn High School,IN
+
+Jennings County High School,IN
+
+Southwestern (Hanover),IN
+
+
+Host Name: Brown County High School,IN
+Brown County High School,IN
+
+Clinton Central High School,IN
+
+Frankfort High School,IN
+
+Eastern (Greentown) High School,IN
+
+Taylor High School,IN
+
+Western High School,IN
+
+Bellmont Senior High School,IN
+
+Eastbrook High School,IN
+
+Bluffton High School,IN
+
+Marion High School,IN
+
+Mississinewa High School,IN
+
+Oak Hill High School,IN
+
+Norwell High School,IN
+
+Indian Creek High School,IN
+
+Southwestern (Shelbyville) High School,IN
+
+Hauser High School,IN
+
+
+Host Name: Southwestern (Hanover),IN
+Southwestern (Hanover),IN
+
+Adams Central High School,IN
+
+Blackford High School,IN
+
+Alexandria-Monroe High School,IN
+
+Delta High School,IN
+
+Jay County High School,IN
+
+Madison-Grant High School,IN
+
+Frankton Jr-Sr High School,IN
+
+Southern Wells Jr-Sr High Sch,IN
+
+Wes-Del Middle/Senior High School,IN
+
+South Adams High School,IN
+
+Hamilton Heights High School,IN
+
+Sheridan High School,IN
+
+Shawe Memorial High School,IN
+
+South Decatur High School,IN
+
+Eminence High School,IN
+
+
+Host Name: Crawford County High School,IN
+Crawford County High School,IN
+
+Monroe Central Jr-Sr High School,IN
+
+Muncie Burris Laboratory School,IN
+
+Union City Community High Sch,IN
+
+Wapahani High School,IN
+
+Yorktown High School,IN
+
+North Harrison High School,IN
+
+Corydon Central High School,IN
+
+Paoli High School,IN
+
+West Washington High School,IN
+
+Perry Central High School,IN
+
+Lanesville High School,IN
+
+Eastern (Pekin) High School,IN
+
+New Washington High School,IN
+
+White River Valley High School,IN
+
+Trinity Lutheran High School,IN
+
+
+Host Name: Jasper High School,IN
+Jasper High School,IN
+
+Daleville Jr/Sr High School,IN
+
+Winchester Community High School,IN
+
+Southridge High School,IN
+
+Northeast Dubois High School,IN
+
+Forest Park High School,IN
+
+Pike Central High School,IN
+
+Loogootee High School,IN
+
+Barr-Reeve High School,IN
+
+Heritage Hills High School,IN
+
+Shoals High School,IN
+
+Springs Valley High School,IN
+
+Washington High School,IN
+
+Washington Catholic High School,IN
+
+Crothersville High School,IN
+
+Austin High School,IN
+
+
+Host Name: South Knox High School,IN
+South Knox High School,IN
+
+Lighthouse CPA High School,IN
+
+Bethesda Christian High School,IN
+
+Covenant Christian (Indpls) High School,IN
+
+Herron High School,IN
+
+Indianapolis Crispus Attucks High School,IN
+
+Indianapolis Northwest High School,IN
+
+Indianapolis Shortridge High School,IN
+
+Indianapolis George Washington High School,IN
+
+Providence Cristo Rey High School,IN
+
+Speedway High School,IN
+
+Indianapolis Cardinal Ritter High School,IN
+
+Indianapolis Lighthouse Charter School,IN
+
+Vincennes Lincoln High School,IN
+
+Scottsburg High School,IN
+
+Henryville High School,IN
+
+
+Host Name: Evansville Mater Dei High School,IN
+Evansville Mater Dei High School,IN
+
+Jasper High School,IN
+
+South Spencer High School,IN
+
+Gibson Southern High School,IN
+
+Princeton Community High School,IN
+
+South Knox High School,IN
+
+Tecumseh High School,IN
+
+Boonville High School,IN
+
+Evansville Bosse High School,IN
+
+Evansville Central High School,IN
+
+Evansville Harrison High School,IN
+
+Evansville Reitz Memorial High School,IN
+
+Evansville F. J. Reitz High School,IN
+
+Mt. Vernon High School,IN
+
+North Posey High School,IN
+
+Signature High School,IN
+
+
+**********************Regionals******************************
+
+Host Name: New Prairie High School,IN
+	Sectional 1 : Hammond Gavit High School,IN	Sectional 2 : S.B. Riley High School,IN
+
+Host Name: Culver Academies High School,IN
+	Sectional 1 : Rensselaer Central High School,IN	Sectional 2 : Benton Central High School,IN	Sectional 3 : Logansport High School,IN
+
+Host Name: West Noble High School,IN
+	Sectional 1 : West Noble High School,IN	Sectional 2 : Culver Academies High School,IN
+
+Host Name: Delta High School,IN
+	Sectional 1 : Delta High School,IN	Sectional 2 : Pendleton Heights High School,IN
+
+Host Name: Marion High School,IN
+	Sectional 1 : Bellmont Senior High School,IN	Sectional 2 : Marion High School,IN
+
+Host Name: Rushville Consolidated High School,IN
+	Sectional 1 : Connersville High School,IN	Sectional 2 : South Dearborn High School,IN
+
+Host Name: Shelbyville High School,IN
+	Sectional 1 : Brebeuf Jesuit Preparatory High School,IN	Sectional 2 : New Palestine High School,IN
+
+Host Name: Brown County High School,IN
+	Sectional 1 : South Putnam High School,IN	Sectional 2 : Brown County High School,IN	Sectional 3 : Southwestern (Hanover),IN
+
+Host Name: Crawford County High School,IN
+	Sectional 1 : Crawford County High School,IN	Sectional 2 : Jasper High School,IN
+
+Host Name: Pike Central High School,IN
+	Sectional 1 : South Knox High School,IN	Sectional 2 : Evansville Mater Dei High School,IN
+**********************Semi-States******************************
+Host Name: New Prairie High School,IN
+New Prairie High School,IN
+Culver Academies High School,IN
+
+Host Name: New Haven High School,IN
+West Noble High School,IN
+Delta High School,IN
+Marion High School,IN
+
+Host Name: Shelbyville High School,IN
+Rushville Consolidated High School,IN
+Shelbyville High School,IN
+
+Host Name: Brown County High School,IN
+Brown County High School,IN
+Crawford County High School,IN
+Pike Central High School,IN
+
