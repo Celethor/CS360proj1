@@ -32,7 +32,7 @@ public class ViewGUI extends JFrame {
 	public ViewGUI(Classify classObj) {
 		this.classObj = classObj;
 		initComponents();
-		setSize(305,480);
+		setSize(292,480);
 		setLocationRelativeTo(null);
 		setVisible(true);
 	}
