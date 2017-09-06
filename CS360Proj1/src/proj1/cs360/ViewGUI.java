@@ -231,7 +231,7 @@ public class ViewGUI extends JFrame {
 	
 	private class sheetGenListener implements ActionListener{
 		public void actionPerformed(ActionEvent e){
-			String fileName="File for Class "+ classObj.getClassName();
+			String fileName="Output for Class "+ classObj.getClassName() + ".txt";
 			File file=new File(fileName);
 			try {
 				PrintWriter out=new PrintWriter(file);
